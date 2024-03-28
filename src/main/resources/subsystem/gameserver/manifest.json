@@ -1,0 +1,20 @@
+{
+  "name": "GameServer",
+  "display_name": "GameServer",
+  "version": "1.0.1.0",
+  "sdk": {
+    "version": {
+      "minimum": null,
+      "target": "1.0.0.0"
+    },
+    "dependencies": [
+      {
+        "uuid": "com.fuzzy.subsystem.core"
+      },
+      {
+        "uuid": "com.fuzzy.subsystem.frontend"
+      }
+    ]
+  },
+  "dependencies": []
+}

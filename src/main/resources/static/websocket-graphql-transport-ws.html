@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var socket = new WebSocket('ws://' + location.host + '/ws', "graphql-transport-ws");
+
+    socket.onopen = function () {
+        console.log("Соединение установлено.");
+
+        // Отправка пакета рукопожатия
+        socket.send(JSON.stringify({
+            "type": "connection_init"
+        }));
+    };
+
+    socket.onclose = function (event) {
+        if (event.wasClean) {
+            console.log('Соединение закрыто чисто');
+        } else {
+            console.log('Обрыв соединения'); // например, "убит" процесс сервера
+        }
+        console.log('Код: ' + event.code + ' причина: ' + event.reason);
+    };
+
+    socket.onmessage = function (event) {
+        console.log("response: " + event.data);
+
+        if (JSON.parse(event.data).type == "connection_ack") {
+            //Пингуем сервер
+            socket.send(JSON.stringify({
+                "type": "ping"
+            }));
+
+            // Запрашиваем статус сервера
+            socket.send(JSON.stringify({
+                "id": "1",
+                "type": "subscribe",
+                "payload": {
+                    "query": "{server{status}}"
+                }
+            }));
+
+            socket.send(JSON.stringify({
+                "id": "2",
+                "type": "subscribe",
+                "payload": {
+                    "query": "{session{status, employee{id}, uuid}}"
+                }
+            }));
+
+            //Авторизуемся
+            socket.send(JSON.stringify({
+                "id": "3",
+                "type": "subscribe",
+                "payload": {
+                    "query": "mutation Logon($login: String!, $passwordHash: String!){logon(login: $login, password_hash: $passwordHash){status, employee{id}, uuid}}",
+                    "variables": {
+                        "login": "admin",
+                        "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+                    }
+                }
+            }));
+        }
+
+        if (JSON.parse(event.data).id == "3" && JSON.parse(event.data).type == "complete") {
+            //Дожидаемся результат авторизации
+
+            socket.send(JSON.stringify({
+                "id": "4",
+                "type": "subscribe",
+                "payload": {
+                    "query": "{session{status, employee{id}, uuid}}"
+                }
+            }));
+
+            //Заведомо ошибочный пакет
+            socket.send(JSON.stringify({
+                "id": "5",
+                "type": "subscribe",
+                "payload": {
+                    "query": "{}"
+                }
+            }));
+
+            //Оформляем подписку
+            socket.send(JSON.stringify({
+                "id": 6,
+                "type": "subscribe",
+                "payload": {
+                    "query": "subscription{update_active_employee}"
+                }
+            }));
+
+            //Ждем 1 минуту
+            setTimeout(function () {
+                // Отменяем подписку
+                socket.send(JSON.stringify({
+                    "id": 6,
+                    "type": "complete"
+                }));
+
+            }, 60 * 1000);
+
+            //Каждые 25 секунд пингуем - для поддержания связи
+            setInterval(pingJob, 25*1000);
+            function pingJob() {
+                socket.send(JSON.stringify({
+                    "type": "ping"
+                }));
+            }
+
+            setTimeout(function () {
+                socket.send(JSON.stringify({
+                    "id": "7",
+                    "type": "subscribe",
+                    "payload": {
+                        "query": "{server{status}}"
+                    }
+                }));
+            }, 10 * 60 * 1000);
+        }
+    };
+
+    socket.onerror = function (error) {
+        console.log("Ошибка " + error.message);
+    };
+</script>
+</body>
+</html>
