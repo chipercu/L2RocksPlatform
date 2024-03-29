@@ -2,10 +2,10 @@ package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.serv
 
 import com.fuzzy.main.cluster.core.service.transport.executor.ComponentExecutorTransport;
 import com.fuzzy.main.cluster.core.service.transport.network.RemoteControllerRequest;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel.Channel;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel.ChannelImpl;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.utils.PackageLog;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.channel.Channel;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.channel.ChannelImpl;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.utils.PackageLog;
 import com.fuzzy.main.cluster.struct.Component;
 import com.google.protobuf.ByteString;
 import com.infomaximum.cluster.core.service.transport.network.grpc.struct.*;

@@ -1,8 +1,8 @@
 package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel.client;
 
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.GrpcRemoteNode;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel.ChannelList;
+import com.infomaximum.cluster.core.service.transport.network.grpc.GrpcRemoteNode;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.channel.ChannelList;
 
 import javax.net.ssl.TrustManagerFactory;
 import java.util.List;

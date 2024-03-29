@@ -1,6 +1,6 @@
 package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.utils;
 
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.exception.ClusterGrpcException;
+import com.infomaximum.cluster.core.service.transport.network.grpc.exception.ClusterGrpcException;
 
 import javax.net.ssl.TrustManagerFactory;
 import java.io.ByteArrayInputStream;

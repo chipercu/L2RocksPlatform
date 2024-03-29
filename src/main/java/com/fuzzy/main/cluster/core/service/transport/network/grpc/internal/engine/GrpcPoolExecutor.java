@@ -1,7 +1,7 @@
 package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.engine;
 
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.utils.thread.DefaultThreadGroup;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.utils.thread.DefaultThreadPoolExecutor;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.utils.thread.DefaultThreadGroup;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.utils.thread.DefaultThreadPoolExecutor;
 
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;

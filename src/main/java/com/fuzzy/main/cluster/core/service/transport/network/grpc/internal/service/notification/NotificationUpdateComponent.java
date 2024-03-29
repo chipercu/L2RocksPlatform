@@ -1,9 +1,9 @@
 package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.service.notification;
 
 import com.fuzzy.main.cluster.core.component.RuntimeComponentInfo;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.GrpcNode;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel.Channels;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.netpackage.NetPackageHandshakeCreator;
+import com.infomaximum.cluster.core.service.transport.network.grpc.GrpcNode;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.channel.Channels;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.netpackage.NetPackageHandshakeCreator;
 import com.fuzzy.main.cluster.core.service.transport.network.local.LocalManagerRuntimeComponent;
 import com.fuzzy.main.cluster.core.service.transport.network.local.event.EventUpdateLocalComponent;
 import com.infomaximum.cluster.core.service.transport.network.grpc.struct.PNetPackage;

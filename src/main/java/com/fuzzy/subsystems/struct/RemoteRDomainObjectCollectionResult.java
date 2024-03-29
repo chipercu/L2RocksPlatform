@@ -21,8 +21,8 @@ public class RemoteRDomainObjectCollectionResult<T extends DomainObject, Y>
             DomainObjectListGetter<T>.Result source
     ) throws PlatformException {
         this.setItems(convert(constructor, source.items));
-        this.setNextCount(source.nextCount);
-        this.setMatchCount(source.items.size() + source.nextCount);
+        this.setHasNext(source.hasNext);
+        this.setMatchCount(source.items.size());
     }
 
     public RemoteRDomainObjectCollectionResult(
@@ -34,7 +34,7 @@ public class RemoteRDomainObjectCollectionResult<T extends DomainObject, Y>
             items.add(constructor.apply(sourceItem.getItem()));
         }
         setItems(items);
-        setNextCount(source.getNextCount());
+        setHasNext(source.hasNext());
         setMatchCount(source.getMatchCount());
     }
 

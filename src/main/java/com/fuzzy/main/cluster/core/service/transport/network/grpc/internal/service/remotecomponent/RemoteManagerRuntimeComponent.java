@@ -2,9 +2,9 @@ package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.serv
 
 import com.fuzzy.main.cluster.core.remote.struct.RController;
 import com.fuzzy.main.cluster.core.service.transport.network.LocationRuntimeComponent;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel.Channel;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel.Channels;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.channel.Channel;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.channel.Channels;
 import com.fuzzy.main.cluster.utils.RandomUtil;
 
 import java.util.ArrayList;

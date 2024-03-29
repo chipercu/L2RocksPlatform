@@ -7,7 +7,7 @@ import java.util.List;
 public class LightAutocompleteResult<Item extends DomainObject> {
 
     private List<LightAutocompleteElement<Item>> items = null;
-    private int nextCount = 0;
+    private boolean hasNext;
     private int matchCount = 0;
 
     public List <LightAutocompleteElement <Item>> getItems() {
@@ -18,12 +18,12 @@ public class LightAutocompleteResult<Item extends DomainObject> {
         this.items = items;
     }
 
-    public int getNextCount() {
-        return nextCount;
+    public boolean hasNext() {
+        return hasNext;
     }
 
-    public void setNextCount(int nextCount) {
-        this.nextCount = nextCount;
+    public void setHasNext(boolean hasNext) {
+        this.hasNext = hasNext;
     }
 
     public int getMatchCount() {

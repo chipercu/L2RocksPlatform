@@ -2,7 +2,7 @@ package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.netp
 
 import com.fuzzy.main.cluster.Cluster;
 import com.fuzzy.main.cluster.core.component.RuntimeComponentInfo;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
 import com.fuzzy.main.cluster.core.service.transport.network.local.LocalManagerRuntimeComponent;
 import com.fuzzy.main.cluster.struct.Component;
 import com.infomaximum.cluster.core.service.transport.network.grpc.struct.*;

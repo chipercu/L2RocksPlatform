@@ -2,8 +2,8 @@ package com.fuzzy.main.cluster.core.service.transport.network.grpc;
 
 import com.fuzzy.main.cluster.NetworkTransit;
 import com.fuzzy.main.cluster.core.service.transport.TransportManager;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.utils.CertificateUtils;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.GrpcNetworkTransitImpl;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.utils.CertificateUtils;
 
 import javax.net.ssl.TrustManagerFactory;
 import java.time.Duration;

@@ -12,7 +12,7 @@ public class Sorter<T> {
     private final int limit;
     private final Consumer<T> onMovedToRestFunction;
 
-    private int nextCount = 0;
+    private boolean hasNext;
 
     public Sorter(SorterComparator<T> comparator, Integer limit, Consumer<T> onMovedToRestFunction) {
         this.data = new ArrayList <>();
@@ -37,24 +37,25 @@ public class Sorter<T> {
             if (onMovedToRestFunction != null) {
                 onMovedToRestFunction.accept(val);
             }
-            ++nextCount;
+            hasNext = true;
         }
     }
 
     public void clear() {
         data.clear();
-        nextCount = 0;
+        hasNext = false;
     }
 
     public boolean isEmpty() {
-        return data.isEmpty() && nextCount == 0;
+        return data.isEmpty() && !hasNext;
     }
 
     public ArrayList<T> getData() {
         return data;
     }
 
-    public int getNextCount() {
-        return nextCount;
+    public boolean hasNext() {
+        return hasNext;
     }
 }
+

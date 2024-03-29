@@ -17,7 +17,7 @@ public class DomainObjectListGetter<T extends DomainObject> {
 
     public class Result {
         public ArrayList<T> items = null;
-        public int nextCount = 0;
+        public boolean hasNext;
     }
 
     public interface Checker<T extends DomainObject> {
@@ -55,7 +55,7 @@ public class DomainObjectListGetter<T extends DomainObject> {
         result.items = sorter.getData().stream()
                 .map(DomainObjectIdentifiable::object)
                 .collect(Collectors.toCollection(ArrayList::new));
-        result.nextCount = sorter.getNextCount();
+        result.hasNext = sorter.hasNext();
         return result;
     }
 

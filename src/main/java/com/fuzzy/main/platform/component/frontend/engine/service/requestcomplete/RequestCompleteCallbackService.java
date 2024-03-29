@@ -5,7 +5,7 @@ import org.eclipse.jetty.server.Request;
 
 public class RequestCompleteCallbackService implements HttpChannel.Listener {
 
-    public final static String ATTRIBUTE_COMPLETE_REQUEST_CALLBACK = "com.infomaximum.request.complete.callback";
+    public final static String ATTRIBUTE_COMPLETE_REQUEST_CALLBACK = "com.fuzzy.request.complete.callback";
 
     public abstract static class Callback {
         public abstract void exec(Request request) throws Throwable;

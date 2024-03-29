@@ -16,15 +16,15 @@ public class RemoteListResult<
 
     private ArrayList<T> items = null;
     private int matchCount = 0;
-    private int nextCount = 0;
+    private boolean hasNext;
 
     protected RemoteListResult() {
     }
 
-    protected RemoteListResult(ArrayList<T> items, int matchCount, int nextCount) {
+    protected RemoteListResult(ArrayList<T> items, int matchCount, boolean hasNext) {
         this.items = items;
         this.matchCount = matchCount;
-        this.nextCount = nextCount;
+        this.hasNext = hasNext;
     }
 
     protected RemoteListResult(
@@ -41,7 +41,7 @@ public class RemoteListResult<
                     constructor.setAccessible(true);
                     item = constructor.newInstance();
                 } catch (InstantiationException | IllegalAccessException |
-                        InvocationTargetException | NoSuchMethodException e) {
+                         InvocationTargetException | NoSuchMethodException e) {
                     throw new RuntimeException(e);
                 }
                 item.setElement(elementConstructor.apply(sourceItem.item()));
@@ -51,7 +51,7 @@ public class RemoteListResult<
             }
             setItems(items);
         }
-        setNextCount(source.nextCount());
+        setNext(source.hasNext());
         setMatchCount(source.matchCount());
     }
 
@@ -71,11 +71,11 @@ public class RemoteListResult<
         this.matchCount = matchCount;
     }
 
-    public int getNextCount() {
-        return nextCount;
+    public boolean hasNext() {
+        return hasNext;
     }
 
-    public void setNextCount(int nextCount) {
-        this.nextCount = nextCount;
+    public void setNext(boolean hasNext) {
+        this.hasNext = hasNext;
     }
 }

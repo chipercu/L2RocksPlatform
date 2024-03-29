@@ -17,5 +17,21 @@ module com.fuzzy {
     requires org.eclipse.jetty.servlet;
     requires org.eclipse.jetty.websocket.jetty.server;
     requires org.eclipse.jetty.servlets;
+    requires com.graphqljava;
+    requires io.reactivex.rxjava2;
+    requires org.checkerframework.checker.qual;
+    requires org.reactivestreams;
+    requires org.apache.commons.lang3;
+    requires spring.web;
+    requires com.infomaximum.cluster.grpc;
+    requires rocksdbjni;
+    requires com.github.oshi;
+    requires jdk.management;
+    requires spring.webmvc;
     requires com.google.common;
+    requires java.sql;
+    requires quartz;
+    requires org.apache.commons.compress;
+    requires org.apache.commons.codec;
+    requires spring.context;
 }

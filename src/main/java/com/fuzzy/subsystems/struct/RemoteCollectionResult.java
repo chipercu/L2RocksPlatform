@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public abstract class RemoteCollectionResult<T> implements RemoteObject {
 
     private ArrayList<T> items = null;
-    private int nextCount = 0;
+    private boolean hasNext;
     private int matchCount = 0;
 
     public ArrayList<T> getItems() {
@@ -18,12 +18,12 @@ public abstract class RemoteCollectionResult<T> implements RemoteObject {
         this.items = items;
     }
 
-    public int getNextCount() {
-        return nextCount;
+    public boolean hasNext() {
+        return hasNext;
     }
 
-    public void setNextCount(int nextCount) {
-        this.nextCount = nextCount;
+    public void setHasNext(boolean hasNext) {
+        this.hasNext = hasNext;
     }
 
     public int getMatchCount() {

@@ -1,7 +1,7 @@
 package com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.channel;
 
 import com.fuzzy.main.cluster.Node;
-import com.fuzzy.main.cluster.core.service.transport.network.grpc.internal.service.remotecontroller.GrpcRemoteControllerRequest;
+import com.infomaximum.cluster.core.service.transport.network.grpc.internal.service.remotecontroller.GrpcRemoteControllerRequest;
 import com.infomaximum.cluster.core.service.transport.network.grpc.struct.PNetPackage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
