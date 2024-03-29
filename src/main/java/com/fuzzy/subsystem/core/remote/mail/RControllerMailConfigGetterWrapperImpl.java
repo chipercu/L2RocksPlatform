@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.remote.mail;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.AbstractQueryRController;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.AbstractQueryRController;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 
 import java.util.Set;

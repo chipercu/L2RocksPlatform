@@ -1,14 +1,16 @@
 package com.fuzzy.subsystems.graphql.query;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;
 import com.fuzzy.subsystems.access.AccessOperation;
 import com.fuzzy.subsystems.access.AccessOperationCollection;
 import com.fuzzy.subsystems.access.PrivilegeEnum;
+import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.function.Function;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
@@ -85,32 +87,31 @@ public class GAccessQuery <S extends RemoteObject, T extends Serializable> exten
     @Override
     public @Nullable T execute(@Nullable S source, @NonNull ContextTransactionRequest context) throws PlatformException {
         UnauthorizedContext authContext = context.getSource().getAuthContext();
-        return this.query.execute(source, context);
-//        if (authContext instanceof AuthorizedContext authorizedContext) {
-//            switch (operator) {
-//                case OR -> {
-//                    for (Pair privilege : privileges) {
-//                        if (authorizedContext
-//                                .getOperations(privilege.privilegeUniqueKey())
-//                                .contains(privilege.operations())) {
-//                            return this.query.execute(source, context);
-//                        }
-//                    }
-//                    throw GeneralExceptionBuilder.buildAccessDeniedException();
-//                }
-//                case AND -> {
-//                    for (Pair privilege : privileges) {
-//                        if (!authorizedContext
-//                                .getOperations(privilege.privilegeUniqueKey())
-//                                .contains(privilege.operations())) {
-//                            throw GeneralExceptionBuilder.buildAccessDeniedException();
-//                        }
-//                    }
-//                    return this.query.execute(source, context);
-//                }
-//            }
-//        }
-//        throw GeneralExceptionBuilder.buildAccessDeniedException();
+        if (authContext instanceof AuthorizedContext authorizedContext) {
+            switch (operator) {
+                case OR -> {
+                    for (Pair privilege : privileges) {
+                        if (authorizedContext
+                                .getOperations(privilege.privilegeUniqueKey())
+                                .contains(privilege.operations())) {
+                            return this.query.execute(source, context);
+                        }
+                    }
+                    throw GeneralExceptionBuilder.buildAccessDeniedException();
+                }
+                case AND -> {
+                    for (Pair privilege : privileges) {
+                        if (!authorizedContext
+                                .getOperations(privilege.privilegeUniqueKey())
+                                .contains(privilege.operations())) {
+                            throw GeneralExceptionBuilder.buildAccessDeniedException();
+                        }
+                    }
+                    return this.query.execute(source, context);
+                }
+            }
+        }
+        throw GeneralExceptionBuilder.buildAccessDeniedException();
     }
 
     private record Pair(@NonNull String privilegeUniqueKey, @NonNull AccessOperationCollection operations) { }

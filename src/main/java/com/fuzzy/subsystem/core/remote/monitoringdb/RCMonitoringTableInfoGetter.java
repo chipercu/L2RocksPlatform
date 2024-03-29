@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.remote.monitoringdb;
 
-import com.fuzzy.main.cluster.core.remote.struct.RController;
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.cluster.core.remote.struct.RController;
+import com.infomaximum.platform.exception.PlatformException;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
 import java.util.ArrayList;

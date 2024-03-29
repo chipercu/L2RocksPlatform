@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.graphql.enums;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.rdao.database.utils.BaseEnum;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.database.utils.BaseEnum;
 
 @GraphQLTypeOutObject("activity_collection_type")
 public enum EnableMonitoringType implements RemoteObject, BaseEnum {

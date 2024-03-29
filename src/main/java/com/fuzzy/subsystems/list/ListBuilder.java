@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.list;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.function.Consumer;
 import com.fuzzy.subsystems.sorter.SorterComparator;
@@ -42,7 +42,7 @@ public class ListBuilder<T extends DomainObject> {
         List<ListItem<T>> items = result.items().stream()
                 .map(o -> new ListItem<>(o.item().object(), o.selected(), o.hidden()))
                 .collect(Collectors.toList());
-        return new ListResult<>(items, result.matchCount(), result.nextCount());
+        return new ListResult<>(items, result.matchCount(), result.hasNext());
     }
 
     protected void forEach(Consumer<T> handler, ContextTransaction<?> context) throws PlatformException {

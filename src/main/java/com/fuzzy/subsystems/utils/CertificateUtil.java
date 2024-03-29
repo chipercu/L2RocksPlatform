@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.utils;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 
 import java.io.InputStream;
@@ -13,7 +13,9 @@ import java.security.cert.X509Certificate;
 
 public class CertificateUtil {
 
-    private final static String DEFAULT_THUMBPRINT_ALGORITHM = "SHA-256";
+    private final static String THUMBPRINT_ALGORITHM_SHA256 = "SHA-256";
+	private final static String THUMBPRINT_ALGORITHM_SHA1 = "SHA-1";
+	private final static String DEFAULT_THUMBPRINT_ALGORITHM = THUMBPRINT_ALGORITHM_SHA256;
 
     public static X509Certificate buildCertificate(InputStream inputStream) throws PlatformException {
         try {
@@ -35,9 +37,9 @@ public class CertificateUtil {
 //        }
 //    }
 
-    public static String getThumbprint(X509Certificate cert) throws PlatformException {
+	public static String getThumbprint(X509Certificate cert, String algorithm) throws PlatformException {
 		try {
-			MessageDigest md = MessageDigest.getInstance(DEFAULT_THUMBPRINT_ALGORITHM);
+			MessageDigest md = MessageDigest.getInstance(algorithm);
 			byte[] der = cert.getEncoded();
 			md.update(der);
 			byte[] digest = md.digest();
@@ -46,5 +48,13 @@ public class CertificateUtil {
 		} catch (NoSuchAlgorithmException | CertificateEncodingException e) {
 			throw GeneralExceptionBuilder.buildInvalidCertificateException(e);
 		}
+	}
+
+    public static String getThumbprint(X509Certificate cert) throws PlatformException {
+		return getThumbprint(cert, DEFAULT_THUMBPRINT_ALGORITHM);
+	}
+
+	public static String getThumbprintSHA1(X509Certificate cert) throws PlatformException {
+		return getThumbprint(cert, THUMBPRINT_ALGORITHM_SHA1);
 	}
 }

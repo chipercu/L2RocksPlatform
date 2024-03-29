@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.employeephone;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
 
 public class EmployeePhoneEditable extends EmployeePhoneReadable implements DomainObjectEditable {
 

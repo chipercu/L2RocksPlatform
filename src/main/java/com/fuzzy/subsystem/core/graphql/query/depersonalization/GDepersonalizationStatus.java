@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.graphql.query.depersonalization;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLField;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLField;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
 import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;
 
 @GraphQLTypeOutObject("depersonalization_status_result")

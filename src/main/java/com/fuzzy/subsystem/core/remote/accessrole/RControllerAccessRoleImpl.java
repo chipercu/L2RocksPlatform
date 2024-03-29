@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.core.remote.accessrole;
 
-import com.fuzzy.main.rdao.database.domainobject.filter.EmptyFilter;
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.*;
-import com.fuzzy.main.platform.querypool.iterator.IteratorEntity;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.database.domainobject.filter.EmptyFilter;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.*;
+import com.infomaximum.platform.querypool.iterator.IteratorEntity;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.domainobject.accessrole.AccessRoleEditable;

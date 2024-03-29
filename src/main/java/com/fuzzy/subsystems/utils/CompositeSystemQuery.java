@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.utils;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.struct.querypool.QuerySystem;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.struct.querypool.QuerySystem;
 
 import java.util.List;
 

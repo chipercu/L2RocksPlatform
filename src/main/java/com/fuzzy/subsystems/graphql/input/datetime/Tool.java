@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.graphql.input.datetime;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

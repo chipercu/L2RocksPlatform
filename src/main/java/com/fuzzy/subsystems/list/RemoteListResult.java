@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.list;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.function.Function;
 
 import java.lang.reflect.Constructor;
@@ -41,7 +41,7 @@ public class RemoteListResult<
                     constructor.setAccessible(true);
                     item = constructor.newInstance();
                 } catch (InstantiationException | IllegalAccessException |
-                         InvocationTargetException | NoSuchMethodException e) {
+                        InvocationTargetException | NoSuchMethodException e) {
                     throw new RuntimeException(e);
                 }
                 item.setElement(elementConstructor.apply(sourceItem.item()));

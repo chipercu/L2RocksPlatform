@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.scheduler.systemevents;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.struct.querypool.QuerySystem;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.struct.querypool.QuerySystem;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.emailmessages.systemevents.SystemEventsMessageSenderImpl;
 import com.fuzzy.subsystem.core.remote.mail.RControllerHelpDeskGetterWrapper;
@@ -18,7 +18,7 @@ import java.time.Duration;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-import static com.infomaximum.subsystem.core.CoreConfig.*;
+import static com.fuzzy.subsystem.core.CoreConfig.*;
 
 public class MailSendSystemEventSchedulerQuery extends QuerySystem<Void> {
     private static final Logger log = LoggerFactory.getLogger(MailSendSystemEventSchedulerQuery.class);

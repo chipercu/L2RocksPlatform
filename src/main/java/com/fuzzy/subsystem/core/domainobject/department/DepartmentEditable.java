@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.department;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
 
 public class DepartmentEditable extends DepartmentReadable implements DomainObjectEditable {
 

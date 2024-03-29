@@ -1,14 +1,14 @@
 package com.fuzzy.subsystem.core.entityprovider.entity;
 
-import com.fuzzy.main.platform.service.detectresource.PlatformEventType;
+import com.fuzzy.platform.service.detectresource.PlatformEventType;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.entityprovider.datasources.ResourceMonitorDataSource;
 import com.fuzzy.subsystem.core.service.systemevent.SystemEvent;
-import com.fuzzy.subsystem.entityprovidersdk.entity.DataContainer;
-import com.fuzzy.subsystem.entityprovidersdk.entity.EntityClass;
-import com.fuzzy.subsystem.entityprovidersdk.entity.EntityField;
-import com.fuzzy.subsystem.entityprovidersdk.entity.Id;
-import com.fuzzy.subsystem.entityprovidersdk.enums.DataType;
+import com.infomaximum.subsystem.entityprovidersdk.entity.DataContainer;
+import com.infomaximum.subsystem.entityprovidersdk.entity.EntityClass;
+import com.infomaximum.subsystem.entityprovidersdk.entity.EntityField;
+import com.infomaximum.subsystem.entityprovidersdk.entity.Id;
+import com.infomaximum.subsystem.entityprovidersdk.enums.DataType;
 
 import java.util.Map;
 

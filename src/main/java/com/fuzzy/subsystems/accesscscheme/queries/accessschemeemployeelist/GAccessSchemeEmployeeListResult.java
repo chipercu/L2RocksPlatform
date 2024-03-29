@@ -1,10 +1,10 @@
 package com.fuzzy.subsystems.accesscscheme.queries.accessschemeemployeelist;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLField;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLField;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
 import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;
 
 import java.util.ArrayList;
@@ -14,14 +14,14 @@ public class GAccessSchemeEmployeeListResult implements RemoteObject {
 
     private final ArrayList<GAccessSchemeEmployeeListItem> items;
     private final int matchCount;
-    private final int nextCount;
+    private final boolean hasNext;
 
     public GAccessSchemeEmployeeListResult(ArrayList<GAccessSchemeEmployeeListItem> items,
                                            int matchCount,
-                                           int nextCount) {
+                                           boolean hasNext) {
         this.items = items;
         this.matchCount = matchCount;
-        this.nextCount = nextCount;
+        this.hasNext = hasNext;
     }
 
     @GraphQLField
@@ -40,8 +40,8 @@ public class GAccessSchemeEmployeeListResult implements RemoteObject {
 
     @GraphQLField
     @GraphQLAuthControl({ AuthorizedContext.class })
-    @GraphQLDescription("Количество оставшихся доступных элементов")
-    public int getNextCount() {
-        return nextCount;
+    @GraphQLDescription("Есть ли элементы за границей лимита")
+    public boolean hasNext() {
+        return hasNext;
     }
 }

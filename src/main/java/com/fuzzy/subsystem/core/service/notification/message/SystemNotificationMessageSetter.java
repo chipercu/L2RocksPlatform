@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.service.notification.message;
 
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.EditableResource;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.EditableResource;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.CoreConfig;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.employeesystemnotification.EmployeeSystemNotificationEditable;

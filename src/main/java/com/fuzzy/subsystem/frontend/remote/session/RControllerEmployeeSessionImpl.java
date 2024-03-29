@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.frontend.remote.session;
 
-import com.fuzzy.main.platform.querypool.AbstractQueryRController;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.AbstractQueryRController;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 import com.fuzzy.subsystem.frontend.service.session.SessionServiceEmployee;
 

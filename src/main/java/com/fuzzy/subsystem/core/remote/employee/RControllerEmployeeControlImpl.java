@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.core.remote.employee;
 
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.*;
-import com.fuzzy.main.platform.querypool.iterator.IteratorEntity;
-import com.fuzzy.main.platform.sdk.context.Context;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.function.Consumer;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.*;
+import com.infomaximum.platform.querypool.iterator.IteratorEntity;
+import com.infomaximum.platform.sdk.context.Context;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.function.Consumer;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
 import com.fuzzy.subsystem.core.accessroleprivileges.EmployeePrivilegesGetter;

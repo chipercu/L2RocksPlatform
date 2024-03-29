@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.database;
 
-import com.fuzzy.main.platform.component.database.DatabaseComponent;
-import com.fuzzy.main.platform.component.database.DatabaseConsts;
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.component.database.DatabaseComponent;
+import com.infomaximum.platform.component.database.DatabaseConsts;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.remote.systemevent.RControllerSystemEvent;
 import com.fuzzy.subsystem.core.service.systemevent.SystemEvent;

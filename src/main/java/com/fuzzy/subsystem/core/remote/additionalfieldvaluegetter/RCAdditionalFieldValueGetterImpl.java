@@ -1,12 +1,13 @@
 package com.fuzzy.subsystem.core.remote.additionalfieldvaluegetter;
 
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.AbstractQueryRController;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.AbstractQueryRController;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.subsystems.remote.Optional;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.additionalfield.AdditionalFieldReadable;
 import com.fuzzy.subsystem.core.domainobject.additionalfieldvalue.AdditionalFieldValueReadable;

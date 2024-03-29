@@ -14,7 +14,7 @@ import java.util.List;
 public class NetworkConfig {
 
     private final String name;
-    private final int port;
+    private final Integer port;
     private final Path certChainPath;
     private final Path privateKeyPath;
 
@@ -22,7 +22,7 @@ public class NetworkConfig {
 
     private final List<String> nodes;
 
-    private NetworkConfig(String name, int port, Path certChainPath, Path privateKeyPath, List<Path> trustCertificates, List<String> nodes) {
+    private NetworkConfig(String name, Integer port, Path certChainPath, Path privateKeyPath, List<Path> trustCertificates, List<String> nodes) {
         this.name = name;
         this.port = port;
         this.certChainPath = certChainPath;
@@ -35,7 +35,7 @@ public class NetworkConfig {
         return name;
     }
 
-    public int getPort() {
+    public Integer getPort() {
         return port;
     }
 
@@ -53,7 +53,7 @@ public class NetworkConfig {
 
     public byte[][] getFileContentTrustCertificates() throws IOException {
         byte[][] contents = new byte[trustCertificates.size()][];
-        for (int i=0; i<trustCertificates.size(); i++) {
+        for (int i = 0; i < trustCertificates.size(); i++) {
             contents[i] = Files.readAllBytes(trustCertificates.get(i));
         }
         return contents;
@@ -65,23 +65,29 @@ public class NetworkConfig {
 
     public static NetworkConfig load(JSONObject json, Path dataDir) {
         JSONObject jCurrent = (JSONObject) json.get("current");
-        String name = jCurrent.get("name").toString();
-        int port = jCurrent.getAsNumber("port").intValue();
-        JSONObject jSsl = (JSONObject) jCurrent.get("ssl");
+        String name = null;
+        Integer port = null;
         Path certChainPath = null;
         Path privateKeyPath = null;
         List<Path> trustCertificates = Collections.emptyList();
-        if (jSsl != null) {
-            certChainPath = getFilePath(jSsl.getAsString("cert_chain_path"), dataDir);
-            privateKeyPath = getFilePath(jSsl.getAsString("private_key_path"), dataDir);
-            JSONArray jTrustCerts = (JSONArray) jSsl.get("trust_certs");
-            if (jTrustCerts != null) {
-                List<Path> certificates = new ArrayList<>();
-                for (Object oTrustCert : jTrustCerts) {
-                    Path trustCert = getFilePath((String) oTrustCert, dataDir);
-                    certificates.add(trustCert);
+
+        if (jCurrent != null) {
+            name = (jCurrent.containsKey("name")) ? jCurrent.get("name").toString().trim() : null;
+            port = (jCurrent.containsKey("port")) ? jCurrent.getAsNumber("port").intValue() : null;
+
+            JSONObject jSsl = (JSONObject) jCurrent.get("ssl");
+            if (jSsl != null) {
+                certChainPath = getFilePath(jSsl.getAsString("cert_chain_path"), dataDir);
+                privateKeyPath = getFilePath(jSsl.getAsString("private_key_path"), dataDir);
+                JSONArray jTrustCerts = (JSONArray) jSsl.get("trust_certs");
+                if (jTrustCerts != null) {
+                    List<Path> certificates = new ArrayList<>();
+                    for (Object oTrustCert : jTrustCerts) {
+                        Path trustCert = getFilePath((String) oTrustCert, dataDir);
+                        certificates.add(trustCert);
+                    }
+                    trustCertificates = Collections.unmodifiableList(certificates);
                 }
-                trustCertificates = Collections.unmodifiableList(certificates);
             }
         }
 
@@ -117,7 +123,7 @@ public class NetworkConfig {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        if (size==0) {
+        if (size == 0) {
             throw new RuntimeException("File: " + result + " is empty");
         }
         return result;

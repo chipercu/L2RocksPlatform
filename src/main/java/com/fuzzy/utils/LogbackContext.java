@@ -2,10 +2,10 @@ package com.fuzzy.utils;
 
 import ch.qos.logback.classic.pattern.ClassicConverter;
 import ch.qos.logback.classic.spi.ILoggingEvent;
-import com.fuzzy.main.platform.querypool.QueryPool;
-import com.fuzzy.main.platform.querypool.service.threadcontext.ThreadContext;
-import com.fuzzy.main.platform.sdk.context.Context;
-import com.fuzzy.subsystems.Subsystems;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.querypool.QueryPool;
+import com.infomaximum.platform.querypool.service.threadcontext.ThreadContext;
+import com.infomaximum.platform.sdk.context.Context;
 
 /**
  * Created by user on 02.12.2015.
@@ -25,7 +25,7 @@ public class LogbackContext extends ClassicConverter {
 
     private static ThreadContext _threadContext = null;
 
-    private static Context getCurrentContext() {
+    private static com.infomaximum.platform.sdk.context.Context getCurrentContext() {
         try {
             if (_threadContext == null) {
                 Subsystems subsystems = Subsystems.getInstance();

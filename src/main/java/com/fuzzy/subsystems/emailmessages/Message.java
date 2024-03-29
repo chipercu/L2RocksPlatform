@@ -1,14 +1,14 @@
 package com.fuzzy.subsystems.emailmessages;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.google.common.base.Charsets;
+import com.google.common.io.Resources;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.config.Language;
 import com.fuzzy.subsystem.core.remote.mail.EmbeddedImageAttachment;
 import com.fuzzy.subsystem.core.remote.mail.FileMailAttachment;
 import com.fuzzy.subsystem.core.remote.mail.Mail;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.subsystem.Subsystem;
-import com.google.common.base.Charsets;
-import com.google.common.io.Resources;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;

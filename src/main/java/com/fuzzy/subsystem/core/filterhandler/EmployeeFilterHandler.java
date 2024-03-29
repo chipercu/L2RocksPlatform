@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.filterhandler;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.querypool.iterator.IteratorEntity;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.iterator.IteratorEntity;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 import com.fuzzy.subsystem.core.grouping.DepartmentGrouping;
 import com.fuzzy.subsystem.core.textfilter.EmployeeTextFilterGetter;

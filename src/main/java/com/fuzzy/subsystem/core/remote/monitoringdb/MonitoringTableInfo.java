@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.monitoringdb;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 
 import java.util.Objects;
 

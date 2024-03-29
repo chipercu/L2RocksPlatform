@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.subscription.employee;
 
-import com.fuzzy.main.cluster.graphql.struct.GSubscribeEvent;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
+import com.infomaximum.cluster.graphql.struct.GSubscribeEvent;
+import com.infomaximum.platform.querypool.QueryTransaction;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.subscription.SubscriptionType;
 

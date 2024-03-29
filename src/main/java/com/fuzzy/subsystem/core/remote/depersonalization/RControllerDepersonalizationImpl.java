@@ -1,14 +1,14 @@
 package com.fuzzy.subsystem.core.remote.depersonalization;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectSource;
-import com.fuzzy.main.rdao.database.domainobject.Transaction;
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.rdao.database.domainobject.iterator.IteratorEntity;
-import com.fuzzy.main.rdao.database.exception.DatabaseException;
-import com.fuzzy.main.rdao.database.utils.TypeConvert;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.AbstractQueryRController;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.database.domainobject.DomainObjectSource;
+import com.infomaximum.database.domainobject.Transaction;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.database.domainobject.iterator.IteratorEntity;
+import com.infomaximum.database.exception.DatabaseException;
+import com.infomaximum.database.utils.TypeConvert;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.AbstractQueryRController;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.infomaximum.rocksdb.RocksDBProvider;
 import com.infomaximum.rocksdb.RocksDataBaseBuilder;
 import com.fuzzy.subsystem.core.CoreSubsystem;

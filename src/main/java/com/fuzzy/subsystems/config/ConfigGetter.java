@@ -1,10 +1,10 @@
 package com.fuzzy.subsystems.config;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.rdao.database.utils.TypeConvert;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.database.utils.TypeConvert;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
 import com.fuzzy.subsystems.domainobject.config.ConfigReadable;
 
 import java.io.Serializable;

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.liscense;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 
 public interface LicenseLoadDisablerChecker {
 

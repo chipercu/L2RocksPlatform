@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.graphql.subscription;
 
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLField;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.cluster.graphql.struct.GSubscribeEvent;
-import com.fuzzy.main.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLField;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.cluster.graphql.struct.GSubscribeEvent;
+import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.authcontext.employee.EmployeeAuthContext;
 import com.fuzzy.subsystem.core.subscription.employee.GEmployeeUpdateEvent;

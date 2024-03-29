@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.accesscscheme.queries.accessschemeemployeelist;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.rdao.database.utils.BaseEnum;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.database.utils.BaseEnum;
 
 @GraphQLTypeOutObject("access_scheme_employee_sorting_column")
 public enum AccessSchemeEmployeeSortingColumn implements RemoteObject, BaseEnum {

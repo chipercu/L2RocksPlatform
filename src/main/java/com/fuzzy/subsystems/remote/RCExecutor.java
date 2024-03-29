@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.remote;
 
-import com.fuzzy.main.platform.querypool.QueryRemoteController;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.QueryRemoteController;
+import com.infomaximum.platform.querypool.ResourceProvider;
 
 public class RCExecutor<T extends QueryRemoteController> extends MultiExecutor<T> {
 

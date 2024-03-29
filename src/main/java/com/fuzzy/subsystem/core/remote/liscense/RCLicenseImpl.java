@@ -1,8 +1,11 @@
 package com.fuzzy.subsystem.core.remote.liscense;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.*;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.AbstractQueryRController;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.RemovableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.license.LicenseBuilder;
 import com.fuzzy.subsystem.core.domainobject.license.LicenseEditable;

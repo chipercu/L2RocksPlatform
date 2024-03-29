@@ -1,7 +1,6 @@
 package com.fuzzy.subsystems.access;
 
-
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 
 import java.util.ArrayList;
 import java.util.Collection;

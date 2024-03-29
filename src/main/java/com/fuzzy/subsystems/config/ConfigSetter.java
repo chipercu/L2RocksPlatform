@@ -1,13 +1,13 @@
 package com.fuzzy.subsystems.config;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.RemovableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.function.Consumer;
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.rdao.database.utils.TypeConvert;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.database.utils.TypeConvert;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.RemovableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.function.Consumer;
 import com.fuzzy.subsystem.core.remote.configsetternotification.RCConfigSetterNotification;
 import com.fuzzy.subsystems.domainobject.config.ConfigEditable;
 import com.fuzzy.subsystems.domainobject.config.ConfigReadable;

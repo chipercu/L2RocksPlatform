@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.collection;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.graphql.GDomainObject;
 import com.fuzzy.subsystems.sorter.Sorter;
 
@@ -12,7 +12,7 @@ import java.util.function.Function;
 public class RemoteCollection<Y extends DomainObject, T extends GDomainObject<Y>> implements RemoteObject {
 
     private ArrayList<T> items = null;
-    private int nextCount = 0;
+    private boolean hasNext;
 
     protected RemoteCollection() {
     }
@@ -28,7 +28,7 @@ public class RemoteCollection<Y extends DomainObject, T extends GDomainObject<Y>
             }
             setItems(items);
         }
-        setNextCount(source.getNextCount());
+        setHasNext(source.hasNext());
     }
 
     public ArrayList<T> getItems() {
@@ -39,11 +39,11 @@ public class RemoteCollection<Y extends DomainObject, T extends GDomainObject<Y>
         this.items = items;
     }
 
-    public int getNextCount() {
-        return nextCount;
+    public boolean hasNext() {
+        return hasNext;
     }
 
-    public void setNextCount(int nextCount) {
-        this.nextCount = nextCount;
+    public void setHasNext(boolean hasNext) {
+        this.hasNext = hasNext;
     }
 }

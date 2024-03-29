@@ -1,17 +1,17 @@
 package com.fuzzy.subsystem.core.entityprovider.datasources;
 
-import com.infomaximum.main.Subsystems;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.service.detectresource.PlatformEventType;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.service.detectresource.PlatformEventType;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.entityprovider.entity.ResourceMonitorEntity;
 import com.fuzzy.subsystem.core.service.systemevent.SystemEvent;
 import com.fuzzy.subsystem.core.service.systemevent.SystemEventService;
-import com.fuzzy.subsystem.entityprovidersdk.entity.BaseSourceIterator;
-import com.fuzzy.subsystem.entityprovidersdk.entity.datasource.DataSourceIterator;
-import com.fuzzy.subsystem.entityprovidersdk.entity.datasource.DataSourceProvider;
+import com.infomaximum.subsystem.entityprovidersdk.entity.BaseSourceIterator;
+import com.infomaximum.subsystem.entityprovidersdk.entity.datasource.DataSourceIterator;
+import com.infomaximum.subsystem.entityprovidersdk.entity.datasource.DataSourceProvider;
 
 import java.util.ArrayList;
 import java.util.EnumMap;

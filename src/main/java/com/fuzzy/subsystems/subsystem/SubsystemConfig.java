@@ -1,15 +1,11 @@
 package com.fuzzy.subsystems.subsystem;
 
-import com.fuzzy.main.cluster.struct.Info;
-import com.fuzzy.subsystems.SubsystemsConfig;
+import com.infomaximum.cluster.struct.Info;
+import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;
 import com.fuzzy.subsystems.utils.TimeConsts;
 import com.fuzzy.utils.FileUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
 import net.minidev.json.JSONObject;
-import net.minidev.json.JSONStyle;
 import net.minidev.json.parser.JSONParser;
 import org.apache.commons.lang3.StringUtils;
 
@@ -35,9 +31,7 @@ public abstract class SubsystemConfig {
         return configPath;
     }
 
-
-
-    public static abstract class Builder {
+    protected static abstract class Builder {
 
         private final SubsystemsConfig subsystemsConfig;
         private final Path configPath;
@@ -45,9 +39,10 @@ public abstract class SubsystemConfig {
         protected Builder(Info subsystemInfo, SubsystemsConfig subsystemsConfig) throws ConfigBuilderException {
             this(subsystemInfo.getUuid(), subsystemsConfig);
         }
-        protected Builder(String configName, SubsystemsConfig subsystemsConfig) throws ConfigBuilderException {
+
+        protected Builder(String subsystemUuid, SubsystemsConfig subsystemsConfig) throws ConfigBuilderException {
             this.subsystemsConfig = subsystemsConfig;
-            this.configPath = subsystemsConfig.getConfigDir().resolve(configName + ".json");
+            this.configPath = subsystemsConfig.getConfigDir().resolve(subsystemUuid + ".json");
         }
 
         protected SubsystemsConfig getSubsystemsConfig() {
@@ -59,10 +54,6 @@ public abstract class SubsystemConfig {
         protected void saveJSON(JSONObject json) throws ConfigBuilderException {
             saveJSON(json, configPath);
         }
-        protected void saveGSON(JsonObject json) throws ConfigBuilderException {
-            saveGSON(json, configPath);
-        }
-
 
         protected JSONObject readJSON() throws ConfigBuilderException {
             JSONObject configJson;
@@ -78,20 +69,10 @@ public abstract class SubsystemConfig {
             return configJson;
         }
 
-        private static void saveGSON(JsonObject jsonObject, Path configPath){
-            try (OutputStream outputStream = Files.newOutputStream(configPath, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
-                 PrintWriter writer = new PrintWriter(outputStream)) {
-                final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                gson.toJson(jsonObject, writer);
-            } catch (IOException e) {
-                throw new ConfigBuilderException(e);
-            }
-        }
-
         private static void saveJSON(JSONObject json, Path configPath) throws ConfigBuilderException {
             try (OutputStream outputStream = Files.newOutputStream(configPath, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
                  PrintWriter writer = new PrintWriter(outputStream)) {
-                json.writeJSONString(writer, JSONStyle.NO_COMPRESS);
+                json.writeJSONString(writer);
             } catch (IOException e) {
                 throw new ConfigBuilderException(e);
             }

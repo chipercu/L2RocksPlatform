@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.list;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.comparators.IdentifiableComparator;
 import com.fuzzy.subsystems.function.Consumer;
 import com.fuzzy.subsystems.function.Function;
@@ -91,7 +91,7 @@ public abstract class AbstractListBuilder<K extends Comparable<K>, T extends Ide
             forEachAlwaysComingItems(alwaysComingItems, object ->
                     items.add(new ListItem<>(object, false, true)), context);
         }
-        return new ListResult<>(items, textFilterExists ? matchCount[0] : 0, sorter.getNextCount());
+        return new ListResult<>(items, textFilterExists ? matchCount[0] : 0, sorter.hasNext());
     }
 
     protected abstract void forEach(@NonNull Consumer<T> handler,

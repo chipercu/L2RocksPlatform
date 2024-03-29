@@ -23,7 +23,7 @@ import java.time.Duration;
  */
 @EnableWebMvc
 @Configuration
-@ComponentScan({ "com.infomaximum.subsystem" })
+@ComponentScan({ "com.fuzzy.subsystem" })
 public class SpringConfigurationMvc implements WebMvcConfigurer {
 
     @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)

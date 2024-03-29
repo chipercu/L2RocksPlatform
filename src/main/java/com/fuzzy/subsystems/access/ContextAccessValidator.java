@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.access;
 
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

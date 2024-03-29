@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.utils;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.exception.runtime.PlatformRuntimeException;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.runtime.PlatformRuntimeException;
 
 import java.util.ArrayList;
 import java.util.List;

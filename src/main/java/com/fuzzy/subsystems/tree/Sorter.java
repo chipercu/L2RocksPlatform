@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.tree;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.remote.Identifiable;
 import com.fuzzy.subsystems.sorter.BinarySearch;
 import com.fuzzy.subsystems.sorter.SorterComparator;
@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 public class Sorter<K, T extends Identifiable<K>> {
 
 	private final List<T> data;
-	private int nextCount;
+	private boolean hasNext;
 
 	private final SorterComparator<T> comparator;
 	private final Set<K> alwaysComingIds;
@@ -49,7 +49,6 @@ public class Sorter<K, T extends Identifiable<K>> {
 		comparator = builder.comparator;
 		onMovedToRestFunction = builder.onMovedToRestFunction;
 		alwaysComingIds = builder.alwaysComingIds;
-		nextCount = 0;
 	}
 
 	public void add(T object, Integer limit) throws PlatformException {
@@ -79,11 +78,11 @@ public class Sorter<K, T extends Identifiable<K>> {
 
 	public void clear() {
 		data.clear();
-		nextCount = 0;
+		hasNext = false;
 	}
 
 	public int size() {
-		return data.size() + nextCount;
+		return data.size();
 	}
 
 	public boolean isEmpty() {
@@ -94,14 +93,14 @@ public class Sorter<K, T extends Identifiable<K>> {
 		return data;
 	}
 
-	public int getNextCount() {
-		return nextCount;
+	public boolean hasNext() {
+		return hasNext;
 	}
 
 	private void moveToRest(T object) {
 		if (onMovedToRestFunction != null) {
 			onMovedToRestFunction.accept(object);
 		}
-		nextCount++;
+		hasNext = true;
 	}
 }

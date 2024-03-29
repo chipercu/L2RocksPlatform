@@ -1,6 +1,6 @@
 package com.fuzzy.main.cluster;
 
-import com.fuzzy.subsystems.SubsystemsConfig;
+import com.fuzzy.main.SubsystemsConfig;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 

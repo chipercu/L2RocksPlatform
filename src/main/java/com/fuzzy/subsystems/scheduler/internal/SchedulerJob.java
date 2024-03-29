@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.scheduler.internal;
 
-import com.fuzzy.main.platform.querypool.QueryFuture;
-import com.fuzzy.main.platform.sdk.component.Component;
-import com.fuzzy.subsystems.Subsystems;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.querypool.QueryFuture;
+import com.infomaximum.platform.sdk.component.Component;
 import com.fuzzy.subsystems.scheduler.Job;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.quartz.JobExecutionContext;

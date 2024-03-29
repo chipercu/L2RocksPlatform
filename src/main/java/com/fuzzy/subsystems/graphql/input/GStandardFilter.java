@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.graphql.input;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLName;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeInput;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLName;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeInput;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.HashSet;

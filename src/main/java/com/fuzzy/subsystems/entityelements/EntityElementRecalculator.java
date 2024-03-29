@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.entityelements;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
 
 public interface EntityElementRecalculator {
 

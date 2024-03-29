@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.remote.session;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 import com.fuzzy.subsystem.frontend.service.session.Session;
 
 import java.time.Instant;

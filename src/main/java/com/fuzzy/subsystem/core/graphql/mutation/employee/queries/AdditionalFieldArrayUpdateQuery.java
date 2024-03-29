@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.graphql.mutation.employee.queries;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.enums.FieldDataType;
 import com.fuzzy.subsystem.core.remote.additionalfieldvaluesetter.RCAdditionalFieldValueSetter;
 

@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.domainobject.apikey;
 
-import com.infomaximum.main.Subsystems;
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.exception.CoreExceptionBuilder;
 
 public class ApiKeyTypes {

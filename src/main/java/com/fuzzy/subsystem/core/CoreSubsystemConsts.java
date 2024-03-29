@@ -2,7 +2,7 @@ package com.fuzzy.subsystem.core;
 
 public class CoreSubsystemConsts {
 
-    public static final String UUID = "com.infomaximum.subsystem.core";
+    public static final String UUID = "com.fuzzy.subsystem.core";
 
     public static class Localization {
 

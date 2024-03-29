@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.frontend.domainobject.accessroleprivilege;
 
-import com.fuzzy.main.rdao.database.anotation.Entity;
-import com.fuzzy.main.rdao.database.anotation.Field;
-import com.fuzzy.main.rdao.database.anotation.HashIndex;
+import com.infomaximum.database.anotation.Entity;
+import com.infomaximum.database.anotation.Field;
+import com.infomaximum.database.anotation.HashIndex;
 import com.fuzzy.subsystem.core.domainobject.accessrole.AccessRoleReadable;
 import com.fuzzy.subsystem.frontend.FrontendSubsystemConsts;
 import com.fuzzy.subsystem.frontend.access.FrontendPrivilege;

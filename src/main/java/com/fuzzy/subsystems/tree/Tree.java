@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.tree;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObject;
 
 import java.io.Serializable;
 

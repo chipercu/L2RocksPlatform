@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.list;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.domainobject.tag.TagReadable;
 import com.fuzzy.subsystem.core.textfilter.TagTextFilterGetter;
 import com.fuzzy.subsystems.list.ListBuilder;

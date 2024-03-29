@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.frontend.service.authorize;
 
-import com.fuzzy.main.cluster.graphql.struct.GRequest;
-import com.fuzzy.main.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.component.frontend.engine.authorize.RequestAuthorize;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryPool;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.component.Component;
+import com.infomaximum.cluster.graphql.struct.GRequest;
+import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.component.frontend.engine.authorize.RequestAuthorize;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryPool;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.component.Component;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 import com.fuzzy.subsystem.frontend.component.authcontext.AuthContextComponent;
 import com.fuzzy.subsystem.frontend.component.authcontext.builder.BuilderAuthContext;

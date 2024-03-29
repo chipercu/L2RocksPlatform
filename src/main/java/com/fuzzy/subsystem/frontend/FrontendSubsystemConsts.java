@@ -2,5 +2,5 @@ package com.fuzzy.subsystem.frontend;
 
 public class FrontendSubsystemConsts {
 
-    public static final String UUID = "com.infomaximum.subsystem.frontend";
+    public static final String UUID = "com.fuzzy.subsystem.frontend";
 }

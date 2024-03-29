@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.accesscscheme;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.rdao.database.utils.BaseEnum;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.database.utils.BaseEnum;
 import com.fuzzy.subsystems.remote.Localizable;
 
 @GraphQLTypeOutObject("object_access_operation")

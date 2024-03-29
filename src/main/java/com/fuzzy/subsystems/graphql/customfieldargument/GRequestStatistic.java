@@ -1,11 +1,11 @@
 package com.fuzzy.subsystems.graphql.customfieldargument;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.fieldargument.custom.CustomFieldArgument;
-import com.fuzzy.main.cluster.graphql.struct.ContextRequest;
-import com.fuzzy.main.platform.component.frontend.engine.service.statistic.StatisticService;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.fieldargument.custom.CustomFieldArgument;
+import com.infomaximum.cluster.graphql.struct.ContextRequest;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.component.frontend.engine.service.statistic.StatisticService;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
-import com.fuzzy.subsystems.Subsystems;
 
 import java.lang.reflect.Method;
 

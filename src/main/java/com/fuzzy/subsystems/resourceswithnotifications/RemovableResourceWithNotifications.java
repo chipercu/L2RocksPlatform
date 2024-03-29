@@ -1,13 +1,13 @@
 package com.fuzzy.subsystems.resourceswithnotifications;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.RemovableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.querypool.iterator.IteratorEntity;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
-import com.fuzzy.main.rdao.database.domainobject.filter.Filter;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.filter.Filter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.RemovableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.iterator.IteratorEntity;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.remote.RCExecutor;
 
 public class RemovableResourceWithNotifications<T extends DomainObject & DomainObjectEditable, Y extends RCDomainObjectNotifications>

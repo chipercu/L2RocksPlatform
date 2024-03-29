@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.domainobject.accessroleprivilege;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
 import com.fuzzy.subsystem.frontend.access.FrontendPrivilege;
 import com.fuzzy.subsystems.access.AccessOperationCollection;
 import com.fuzzy.subsystems.entityprivilege.EntityPrivilegeEditable;

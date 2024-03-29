@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.database;
 
-import com.fuzzy.main.platform.component.database.DatabaseComponent;
-import com.fuzzy.main.platform.component.database.DatabaseConsts;
-import com.fuzzy.main.platform.component.database.remote.backup.RControllerBackup;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryFuture;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.component.database.DatabaseComponent;
+import com.infomaximum.platform.component.database.DatabaseConsts;
+import com.infomaximum.platform.component.database.remote.backup.RControllerBackup;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryFuture;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystems.scheduler.Job;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.checkerframework.checker.nullness.qual.NonNull;

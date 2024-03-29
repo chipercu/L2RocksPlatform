@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.license.updater.schemeupdater.factory;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.license.updater.schemeupdater.LicenseSchemeUpdater;
 
 public interface SchemeUpdaterFactory {

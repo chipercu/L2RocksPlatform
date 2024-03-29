@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.tree;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.graphql.input.GInputNodesItems;
 import com.fuzzy.subsystems.remote.Identifiable;
 import com.fuzzy.subsystems.sorter.SorterComparator;
@@ -113,8 +113,8 @@ public class TreeNode<Node extends DomainObject, Item extends DomainObject> exte
         return elements.getItems();
     }
 
-    public int getChildItemsNextCount() {
-        return elements.getNextCount();
+    public boolean getChildItemsHasNext() {
+        return elements.hasNext();
     }
 
     public List <TreeNode <Node, Item>> getHiddenChildNodes() {

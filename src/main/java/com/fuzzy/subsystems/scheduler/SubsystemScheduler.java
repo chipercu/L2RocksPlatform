@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.scheduler;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.sdk.component.Component;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.sdk.component.Component;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.Collection;

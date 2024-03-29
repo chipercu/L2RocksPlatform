@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.apikeyprivilege;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
 import com.fuzzy.subsystems.access.AccessOperationCollection;
 import com.fuzzy.subsystems.entityprivilege.EntityPrivilegeEditable;

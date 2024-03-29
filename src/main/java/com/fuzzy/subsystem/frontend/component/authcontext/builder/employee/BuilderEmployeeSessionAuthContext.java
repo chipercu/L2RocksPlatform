@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.frontend.component.authcontext.builder.employee;
 
-import com.fuzzy.main.cluster.graphql.struct.GRequest;
-import com.fuzzy.main.platform.component.frontend.request.GRequestHttp;
-import com.fuzzy.main.platform.component.frontend.request.GRequestWebSocket;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.cluster.graphql.struct.GRequest;
+import com.infomaximum.platform.component.frontend.request.GRequestHttp;
+import com.infomaximum.platform.component.frontend.request.GRequestWebSocket;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
 import com.fuzzy.subsystem.core.accessroleprivileges.EmployeePrivilegesGetter;

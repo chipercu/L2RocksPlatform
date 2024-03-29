@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.core.graphql.query.authentication;
 
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLField;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.graphql.annotation.GraphQLAuthControl;
-import com.fuzzy.main.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLField;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystem.core.config.AuthenticationConfig;
 import com.fuzzy.subsystem.core.graphql.query.config.GComplexPasswordOutput;
 import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;

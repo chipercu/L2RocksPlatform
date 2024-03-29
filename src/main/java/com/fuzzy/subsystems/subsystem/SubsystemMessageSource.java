@@ -21,7 +21,11 @@ public class SubsystemMessageSource {
 
     public String getString(String key, Language language) {
         try {
-            return resourceBundles.get(language).getString(key);
+            ResourceBundle bundle = resourceBundles.get(language);
+            if (bundle == null) {
+                return key;
+            }
+            return bundle.getString(key);
         } catch (MissingResourceException e) {
             return key;
         }

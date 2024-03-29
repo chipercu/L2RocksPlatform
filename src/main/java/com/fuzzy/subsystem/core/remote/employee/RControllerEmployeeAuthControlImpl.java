@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.remote.employee;
 
-import com.infomaximum.main.Subsystems;
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.AbstractQueryRController;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.AbstractQueryRController;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.accessroleprivileges.EmployeePrivilegesGetter;
 import com.fuzzy.subsystem.core.authcontext.employee.EmployeeSessionAuthContext;

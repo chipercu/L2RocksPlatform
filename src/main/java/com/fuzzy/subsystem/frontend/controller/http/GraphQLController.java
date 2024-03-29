@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.controller.http;
 
-import com.infomaximum.main.Subsystems;
+import com.fuzzy.main.Subsystems;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 import com.fuzzy.subsystem.frontend.controller.http.utils.RevalidateHashFromWebClientUtils;
 import jakarta.servlet.http.HttpServletRequest;

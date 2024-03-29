@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.sorter;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObject;
 import com.fuzzy.subsystems.comparators.DomainObjectStringComparator;
 import com.fuzzy.subsystems.function.Function;
 import com.fuzzy.subsystems.graphql.input.GPaging;

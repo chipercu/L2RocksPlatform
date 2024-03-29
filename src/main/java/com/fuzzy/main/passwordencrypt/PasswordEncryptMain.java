@@ -1,8 +1,8 @@
 package com.fuzzy.main.passwordencrypt;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.sdk.context.impl.ContextImpl;
-import com.fuzzy.main.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.sdk.context.impl.ContextImpl;
+import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
 import com.fuzzy.subsystem.core.crypto.CryptoPassword;
 import com.fuzzy.subsystem.core.securitylog.CoreEvent;
 import com.fuzzy.subsystem.core.securitylog.CoreTarget;

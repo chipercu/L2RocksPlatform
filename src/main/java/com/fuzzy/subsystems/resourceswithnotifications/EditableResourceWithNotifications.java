@@ -1,15 +1,15 @@
 package com.fuzzy.subsystems.resourceswithnotifications;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.EditableResource;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.querypool.iterator.IteratorEntity;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
-import com.fuzzy.main.rdao.database.domainobject.filter.Filter;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.filter.Filter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.EditableResource;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.iterator.IteratorEntity;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.remote.RCExecutor;
 
 import java.util.Set;

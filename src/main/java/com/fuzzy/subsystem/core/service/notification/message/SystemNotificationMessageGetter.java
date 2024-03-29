@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.service.notification.message;
 
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.CoreConfig;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.employeesystemnotification.EmployeeSystemNotificationReadable;
@@ -12,8 +12,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.util.Objects;
 
-import static com.infomaximum.subsystem.core.domainobject.employeesystemnotification.EmployeeSystemNotificationReadable.FIELD_ID_EMPLOYEE;
-import static com.infomaximum.subsystem.core.domainobject.employeesystemnotification.EmployeeSystemNotificationReadable.FIELD_MESSAGE_HASH;
+import static com.fuzzy.subsystem.core.domainobject.employeesystemnotification.EmployeeSystemNotificationReadable.FIELD_ID_EMPLOYEE;
+import static com.fuzzy.subsystem.core.domainobject.employeesystemnotification.EmployeeSystemNotificationReadable.FIELD_MESSAGE_HASH;
 
 public class SystemNotificationMessageGetter {
     private final CoreSubsystem component;

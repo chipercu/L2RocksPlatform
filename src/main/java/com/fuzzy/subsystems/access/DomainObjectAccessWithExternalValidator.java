@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.access;
 
-import com.fuzzy.main.platform.querypool.QueryRemoteController;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.platform.querypool.QueryRemoteController;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class DomainObjectAccessWithExternalValidator<

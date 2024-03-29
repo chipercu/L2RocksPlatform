@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.function;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 
 @FunctionalInterface
 public interface Consumer<T> {

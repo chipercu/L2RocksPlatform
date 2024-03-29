@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.privilege;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.config.Language;
 import com.fuzzy.subsystem.core.remote.privilege.RControllerPrivilegeGetter;
 import com.fuzzy.subsystems.access.AccessOperationCollection;

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.filter;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
 
 public class FilterEditable extends FilterReadable implements DomainObjectEditable {
 

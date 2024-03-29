@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.core.updatetask.dataconverterqueries;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.EditableResource;
-import com.fuzzy.main.platform.querypool.Query;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.context.impl.ContextTransactionImpl;
-import com.fuzzy.main.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.EditableResource;
+import com.infomaximum.platform.querypool.Query;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.context.impl.ContextTransactionImpl;
+import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
 import com.fuzzy.subsystem.core.config.CoreConfigDescription;
 import com.fuzzy.subsystem.core.config.CoreConfigGetter;
 import com.fuzzy.subsystem.core.config.CoreConfigSetter;

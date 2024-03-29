@@ -1,12 +1,12 @@
 package com.fuzzy.subsystems.graphql.out;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLField;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.fuzzy.main.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLField;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
 
 import java.util.ArrayList;
 import java.util.Map;

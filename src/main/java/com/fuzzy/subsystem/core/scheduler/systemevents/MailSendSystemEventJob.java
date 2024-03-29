@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.scheduler.systemevents;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 import com.fuzzy.subsystem.core.emailmessages.systemevents.SystemEventsMessage;
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Set;
 
-import static com.infomaximum.subsystem.core.service.systemevent.SystemEvent.EventLevel;
+import static com.fuzzy.subsystem.core.service.systemevent.SystemEvent.EventLevel;
 
 public class MailSendSystemEventJob extends Job {
 

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.controller.websocket;
 
-import com.infomaximum.main.Subsystems;
+import com.fuzzy.main.Subsystems;
 import com.infomaximum.network.mvc.ResponseEntity;
 import com.infomaximum.network.mvc.anotation.Controller;
 import com.infomaximum.network.mvc.anotation.ControllerAction;

@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.frontend.service.session;
 
-import com.fuzzy.main.platform.sdk.context.impl.ContextImpl;
-import com.fuzzy.main.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.infomaximum.platform.sdk.context.impl.ContextImpl;
+import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
 import com.fuzzy.subsystem.core.remote.logon.LogoutCause;
 import com.fuzzy.subsystem.core.securitylog.CoreEvent;
 import com.fuzzy.subsystem.core.securitylog.CoreParameter;

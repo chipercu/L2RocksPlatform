@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.employeetokenrestoreaccess;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
 import com.fuzzy.subsystem.core.employeetoken.EmployeeTokenEditable;
 
 import java.time.Instant;

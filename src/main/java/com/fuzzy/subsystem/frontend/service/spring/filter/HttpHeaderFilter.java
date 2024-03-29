@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.service.spring.filter;
 
-import com.infomaximum.main.Subsystems;
+import com.fuzzy.main.Subsystems;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 import com.fuzzy.subsystem.frontend.struct.config.ConnectorConfig;
 import com.fuzzy.subsystem.frontend.struct.config.Protocol;

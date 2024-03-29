@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.sorter;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
@@ -58,4 +58,3 @@ public class Sorter<T> {
         return hasNext;
     }
 }
-

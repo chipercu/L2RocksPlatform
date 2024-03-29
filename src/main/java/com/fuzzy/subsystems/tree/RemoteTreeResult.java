@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.tree;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.platform.exception.PlatformException;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -64,9 +64,9 @@ public abstract class RemoteTreeResult<Y extends RemoteTreeElement<?> & RemoteOb
         }
         addItemsToElements(node.getChildItems(), innerParents, false);
         addItemsToElements(node.getHiddenChildItems(), innerParents, true);
-        if (node.getChildItemsNextCount() != 0) {
+        if (node.getChildItemsHasNext()) {
             Y element = createElement(null);
-            element.setNextCount(node.getChildItemsNextCount());
+            element.setNext(node.getChildItemsHasNext());
             element.setSelected(node.isSelectedInRest());
             element.setParents(innerParents);
             elements.add(element);

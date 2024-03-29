@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.authcontext;
 
-import com.fuzzy.main.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
 import com.fuzzy.subsystems.access.AccessOperationCollection;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

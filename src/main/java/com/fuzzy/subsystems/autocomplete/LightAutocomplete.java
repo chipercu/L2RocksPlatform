@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.autocomplete;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
-import com.fuzzy.main.rdao.database.utils.PrefixIndexUtils;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.database.utils.PrefixIndexUtils;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.graphql.input.GPaging;
 import com.fuzzy.subsystems.graphql.input.GTextFilter;
 import com.fuzzy.subsystems.sorter.Sorter;
@@ -43,9 +43,9 @@ public class LightAutocomplete<Item extends DomainObject> {
         }
         LightAutocompleteResult<Item> result = new LightAutocompleteResult<>();
         result.setItems(elements.getData());
-        result.setNextCount(elements.getNextCount());
+        result.setHasNext(elements.hasNext());
         if (textFilter != null && textFilter.isSpecified()) {
-            result.setMatchCount(elements.getData().size() + elements.getNextCount());
+            result.setMatchCount(elements.getData().size());
         }
         return result;
     }

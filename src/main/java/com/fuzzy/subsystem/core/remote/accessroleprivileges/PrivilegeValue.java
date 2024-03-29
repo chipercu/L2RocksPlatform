@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.accessroleprivileges;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 import com.fuzzy.subsystems.access.AccessOperationCollection;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

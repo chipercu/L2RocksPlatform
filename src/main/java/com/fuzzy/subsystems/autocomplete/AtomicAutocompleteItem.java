@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.autocomplete;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObject;
 
 public class AtomicAutocompleteItem<T extends DomainObject> {
     private T object;

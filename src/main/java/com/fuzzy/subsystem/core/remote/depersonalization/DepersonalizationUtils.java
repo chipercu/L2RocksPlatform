@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.core.remote.depersonalization;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectSource;
-import com.fuzzy.main.rdao.database.domainobject.Transaction;
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.fuzzy.main.rdao.database.domainobject.filter.IdFilter;
-import com.fuzzy.main.rdao.database.domainobject.iterator.IteratorEntity;
-import com.fuzzy.main.rdao.database.exception.DatabaseException;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectSource;
+import com.infomaximum.database.domainobject.Transaction;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.database.domainobject.filter.IdFilter;
+import com.infomaximum.database.domainobject.iterator.IteratorEntity;
+import com.infomaximum.database.exception.DatabaseException;
 import com.fuzzy.subsystems.config.Config;
 import com.fuzzy.subsystems.domainobject.config.ConfigEditable;
 import com.fuzzy.subsystems.domainobject.config.ConfigReadable;

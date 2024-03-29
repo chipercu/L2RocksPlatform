@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.crypto;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.utils.FileUtils;
-import com.infomaximum.utils.Random;
+import com.fuzzy.utils.Random;
 import org.apache.commons.lang3.ArrayUtils;
 
 import javax.crypto.Cipher;

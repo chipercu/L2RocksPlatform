@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.security.struct.data.system;
 
-import com.fuzzy.subsystems.Subsystems;
+import com.fuzzy.main.Subsystems;
 import com.fuzzy.subsystems.security.struct.data.SyslogStructData;
 
 import java.util.HashMap;

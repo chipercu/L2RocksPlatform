@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.config;
 
-import com.fuzzy.main.rdao.database.schema.TypeConverter;
-import com.fuzzy.main.rdao.database.utils.ByteUtils;
-import com.fuzzy.main.rdao.database.utils.TypeConvert;
+import com.infomaximum.database.schema.TypeConverter;
+import com.infomaximum.database.utils.ByteUtils;
+import com.infomaximum.database.utils.TypeConvert;
 
 import java.time.Duration;
 

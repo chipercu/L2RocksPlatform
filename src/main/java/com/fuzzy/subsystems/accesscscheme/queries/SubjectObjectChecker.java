@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.accesscscheme.queries;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public interface SubjectObjectChecker<S, O> {

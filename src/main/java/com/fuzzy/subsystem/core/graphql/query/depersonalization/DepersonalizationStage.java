@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.graphql.query.depersonalization;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
 
 @GraphQLTypeOutObject("depersonalization_stage")
 public enum DepersonalizationStage implements RemoteObject {

@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.graphql.query.license.licenselimits;
 
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLField;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLField;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
 
 @GraphQLTypeOutObject("License_limits_query")
 public class GQueryLicenseLimits {

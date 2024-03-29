@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.remote.authentication;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.struct.GOptional;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.struct.GOptional;
 
 public class AuthenticationUpdatingBuilder implements RemoteObject {
 

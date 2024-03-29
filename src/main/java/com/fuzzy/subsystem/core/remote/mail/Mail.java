@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.mail;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;

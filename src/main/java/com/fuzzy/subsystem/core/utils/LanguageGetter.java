@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.core.utils;
 
-import com.fuzzy.main.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.authcontext.employee.EmployeeAuthContext;
 import com.fuzzy.subsystem.core.config.CoreConfigDescription;
 import com.fuzzy.subsystem.core.config.CoreConfigGetter;

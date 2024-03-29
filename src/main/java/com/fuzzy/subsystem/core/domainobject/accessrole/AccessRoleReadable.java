@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.domainobject.accessrole;
 
-import com.fuzzy.main.rdao.database.anotation.Entity;
-import com.fuzzy.main.rdao.database.anotation.Field;
-import com.fuzzy.main.rdao.database.anotation.HashIndex;
-import com.fuzzy.main.rdao.database.anotation.PrefixIndex;
+import com.infomaximum.database.anotation.Entity;
+import com.infomaximum.database.anotation.Field;
+import com.infomaximum.database.anotation.HashIndex;
+import com.infomaximum.database.anotation.PrefixIndex;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystems.remote.RDomainObject;
 

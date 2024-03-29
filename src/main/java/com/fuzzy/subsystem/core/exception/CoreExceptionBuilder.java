@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.exception;
 
-import com.fuzzy.main.rdao.database.utils.BaseEnum;
-import com.fuzzy.main.platform.exception.ExceptionFactory;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.exception.PlatformExceptionFactory;
+import com.infomaximum.database.utils.BaseEnum;
+import com.infomaximum.platform.exception.ExceptionFactory;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformExceptionFactory;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 
 import java.util.Collections;

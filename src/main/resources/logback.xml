@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="30 seconds">
 
-    <conversionRule conversionWord="tid" converterClass="com.fuzzy.com.fuzzy.utils.LogbackThreadId" />
-    <conversionRule conversionWord="ctx" converterClass="com.fuzzy.com.fuzzy.utils.LogbackContext" />
+    <conversionRule conversionWord="tid" converterClass="com.fuzzy.utils.LogbackThreadId" />
+    <conversionRule conversionWord="ctx" converterClass="com.fuzzy.utils.LogbackContext" />
 
     <define name="logdir" class="com.fuzzy.subsystems.logback.LogDirPropertyDefiner"/>
     <define name="filename" class="com.fuzzy.subsystems.logback.LogNamePropertyDefiner"/>

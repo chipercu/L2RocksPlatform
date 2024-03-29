@@ -1,17 +1,18 @@
 package com.fuzzy.subsystems.entityelements;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.EditableResource;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.RemovableResource;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.EditableResource;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.RemovableResource;
 import com.fuzzy.subsystems.utils.PrimaryKeyValidator;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class EntityElementSetter<
@@ -35,14 +36,14 @@ public class EntityElementSetter<
         private final Set<Long> validInsertedItems;
         private final Set<Long> validInsertedNodes;
 
-        public ElementValidator(Collection<Long> nodes, Collection <Long> items, QueryTransaction transaction) throws PlatformException {
+        public ElementValidator(Collection<Long> nodes, Collection<Long> items, QueryTransaction transaction) throws PlatformException {
             PrimaryKeyValidator primaryKeyValidator = new PrimaryKeyValidator(true);
             validInsertedNodes = nodeReadableResource != null && nodes != null ?
                     primaryKeyValidator.validate(nodes, nodeReadableResource, transaction) :
-                    new HashSet <>();
+                    new HashSet<>();
             validInsertedItems = itemReadableResource != null && items != null ?
                     primaryKeyValidator.validate(items, itemReadableResource, transaction) :
-                    new HashSet <>();
+                    new HashSet<>();
         }
 
         public Set<Long> getValidInsertedItems() {
@@ -143,7 +144,9 @@ public class EntityElementSetter<
                 validInsertedItems,
                 itemFieldNumber
         );
-        entityElementsRecalculator.recalculate(entityId, transaction);
+        if (Objects.nonNull(entityElementsRecalculator)) {
+            entityElementsRecalculator.recalculate(entityId, transaction);
+        }
     }
 
     public void setState(
@@ -170,7 +173,9 @@ public class EntityElementSetter<
                 validator.getValidInsertedItems(),
                 itemFieldNumber
         );
-        entityElementsRecalculator.recalculate(entityId, transaction);
+        if (Objects.nonNull(entityElementsRecalculator)) {
+            entityElementsRecalculator.recalculate(entityId, transaction);
+        }
     }
 
     private void clearEntityAll(Long entityId, QueryTransaction transaction) throws PlatformException {

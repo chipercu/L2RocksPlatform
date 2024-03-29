@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.graphql.query.tree;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
 
 @GraphQLTypeOutObject("tree_view")
 public enum GTreeView implements RemoteObject {

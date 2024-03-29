@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.employee;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 
 public enum ChangePasswordCause implements RemoteObject {
 

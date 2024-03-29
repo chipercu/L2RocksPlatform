@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.mail;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.graphql.query.config.HelpDeskConfig;
 
 public interface HelpDeskGetterWrapper {

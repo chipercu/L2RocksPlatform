@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.sorter;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.graphql.enums.SortingDirection;
 
 @FunctionalInterface

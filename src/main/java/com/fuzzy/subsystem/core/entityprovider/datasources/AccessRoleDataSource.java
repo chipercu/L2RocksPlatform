@@ -1,16 +1,16 @@
 package com.fuzzy.subsystem.core.entityprovider.datasources;
 
-import com.fuzzy.main.rdao.database.domainobject.filter.IdFilter;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.querypool.iterator.IteratorEntity;
+import com.infomaximum.database.domainobject.filter.IdFilter;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.iterator.IteratorEntity;
 import com.fuzzy.subsystem.core.domainobject.accessrole.AccessRoleReadable;
 import com.fuzzy.subsystem.core.entityprovider.entity.AccessRoleEntity;
-import com.fuzzy.subsystem.entityprovidersdk.entity.BaseSourceIterator;
-import com.fuzzy.subsystem.entityprovidersdk.entity.datasource.DataSourceIterator;
-import com.fuzzy.subsystem.entityprovidersdk.entity.datasource.DataSourceProvider;
+import com.infomaximum.subsystem.entityprovidersdk.entity.BaseSourceIterator;
+import com.infomaximum.subsystem.entityprovidersdk.entity.datasource.DataSourceIterator;
+import com.infomaximum.subsystem.entityprovidersdk.entity.datasource.DataSourceProvider;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.additionalfield;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObjectEditable;
+import com.infomaximum.database.domainobject.DomainObjectEditable;
 import com.fuzzy.subsystem.core.enums.FieldDataType;
 
 public class AdditionalFieldEditable extends AdditionalFieldReadable implements DomainObjectEditable {

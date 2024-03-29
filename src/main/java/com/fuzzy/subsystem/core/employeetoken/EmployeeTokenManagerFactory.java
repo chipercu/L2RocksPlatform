@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.core.employeetoken;
 
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.employeeinvitationtoken.EmployeeInvitationTokenEditable;
 import com.fuzzy.subsystem.core.domainobject.employeetokenrestoreaccess.EmployeeTokenRestoreAccessEditable;
 
 import java.time.Duration;
 
-import static com.infomaximum.subsystem.core.CoreSubsystemConsts.Mail.INVITATION_TOKEN_EXPIRATION_DAY;
+import static com.fuzzy.subsystem.core.CoreSubsystemConsts.Mail.INVITATION_TOKEN_EXPIRATION_DAY;
 
 public class EmployeeTokenManagerFactory {
 

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.database;
 
-import com.infomaximum.main.SubsystemsConfig;
+import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;
 import com.fuzzy.subsystems.subsystem.SubsystemConfig;
 import net.minidev.json.JSONObject;

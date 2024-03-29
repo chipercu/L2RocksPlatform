@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.dump;
 
-import com.fuzzy.main.cluster.Cluster;
+import com.infomaximum.cluster.Cluster;
+import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.subsystem.core.CoreSubsystem;
-import com.fuzzy.subsystems.SubsystemsConfig;
 import com.fuzzy.subsystems.logback.LogNamePropertyDefiner;
 import com.fuzzy.subsystems.remote.dump.RControllerEventDump;
 import net.minidev.json.JSONObject;
@@ -29,7 +29,7 @@ public class Dump {
 
     private static final Logger log = LoggerFactory.getLogger(Dump.class);
 
-    private static final String APP_NAME = "ReLife";
+    private static final String APP_NAME = "infomaximum";
     private static final String APP_TYPE = "server";
 
     public synchronized static void build(SubsystemsConfig subsystemsConfig, Cluster cluster) {

@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.remote.logon;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
 
 @GraphQLTypeOutObject("auth_status")
 public enum AuthStatus implements RemoteObject {

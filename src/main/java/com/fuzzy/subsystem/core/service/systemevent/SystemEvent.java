@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.service.systemevent;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import org.apache.commons.lang3.StringUtils;
 

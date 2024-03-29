@@ -1,11 +1,10 @@
 package com.fuzzy.subsystem.core.access;
 
-import com.fuzzy.subsystems.access.PrivilegeEnum;
 import com.fuzzy.subsystem.core.remote.accessroleprivileges.PrivilegeValue;
 import com.fuzzy.subsystems.access.AccessOperation;
 import com.fuzzy.subsystems.access.AccessOperationCollection;
 import com.fuzzy.subsystems.access.Privilege;
-
+import com.fuzzy.subsystems.access.PrivilegeEnum;
 
 public enum CorePrivilege implements PrivilegeEnum {
 

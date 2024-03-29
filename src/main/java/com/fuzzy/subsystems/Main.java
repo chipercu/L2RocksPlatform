@@ -1,14 +1,14 @@
 package com.fuzzy.subsystems;
 
+import com.fuzzy.main.Subsystems;
+import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.main.argument.ArgumentParser;
 import com.fuzzy.main.argument.upgrade.ArgumentUpgrade;
-import com.fuzzy.main.platform.sdk.context.impl.ContextImpl;
-import com.fuzzy.main.platform.sdk.context.source.impl.SourceSystemImpl;
-import com.fuzzy.main.platform.update.core.ModuleUpdateEntity;
+import com.infomaximum.platform.sdk.context.impl.ContextImpl;
+import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.infomaximum.platform.update.core.ModuleUpdateEntity;
 import com.fuzzy.subsystem.core.securitylog.CoreEvent;
 import com.fuzzy.subsystem.core.securitylog.CoreTarget;
-import com.fuzzy.subsystem.telegram.TelegramBotConfig;
-import com.fuzzy.subsystem.telegram.TelegramUtils;
 import com.fuzzy.subsystems.security.SecurityLog;
 import com.fuzzy.subsystems.security.struct.data.event.SyslogStructDataEvent;
 import com.fuzzy.subsystems.security.struct.data.target.SyslogStructDataTarget;
@@ -62,7 +62,6 @@ public class Main {
             } else if (argumentParser.autoUpgrade) {
                 subsystems.upgrade();
             }
-            subsystems.getTelegramBot().sendMessage(TelegramBotConfig.groupId, "Запуск платформы " + TelegramUtils.currentTime());
             subsystems.start();
 
             FutureTask<Void> stopSignal = new FutureTask<>(() -> null);
@@ -71,8 +70,6 @@ public class Main {
             log.debug("App shutDownHook");
             subsystems.stop();
         } catch (Throwable e) {
-            subsystems.getTelegramBot().sendMessage(TelegramBotConfig.groupId, "Остановка платформы " + TelegramUtils.currentTime());
-            subsystems.getTelegramBot().sendMessage(TelegramBotConfig.groupId, "Ошибка :  " + e.getMessage());
             crash(e);
         }
         subsystems.close();

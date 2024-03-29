@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.serverinit;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 import com.fuzzy.subsystem.core.config.Language;
 
 public class ServerInitData implements RemoteObject {

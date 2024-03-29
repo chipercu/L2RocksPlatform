@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.logon;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 
 public enum LogoutCause implements RemoteObject {
 

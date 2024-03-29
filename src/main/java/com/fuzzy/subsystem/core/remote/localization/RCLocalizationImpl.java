@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.localization;
 
-import com.fuzzy.main.cluster.core.remote.AbstractRController;
+import com.infomaximum.cluster.core.remote.AbstractRController;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.config.Language;
 

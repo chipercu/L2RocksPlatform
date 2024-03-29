@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.domainobject.license;
 
-import com.fuzzy.main.rdao.database.anotation.Entity;
-import com.fuzzy.main.rdao.database.anotation.Field;
+import com.infomaximum.database.anotation.Entity;
+import com.infomaximum.database.anotation.Field;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystems.remote.RDomainObject;
 

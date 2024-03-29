@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.graphql.query.authentication.queries;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystem.core.config.Language;
 import com.fuzzy.subsystem.core.graphql.query.authentication.GAuthenticationType;
 import com.fuzzy.subsystem.core.remote.authenticationtype.RCAuthenticationType;

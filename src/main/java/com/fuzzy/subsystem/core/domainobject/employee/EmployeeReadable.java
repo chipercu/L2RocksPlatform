@@ -2,11 +2,11 @@ package com.fuzzy.subsystem.core.domainobject.employee;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Strings;
-import com.fuzzy.main.rdao.database.anotation.Entity;
-import com.fuzzy.main.rdao.database.anotation.Field;
-import com.fuzzy.main.rdao.database.anotation.HashIndex;
-import com.fuzzy.main.rdao.database.anotation.PrefixIndex;
-import com.fuzzy.main.rdao.database.utils.EnumConverter;
+import com.infomaximum.database.anotation.Entity;
+import com.infomaximum.database.anotation.Field;
+import com.infomaximum.database.anotation.HashIndex;
+import com.infomaximum.database.anotation.PrefixIndex;
+import com.infomaximum.database.utils.EnumConverter;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.config.DisplayNameFormat;
 import com.fuzzy.subsystem.core.config.Language;

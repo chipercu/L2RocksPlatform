@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.controller.http.utils;
 
-import com.infomaximum.main.Subsystems;
+import com.fuzzy.main.Subsystems;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 import org.apache.commons.codec.digest.DigestUtils;
 

@@ -1,17 +1,17 @@
 package com.fuzzy.subsystem.core;
 
-import com.fuzzy.main.rdao.database.domainobject.filter.HashFilter;
-import com.infomaximum.main.Subsystems;
-import com.fuzzy.main.platform.component.database.DatabaseComponent;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.context.impl.ContextImpl;
-import com.fuzzy.main.platform.sdk.context.source.impl.SourceSystemImpl;
-import com.fuzzy.main.platform.sdk.struct.querypool.QuerySystem;
-import com.fuzzy.main.platform.service.detectresource.DetectLowResourceService;
-import com.fuzzy.main.platform.service.detectresource.observer.ResourceObservable;
+import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.component.database.DatabaseComponent;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.context.impl.ContextImpl;
+import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.infomaximum.platform.sdk.struct.querypool.QuerySystem;
+import com.fuzzy.platform.service.detectresource.DetectLowResourceService;
+import com.fuzzy.platform.service.detectresource.observer.ResourceObservable;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
 import com.fuzzy.subsystem.core.domainobject.accessrole.AccessRoleReadable;
 import com.fuzzy.subsystem.core.license.LicenseManager;
@@ -33,11 +33,13 @@ import com.fuzzy.subsystems.subsystem.Subsystem;
 import com.fuzzy.subsystems.utils.CompositeSystemQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
 
+@com.infomaximum.cluster.anotation.Info(uuid = CoreSubsystemConsts.UUID)
 public class CoreSubsystem extends Subsystem {
 
     private final static Logger log = LoggerFactory.getLogger(CoreSubsystem.class);

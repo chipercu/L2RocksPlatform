@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.employee;
 
-import com.fuzzy.main.cluster.graphql.struct.GOptional;
+import com.infomaximum.cluster.graphql.struct.GOptional;
 import com.fuzzy.subsystem.core.config.Language;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 import com.fuzzy.subsystems.modelspace.BuilderFields;

@@ -1,13 +1,13 @@
 package com.fuzzy.subsystems.accesscscheme.queries.accessschemeemployeelist;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.platform.component.frontend.context.ContextTransactionRequest;
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.component.Component;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.component.Component;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystem.core.config.CoreConfigDescription;
 import com.fuzzy.subsystem.core.config.CoreConfigGetter;
 import com.fuzzy.subsystem.core.config.DisplayNameFormat;
@@ -22,6 +22,7 @@ import com.fuzzy.subsystems.accesscscheme.GAccessSchemeOperation;
 import com.fuzzy.subsystems.accesscscheme.domainobject.AccessSchemeItem;
 import com.fuzzy.subsystems.accesscscheme.localization.GlobalLocalization;
 import com.fuzzy.subsystems.accesscscheme.localization.Localization;
+import com.fuzzy.subsystems.function.BiFunction;
 import com.fuzzy.subsystems.function.Consumer;
 import com.fuzzy.subsystems.graphql.enums.SortingDirection;
 import com.fuzzy.subsystems.graphql.input.GPaging;
@@ -60,6 +61,8 @@ public abstract class AccessSchemeEmployeeListQuery<
     private CoreConfigGetter coreConfigGetter;
     private LanguageGetter languageGetter;
 
+    private BiFunction<T, ContextTransaction, Boolean> checker;
+
     public AccessSchemeEmployeeListQuery(@Nullable GTextFilter textFilter,
                                          @Nullable GPaging paging,
                                          @NonNull AccessSchemeEmployeeSortingColumn sortingColumn,
@@ -80,6 +83,10 @@ public abstract class AccessSchemeEmployeeListQuery<
                                          @NonNull AccessSchemeEmployeeSortingColumn sortingColumn,
                                          @NonNull SortingDirection sortingDirection) {
         this(textFilter, paging, sortingColumn, sortingDirection, new GlobalLocalization(component));
+    }
+
+    public void setChecker(BiFunction<T, ContextTransaction, Boolean> checker) {
+        this.checker = checker;
     }
 
     @Override
@@ -119,7 +126,7 @@ public abstract class AccessSchemeEmployeeListQuery<
             gItem.setHidden(item.hidden());
             gItems.add(gItem);
         }
-        return new GAccessSchemeEmployeeListResult(gItems, listResult.matchCount(), listResult.nextCount());
+        return new GAccessSchemeEmployeeListResult(gItems, listResult.matchCount(), listResult.hasNext());
     }
 
     protected abstract void forEachAccessSchemeItem(@NonNull S source,
@@ -213,6 +220,14 @@ public abstract class AccessSchemeEmployeeListQuery<
         @Override
         protected void forEach(@NonNull Consumer<T> handler, @NonNull ContextTransaction<?> context) throws PlatformException {
             forEachAccessSchemeItem(source, handler, context);
+        }
+
+        @Override
+        protected boolean checkItem(@NonNull T item, @NonNull ContextTransaction<?> context) throws PlatformException {
+            if (checker != null) {
+                return checker.apply(item, context);
+            }
+            return super.checkItem(item, context);
         }
     }
 }

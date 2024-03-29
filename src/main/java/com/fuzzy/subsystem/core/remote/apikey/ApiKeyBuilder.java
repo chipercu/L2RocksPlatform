@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.apikey;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.domainobject.apikey.ApiKeyReadable;
 import com.fuzzy.subsystem.core.domainobject.apikey.ApiKeyType;
 import com.fuzzy.subsystem.core.domainobject.apikey.ApiKeyTypes;

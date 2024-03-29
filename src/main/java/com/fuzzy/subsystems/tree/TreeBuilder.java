@@ -1,11 +1,12 @@
 package com.fuzzy.subsystems.tree;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
-import com.fuzzy.main.platform.querypool.ReadableResource;
-import com.fuzzy.main.platform.querypool.iterator.IteratorEntity;
-import com.fuzzy.main.platform.sdk.iterator.Iterator;
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.google.common.collect.Sets;
+import com.infomaximum.database.domainobject.DomainObject;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.querypool.ReadableResource;
+import com.infomaximum.platform.querypool.iterator.IteratorEntity;
+import com.infomaximum.platform.sdk.iterator.Iterator;
 import com.fuzzy.subsystem.core.graphql.query.tree.GTreeView;
 import com.fuzzy.subsystems.comparators.DomainObjectIdComparator;
 import com.fuzzy.subsystems.graphql.input.GInputNodesItems;
@@ -15,7 +16,6 @@ import com.fuzzy.subsystems.grouping.NodeGrouping;
 import com.fuzzy.subsystems.grouping.NodeItemGrouping;
 import com.fuzzy.subsystems.sorter.SorterComparator;
 import com.fuzzy.subsystems.textfilter.TextFilterGetter;
-import com.google.common.collect.Sets;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;

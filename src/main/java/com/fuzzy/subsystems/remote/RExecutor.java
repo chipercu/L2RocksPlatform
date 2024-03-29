@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.remote;
 
-import com.fuzzy.main.cluster.core.remote.Remotes;
-import com.fuzzy.main.cluster.core.remote.struct.RController;
+import com.infomaximum.cluster.core.remote.Remotes;
+import com.infomaximum.cluster.core.remote.struct.RController;
 
 import java.util.Collection;
 

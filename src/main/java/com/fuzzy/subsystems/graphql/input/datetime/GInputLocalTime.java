@@ -1,10 +1,10 @@
 package com.fuzzy.subsystems.graphql.input.datetime;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLDescription;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLName;
-import com.fuzzy.main.cluster.graphql.anotation.GraphQLTypeInput;
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
+import com.infomaximum.cluster.graphql.anotation.GraphQLName;
+import com.infomaximum.cluster.graphql.anotation.GraphQLTypeInput;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.graphql.out.GOutTime;
 import org.checkerframework.checker.nullness.qual.NonNull;

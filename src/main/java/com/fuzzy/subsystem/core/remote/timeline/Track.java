@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.timeline;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

@@ -1,14 +1,14 @@
 package com.fuzzy.subsystems.subsystem;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.ResourceProvider;
-import com.fuzzy.main.platform.sdk.component.Component;
-import com.fuzzy.main.platform.sdk.context.ContextTransaction;
-import com.fuzzy.main.platform.sdk.struct.querypool.QuerySystem;
-import com.fuzzy.main.rdao.database.anotation.Entity;
-import com.fuzzy.main.rdao.database.schema.Schema;
-import com.fuzzy.main.rdao.database.schema.StructEntity;
-import com.fuzzy.subsystems.Subsystems;
+import com.infomaximum.database.anotation.Entity;
+import com.infomaximum.database.schema.Schema;
+import com.infomaximum.database.schema.StructEntity;
+import com.fuzzy.main.Subsystems;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.sdk.component.Component;
+import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.infomaximum.platform.sdk.struct.querypool.QuerySystem;
 import com.fuzzy.subsystems.scheduler.SubsystemScheduler;
 import org.reflections.Reflections;
 import org.slf4j.Logger;

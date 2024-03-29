@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.scheduler;
 
-import com.fuzzy.main.platform.exception.PlatformException;
-import com.fuzzy.main.platform.querypool.Query;
-import com.fuzzy.main.platform.querypool.QueryFuture;
-import com.fuzzy.main.platform.querypool.QueryTransaction;
+import com.infomaximum.platform.exception.PlatformException;
+import com.infomaximum.platform.querypool.Query;
+import com.infomaximum.platform.querypool.QueryFuture;
+import com.infomaximum.platform.querypool.QueryTransaction;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

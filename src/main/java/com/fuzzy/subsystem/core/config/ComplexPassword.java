@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.config;
 
-import com.fuzzy.main.cluster.core.remote.struct.RemoteObject;
+import com.infomaximum.cluster.core.remote.struct.RemoteObject;
 
 public class ComplexPassword implements RemoteObject {
 

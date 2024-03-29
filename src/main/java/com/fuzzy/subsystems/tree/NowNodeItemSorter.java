@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.tree;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.remote.Identifiable;
 import com.fuzzy.subsystems.sorter.SorterComparator;
 
@@ -102,8 +102,8 @@ public class NowNodeItemSorter<N, I, Node extends Identifiable<N>, Item extends 
 	}
 
 	@Override
-	public int getNextCount() {
-		return nodes.getNextCount() + items.getNextCount();
+	public boolean hasNext() {
+		return nodes.hasNext() || items.hasNext();
 	}
 
 	private Integer getItemsLimit() {

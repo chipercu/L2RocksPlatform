@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.comparators;
 
-import com.fuzzy.main.rdao.database.domainobject.DomainObject;
+import com.infomaximum.database.domainobject.DomainObject;
 
 public class DomainObjectIdComparator<T extends DomainObject> extends IdComparator<Long, T> {
 

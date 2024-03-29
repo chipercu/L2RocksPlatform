@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.textfilter;
 
-import com.fuzzy.main.platform.querypool.ResourceProvider;
+import com.infomaximum.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.tag.TagReadable;
 import com.fuzzy.subsystems.textfilter.DomainObjectTextFilterGetter;
 

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.tree;
 
-import com.fuzzy.main.platform.exception.PlatformException;
+import com.infomaximum.platform.exception.PlatformException;
 import com.fuzzy.subsystems.remote.Identifiable;
 
 import java.util.List;
@@ -21,5 +21,5 @@ public interface NodeItemSorter<N, I, Node extends Identifiable<N>, Item extends
 
 	List<Item> getItems();
 
-	int getNextCount();
+	boolean hasNext();
 }
