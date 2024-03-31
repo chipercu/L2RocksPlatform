@@ -12,9 +12,9 @@
  */
 package com.fuzzy.subsystem.loginserver.serverpackets;
 
-import l2open.config.ConfigValue;
+import com.fuzzy.subsystem.config.ConfigValue;
 import l2open.extensions.network.SendablePacket;
-import l2open.loginserver.L2LoginClient;
+import com.fuzzy.subsystem.loginserver.L2LoginClient;
 
 import java.util.logging.Logger;
 

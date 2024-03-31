@@ -3,8 +3,8 @@ package com.fuzzy.subsystem.loginserver.serverpackets;
 import javolution.util.FastList;
 import l2open.config.ConfigValue;
 import l2open.gameserver.loginservercon.AdvIP;
-import l2open.loginserver.*;
-import l2open.loginserver.gameservercon.GameServerInfo;
+import com.fuzzy.subsystem.loginserver.*;
+import com.fuzzy.subsystem.loginserver.gameservercon.GameServerInfo;
 import l2open.util.Util;
 
 import java.net.InetAddress;

@@ -1,33 +1,26 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
-import l2open.loginserver.gameservercon.AttGS;
+import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
 
-public class BlowFishKey extends ClientBasePacket
-{
-	public BlowFishKey(byte[] decrypt, AttGS gameserver)
-	{
-		super(decrypt, gameserver);
-	}
+public class BlowFishKey extends ClientBasePacket {
+    public BlowFishKey(byte[] decrypt, AttGS gameserver) {
+        super(decrypt, gameserver);
+    }
 
-	@Override
-	public void read()
-	{
-		int keyLength = readD();
-		if(keyLength == 0)
-		{
-			getGameServer().initBlowfish(null);
-			return;
-		}
+    @Override
+    public void read() {
+        int keyLength = readD();
+        if (keyLength == 0) {
+            getGameServer().initBlowfish(null);
+            return;
+        }
 
-		byte[] data = readB(keyLength);
-		try
-		{
-			data = getGameServer().RSADecrypt(data);
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		getGameServer().initBlowfish(data);
-	}
+        byte[] data = readB(keyLength);
+        try {
+            data = getGameServer().RSADecrypt(data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        getGameServer().initBlowfish(data);
+    }
 }

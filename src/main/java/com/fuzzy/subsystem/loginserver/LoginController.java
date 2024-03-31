@@ -4,12 +4,12 @@ import javolution.util.FastMap;
 import l2open.Base64;
 import l2open.config.ConfigValue;
 import l2open.database.*;
-import l2open.loginserver.crypt.Crypt;
-import l2open.loginserver.crypt.ScrambledKeyPair;
-import l2open.loginserver.gameservercon.AttGS;
-import l2open.loginserver.gameservercon.GameServerInfo;
-import l2open.loginserver.gameservercon.lspackets.RequestCharacters;
-import l2open.loginserver.serverpackets.LoginFail.LoginFailReason;
+import com.fuzzy.subsystem.loginserver.crypt.Crypt;
+import com.fuzzy.subsystem.loginserver.crypt.ScrambledKeyPair;
+import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
+import com.fuzzy.subsystem.loginserver.gameservercon.GameServerInfo;
+import com.fuzzy.subsystem.loginserver.gameservercon.lspackets.RequestCharacters;
+import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail.LoginFailReason;
 import l2open.util.*;
 
 import javax.crypto.Cipher;

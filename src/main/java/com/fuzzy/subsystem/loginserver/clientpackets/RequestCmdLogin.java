@@ -1,17 +1,17 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
 import l2open.config.ConfigValue;
-import l2open.loginserver.L2LoginClient;
-import l2open.loginserver.L2LoginClient.LoginClientState;
-import l2open.loginserver.LoginController;
-import l2open.loginserver.LoginController.State;
-import l2open.loginserver.LoginController.Status;
-import l2open.loginserver.gameservercon.GameServerInfo;
-import l2open.loginserver.gameservercon.lspackets.KickPlayer;
-import l2open.loginserver.serverpackets.LoginFail;
-import l2open.loginserver.serverpackets.LoginFail.LoginFailReason;
-import l2open.loginserver.serverpackets.LoginOk;
-import l2open.loginserver.serverpackets.ServerList;
+import com.fuzzy.subsystem.loginserver.L2LoginClient;
+import com.fuzzy.subsystem.loginserver.L2LoginClient.LoginClientState;
+import com.fuzzy.subsystem.loginserver.LoginController;
+import com.fuzzy.subsystem.loginserver.LoginController.State;
+import com.fuzzy.subsystem.loginserver.LoginController.Status;
+import com.fuzzy.subsystem.loginserver.gameservercon.GameServerInfo;
+import com.fuzzy.subsystem.loginserver.gameservercon.lspackets.KickPlayer;
+import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail;
+import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail.LoginFailReason;
+import com.fuzzy.subsystem.loginserver.serverpackets.LoginOk;
+import com.fuzzy.subsystem.loginserver.serverpackets.ServerList;
 
 import javax.crypto.Cipher;
 import java.security.GeneralSecurityException;

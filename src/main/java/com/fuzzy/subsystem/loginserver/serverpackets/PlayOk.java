@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.serverpackets;
 
-import l2open.loginserver.SessionKey;
+import com.fuzzy.subsystem.loginserver.SessionKey;
 
 public final class PlayOk extends L2LoginServerPacket
 {

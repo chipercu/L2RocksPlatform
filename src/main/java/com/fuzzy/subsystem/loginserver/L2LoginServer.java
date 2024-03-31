@@ -9,7 +9,7 @@ import l2open.extensions.network.SelectorThread;
 import l2open.gameserver.GameServer;
 import l2open.gameserver.taskmanager.MemoryWatchDog;
 import l2open.gameserver.xml.XmlUtils;
-import l2open.loginserver.gameservercon.GSConnection;
+import com.fuzzy.subsystem.loginserver.gameservercon.GSConnection;
 import l2open.status.Status;
 import l2open.util.Log;
 import l2open.util.Util;

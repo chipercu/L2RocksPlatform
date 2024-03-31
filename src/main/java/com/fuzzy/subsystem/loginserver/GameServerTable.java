@@ -11,7 +11,7 @@ import l2open.database.FiltredPreparedStatement;
 import l2open.database.L2DatabaseFactory;
 import l2open.database.ThreadConnection;
 import l2open.gameserver.loginservercon.AdvIP;
-import l2open.loginserver.gameservercon.GameServerInfo;
+import com.fuzzy.subsystem.loginserver.gameservercon.GameServerInfo;
 import l2open.util.GArray;
 import l2open.util.Rnd;
 

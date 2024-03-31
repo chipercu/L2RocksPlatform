@@ -1,25 +1,22 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
-import l2open.loginserver.IpManager;
-import l2open.loginserver.gameservercon.AttGS;
-import l2open.loginserver.gameservercon.GSConnection;
-import l2open.loginserver.gameservercon.lspackets.BanIPList;
-import l2open.loginserver.gameservercon.lspackets.IpAction;
+import com.fuzzy.subsystem.loginserver.IpManager;
+import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
+import com.fuzzy.subsystem.loginserver.gameservercon.GSConnection;
+import com.fuzzy.subsystem.loginserver.gameservercon.lspackets.BanIPList;
+import com.fuzzy.subsystem.loginserver.gameservercon.lspackets.IpAction;
 
-public class UnbanIP extends ClientBasePacket
-{
-	public UnbanIP(byte[] decrypt, AttGS gameserver)
-	{
-		super(decrypt, gameserver);
-	}
+public class UnbanIP extends ClientBasePacket {
+    public UnbanIP(byte[] decrypt, AttGS gameserver) {
+        super(decrypt, gameserver);
+    }
 
-	@Override
-	public void read()
-	{
-		String ip = readS();
-		IpManager.getInstance().UnbanIp(ip);
+    @Override
+    public void read() {
+        String ip = readS();
+        IpManager.getInstance().UnbanIp(ip);
 
-		GSConnection.getInstance().broadcastPacket(new BanIPList());
-		GSConnection.getInstance().broadcastPacket(new IpAction(ip, false, ""));
-	}
+        GSConnection.getInstance().broadcastPacket(new BanIPList());
+        GSConnection.getInstance().broadcastPacket(new IpAction(ip, false, ""));
+    }
 }

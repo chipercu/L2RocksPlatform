@@ -1,20 +1,17 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
 import l2open.Server;
-import l2open.loginserver.gameservercon.AttGS;
+import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
 
-public class Restart extends ClientBasePacket
-{
-	public Restart(byte[] decrypt, AttGS gameserver)
-	{
-		super(decrypt, gameserver);
-	}
+public class Restart extends ClientBasePacket {
+    public Restart(byte[] decrypt, AttGS gameserver) {
+        super(decrypt, gameserver);
+    }
 
-	@Override
-	public void read()
-	{
-		System.out.println("Recived full restart command from: " + getGameServer());
-		Server.exit(2, "Recived full restart command from: " + getGameServer());
-		// Полный рестарт логинсервера.
-	}
+    @Override
+    public void read() {
+        System.out.println("Recived full restart command from: " + getGameServer());
+        Server.exit(2, "Recived full restart command from: " + getGameServer());
+        // Полный рестарт логинсервера.
+    }
 }
