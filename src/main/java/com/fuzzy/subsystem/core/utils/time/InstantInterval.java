@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.utils.time;
 
-import com.infomaximum.database.utils.InstantUtils;
+import com.fuzzy.database.utils.InstantUtils;
 
 import java.time.Duration;
 import java.time.Instant;

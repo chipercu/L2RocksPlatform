@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.scheduler.systemevents;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
-import com.infomaximum.platform.sdk.struct.querypool.QuerySystem;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.sdk.struct.querypool.QuerySystem;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.emailmessages.systemevents.SystemEventsMessageSenderImpl;
 import com.fuzzy.subsystem.core.remote.mail.RControllerHelpDeskGetterWrapper;

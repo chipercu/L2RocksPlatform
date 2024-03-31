@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.autocomplete;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.utils.PrefixIndexUtils;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.utils.PrefixIndexUtils;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
 
 import java.util.ArrayList;
 import java.util.List;

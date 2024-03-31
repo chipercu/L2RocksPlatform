@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.access;
 
-import com.infomaximum.database.utils.BaseEnum;
+import com.fuzzy.database.utils.BaseEnum;
 
 public interface PrivilegeEnum extends BaseEnum {
 

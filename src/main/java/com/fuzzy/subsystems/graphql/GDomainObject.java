@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.graphql;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.database.domainobject.DomainObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.database.domainobject.DomainObject;
 import com.fuzzy.subsystems.remote.Identifiable;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

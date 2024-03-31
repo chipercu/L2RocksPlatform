@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.struct.request;
 
-import com.infomaximum.platform.component.frontend.request.GRequestWebSocket;
+import com.fuzzy.platform.component.frontend.request.GRequestWebSocket;
 
 import java.io.Serializable;
 import java.time.Instant;

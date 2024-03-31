@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.apikeyprivileges;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.remote.apikeyprivileges.RControllerApiKeyPrivilegesGetter;
 import com.fuzzy.subsystems.access.AccessOperationCollection;
 import org.checkerframework.checker.nullness.qual.NonNull;

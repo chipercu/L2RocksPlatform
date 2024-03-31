@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.core.remote.employee;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.domainobject.DomainObjectEditable;
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.*;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.*;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.additionalfield.AdditionalFieldReadable;
 import com.fuzzy.subsystem.core.domainobject.additionalfieldvalue.AdditionalFieldValueEditable;

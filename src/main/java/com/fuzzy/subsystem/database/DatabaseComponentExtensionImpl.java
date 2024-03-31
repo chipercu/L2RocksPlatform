@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.database;
 
-import com.infomaximum.platform.component.database.DatabaseComponent;
-import com.infomaximum.platform.component.database.DatabaseComponentExtension;
+import com.fuzzy.platform.component.database.DatabaseComponent;
+import com.fuzzy.platform.component.database.DatabaseComponentExtension;
 import com.fuzzy.subsystems.scheduler.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.autocomplete;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.utils.PrefixIndexUtils;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.utils.PrefixIndexUtils;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.graphql.input.GPaging;
 import com.fuzzy.subsystems.graphql.input.GTextFilter;
 import com.fuzzy.subsystems.sorter.Sorter;

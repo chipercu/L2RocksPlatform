@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.systemevent;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.platform.service.detectresource.observer.ResourceObserver;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.ResourceMonitorStatus;
 import com.fuzzy.subsystem.core.CoreSubsystem;

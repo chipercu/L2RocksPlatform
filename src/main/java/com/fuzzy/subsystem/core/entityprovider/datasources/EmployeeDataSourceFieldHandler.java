@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.entityprovider.datasources;
 
-import com.infomaximum.subsystem.entityprovidersdk.data.EntityFieldInfo;
+import com.fuzzy.subsystem.entityprovidersdk.data.EntityFieldInfo;
 
 import java.util.Arrays;
 import java.util.List;

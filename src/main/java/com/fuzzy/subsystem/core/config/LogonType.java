@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.config;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.infomaximum.database.utils.BaseEnum;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.database.utils.BaseEnum;
 
 @GraphQLTypeOutObject("logon_type")
 public enum LogonType implements RemoteObject, BaseEnum {

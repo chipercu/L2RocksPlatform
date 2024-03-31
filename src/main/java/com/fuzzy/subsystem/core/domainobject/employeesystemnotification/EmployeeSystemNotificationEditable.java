@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.employeesystemnotification;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public class EmployeeSystemNotificationEditable extends EmployeeSystemNotificationReadable  implements DomainObjectEditable {
     public EmployeeSystemNotificationEditable(long id) {

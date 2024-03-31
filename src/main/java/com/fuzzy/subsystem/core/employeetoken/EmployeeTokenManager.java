@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.employeetoken;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.domainobject.DomainObjectEditable;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
 
 public interface EmployeeTokenManager<T extends DomainObject & DomainObjectEditable & EmployeeTokenEditable> {
 

@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.graphql.query.employee.additionalfields;
 
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.additionalfield.AdditionalFieldReadable;
 import com.fuzzy.subsystem.core.domainobject.department.DepartmentReadable;

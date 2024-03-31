@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.apikey;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public class ApiKeyEditable extends ApiKeyReadable implements DomainObjectEditable {
 

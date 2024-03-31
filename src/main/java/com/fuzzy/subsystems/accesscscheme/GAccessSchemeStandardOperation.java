@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.accesscscheme;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLField;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLField;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.platform.sdk.graphql.annotation.GraphQLAuthControl;
 import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

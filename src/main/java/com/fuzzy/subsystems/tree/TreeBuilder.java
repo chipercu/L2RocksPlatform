@@ -1,12 +1,12 @@
 package com.fuzzy.subsystems.tree;
 
 import com.google.common.collect.Sets;
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.iterator.IteratorEntity;
-import com.infomaximum.platform.sdk.iterator.Iterator;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.iterator.IteratorEntity;
+import com.fuzzy.platform.sdk.iterator.Iterator;
 import com.fuzzy.subsystem.core.graphql.query.tree.GTreeView;
 import com.fuzzy.subsystems.comparators.DomainObjectIdComparator;
 import com.fuzzy.subsystems.graphql.input.GInputNodesItems;

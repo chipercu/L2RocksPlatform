@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.dump;
 
-import com.infomaximum.cluster.Cluster;
+import com.fuzzy.cluster.Cluster;
 import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystems.logback.LogNamePropertyDefiner;
@@ -29,7 +29,7 @@ public class Dump {
 
     private static final Logger log = LoggerFactory.getLogger(Dump.class);
 
-    private static final String APP_NAME = "infomaximum";
+    private static final String APP_NAME = "L2RocksPlatform";
     private static final String APP_TYPE = "server";
 
     public synchronized static void build(SubsystemsConfig subsystemsConfig, Cluster cluster) {

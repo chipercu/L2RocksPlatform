@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.frontend;
 
 import com.google.common.base.CharMatcher;
-import com.infomaximum.cluster.struct.Info;
+import com.fuzzy.cluster.struct.Info;
 import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.subsystem.frontend.struct.config.ConnectorConfig;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;

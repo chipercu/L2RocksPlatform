@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.filterhandler;
 
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.employeeaccess.ManagerEmployeeAccess;
 import com.fuzzy.subsystem.core.employeeaccess.ManagerEmployeeAccessGetter;
 import com.fuzzy.subsystems.graphql.input.GStandardFilter;

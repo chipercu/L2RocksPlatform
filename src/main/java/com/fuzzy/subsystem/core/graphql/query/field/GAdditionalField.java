@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.core.graphql.query.field;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLField;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
-import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLField;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.fuzzy.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
 import com.fuzzy.subsystem.core.domainobject.additionalfield.AdditionalFieldReadable;
 import com.fuzzy.subsystem.core.enums.FieldDataType;

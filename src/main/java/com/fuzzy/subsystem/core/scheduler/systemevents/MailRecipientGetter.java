@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.core.scheduler.systemevents;
 
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.querypool.iterator.IteratorEntity;
-import com.infomaximum.platform.sdk.context.impl.ContextTransactionImpl;
-import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.iterator.IteratorEntity;
+import com.fuzzy.platform.sdk.context.impl.ContextTransactionImpl;
+import com.fuzzy.platform.sdk.context.source.impl.SourceSystemImpl;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
 import com.fuzzy.subsystem.core.accessroleprivileges.EmployeePrivilegesGetter;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;

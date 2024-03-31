@@ -1,7 +1,7 @@
 package com.fuzzy.main.argument.upgrade;
 
 import com.google.common.base.Strings;
-import com.infomaximum.platform.sdk.component.version.Version;
+import com.fuzzy.platform.sdk.component.version.Version;
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;

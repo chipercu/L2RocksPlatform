@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.frontend.component.authcontext.builder;
 
-import com.infomaximum.cluster.anotation.DisableValidationRemoteMethod;
-import com.infomaximum.cluster.graphql.struct.GRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.cluster.anotation.DisableValidationRemoteMethod;
+import com.fuzzy.cluster.graphql.struct.GRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;
 
 public interface BuilderAuthContext {

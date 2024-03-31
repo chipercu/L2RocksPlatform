@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.remote.dump;
 
-import com.infomaximum.cluster.core.remote.struct.RController;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.cluster.core.remote.struct.RController;
+import com.fuzzy.platform.exception.PlatformException;
 
 import java.net.URI;
 

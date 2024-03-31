@@ -1,14 +1,14 @@
 package com.fuzzy.subsystem.frontend.controller.http;
 
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.infomaximum.platform.component.frontend.context.impl.ContextTransactionRequestImpl;
-import com.infomaximum.platform.component.frontend.context.source.impl.SourceGRequestAuthImpl;
-import com.infomaximum.platform.component.frontend.request.GRequestHttp;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.Query;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.fuzzy.platform.component.frontend.context.impl.ContextTransactionRequestImpl;
+import com.fuzzy.platform.component.frontend.context.source.impl.SourceGRequestAuthImpl;
+import com.fuzzy.platform.component.frontend.request.GRequestHttp;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.Query;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
 import com.fuzzy.subsystem.core.authcontext.employee.EmployeeAuthContext;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;

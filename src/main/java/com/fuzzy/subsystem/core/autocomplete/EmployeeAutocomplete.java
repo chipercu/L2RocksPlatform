@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.autocomplete;
 
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.department.DepartmentReadable;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 import com.fuzzy.subsystem.core.grouping.DepartmentGrouping;

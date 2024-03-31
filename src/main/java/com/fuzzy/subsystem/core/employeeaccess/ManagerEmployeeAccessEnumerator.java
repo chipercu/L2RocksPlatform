@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.employeeaccess;
 
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.managerallaccess.ManagerAllAccessReadable;
 import com.fuzzy.subsystem.core.domainobject.managerdepartmentaccess.ManagerDepartmentAccessReadable;
 import com.fuzzy.subsystem.core.domainobject.manageremployeeaccess.ManagerEmployeeAccessReadable;

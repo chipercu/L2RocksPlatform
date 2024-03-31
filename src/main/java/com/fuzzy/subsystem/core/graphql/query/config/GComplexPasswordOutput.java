@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.core.graphql.query.config;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLField;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLField;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.fuzzy.platform.sdk.graphql.annotation.GraphQLAuthControl;
 import com.fuzzy.subsystem.core.config.ComplexPassword;
 
 @GraphQLTypeOutObject("complex_password_output")

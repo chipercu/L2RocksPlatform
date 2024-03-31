@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.list;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 
 public class RemoteListItem<T extends RemoteObject> {
 

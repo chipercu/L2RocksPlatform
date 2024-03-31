@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.autocomplete;
 
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.tag.TagReadable;
 import com.fuzzy.subsystem.core.textfilter.TagTextFilterGetter;
 import com.fuzzy.subsystems.autocomplete.AtomicAutocompleteImpl;

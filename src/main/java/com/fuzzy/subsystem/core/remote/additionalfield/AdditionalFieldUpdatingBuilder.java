@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.remote.additionalfield;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.cluster.graphql.struct.GOptional;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.graphql.struct.GOptional;
 import com.fuzzy.subsystem.core.enums.FieldDataType;
 
 public class AdditionalFieldUpdatingBuilder implements RemoteObject {

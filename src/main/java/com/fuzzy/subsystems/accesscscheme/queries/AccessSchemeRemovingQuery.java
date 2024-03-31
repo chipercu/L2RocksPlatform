@@ -1,12 +1,12 @@
 package com.fuzzy.subsystems.accesscscheme.queries;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystems.accesscscheme.domainobject.AccessSchemeItem;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;

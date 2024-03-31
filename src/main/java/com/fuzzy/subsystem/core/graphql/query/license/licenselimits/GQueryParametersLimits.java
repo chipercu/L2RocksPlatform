@@ -1,14 +1,14 @@
 package com.fuzzy.subsystem.core.graphql.query.license.licenselimits;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLField;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
-import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLField;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.fuzzy.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.license.enums.LicenseParameter;
 import com.fuzzy.subsystem.core.remote.liscense.RCLicenseGetter;
@@ -16,12 +16,12 @@ import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;
 
 @GraphQLTypeOutObject("parameters_limits_query")
 public class GQueryParametersLimits {
-    private static final String MONITORING_UUID = "com.infomaximum.subsystem.monitoring";
-    private static final String AUTOMATION_UUID = "com.infomaximum.subsystem.automation";
-    private static final String BI_DATA_UUID = "com.infomaximum.subsystem.bidata";
-    private static final String CORE_UUID = "com.infomaximum.subsystem.core";
-    private static final String AUTOMATION_WEBHOOK_UUID = "com.infomaximum.subsystem.automationwebhook";
-    private static final String DASHBOARD_UUID = "com.infomaximum.subsystem.dashboard";
+    private static final String MONITORING_UUID = "com.fuzzy.subsystem.monitoring";
+    private static final String AUTOMATION_UUID = "com.fuzzy.subsystem.automation";
+    private static final String BI_DATA_UUID = "com.fuzzy.subsystem.bidata";
+    private static final String CORE_UUID = "com.fuzzy.subsystem.core";
+    private static final String AUTOMATION_WEBHOOK_UUID = "com.fuzzy.subsystem.automationwebhook";
+    private static final String DASHBOARD_UUID = "com.fuzzy.subsystem.dashboard";
 
     @GraphQLField
     @GraphQLAuthControl({ AuthorizedContext.class })

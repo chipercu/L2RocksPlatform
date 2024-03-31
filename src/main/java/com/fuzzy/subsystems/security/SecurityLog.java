@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.security;
 
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.sdk.context.Context;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.sdk.context.Context;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.security.build.SyslogStructDataBuilder;
 import com.fuzzy.subsystems.security.struct.data.SyslogStructData;
 import com.fuzzy.subsystems.security.struct.data.event.SyslogStructDataEvent;
@@ -27,7 +27,7 @@ public class SecurityLog {
     private static final Logger log = LoggerFactory.getLogger(SecurityLog.class);
 
     private static final String ENTERPRISE_ID = "729368";       // должно быть ASCII max 128 символов
-    private static final String PROCESS_NAME = "infomaximum";   // должно быть ASCII max 48 символов
+    private static final String PROCESS_NAME = "L2RocksPlatform";   // должно быть ASCII max 48 символов
     private static final String HOST_NAME = getHostName();
     private static final String PROCESS_PID = getProcId();
 

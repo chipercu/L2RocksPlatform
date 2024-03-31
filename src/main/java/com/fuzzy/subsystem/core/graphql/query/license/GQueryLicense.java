@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.graphql.query.license;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLField;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLField;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
 import com.fuzzy.subsystem.core.graphql.query.license.licenseconsumption.GQueryLicenseConsumption;
 import com.fuzzy.subsystem.core.graphql.query.license.licensedemployee.GQueryLicensedEmployee;
 import com.fuzzy.subsystem.core.graphql.query.license.licenselimits.GQueryLicenseLimits;

@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.access;
 
-import com.infomaximum.cluster.graphql.struct.GOptional;
-import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.cluster.graphql.struct.GOptional;
+import com.fuzzy.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 

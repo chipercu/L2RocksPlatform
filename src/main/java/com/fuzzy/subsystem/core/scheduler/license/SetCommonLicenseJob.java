@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.core.scheduler.license;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
-import com.infomaximum.platform.sdk.context.impl.ContextTransactionImpl;
-import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.sdk.context.impl.ContextTransactionImpl;
+import com.fuzzy.platform.sdk.context.source.impl.SourceSystemImpl;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.license.LicenseManager;
 import com.fuzzy.subsystem.core.remote.licensenotification.RCLicenseNotification;

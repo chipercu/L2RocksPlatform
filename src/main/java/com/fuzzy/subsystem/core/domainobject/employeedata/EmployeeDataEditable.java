@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.employeedata;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public class EmployeeDataEditable extends EmployeeDataReadable implements DomainObjectEditable {
 

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.tree;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.remote.Identifiable;
 
 import java.util.List;

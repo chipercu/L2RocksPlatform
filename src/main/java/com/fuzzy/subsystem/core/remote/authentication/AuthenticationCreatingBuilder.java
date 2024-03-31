@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.authentication;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 
 public class AuthenticationCreatingBuilder implements RemoteObject {
 

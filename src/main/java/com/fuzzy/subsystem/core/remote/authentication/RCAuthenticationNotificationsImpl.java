@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.remote.authentication;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.*;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.*;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.config.CoreConfigDescription;

@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.subsystem;
 
-import com.infomaximum.cluster.struct.Component;
-import com.infomaximum.platform.sdk.component.version.CompatibleVersion;
-import com.infomaximum.platform.sdk.component.version.Version;
+import com.fuzzy.cluster.struct.Component;
+import com.fuzzy.platform.sdk.component.version.CompatibleVersion;
+import com.fuzzy.platform.sdk.component.version.Version;
 import com.fuzzy.subsystems.utils.ManifestUtils;
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
@@ -13,7 +13,7 @@ import org.reflections.Reflections;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Info extends com.infomaximum.platform.sdk.component.Info {
+public class Info extends com.fuzzy.platform.sdk.component.Info {
 
 	public static class DependenceVersion {
 		public final Class<? extends Subsystem> subsystem;
@@ -77,7 +77,7 @@ public class Info extends com.infomaximum.platform.sdk.component.Info {
 		return (Class<? extends Subsystem>) super.getComponent();
 	}
 
-	public static class Builder extends com.infomaximum.platform.sdk.component.Info.Builder<Builder> {
+	public static class Builder extends com.fuzzy.platform.sdk.component.Info.Builder<Builder> {
 
 		private boolean platform = false;
 		private String name;

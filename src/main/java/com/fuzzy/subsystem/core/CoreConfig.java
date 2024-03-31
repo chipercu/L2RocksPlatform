@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core;
 
-import com.infomaximum.cluster.struct.Info;
+import com.fuzzy.cluster.struct.Info;
 import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.subsystem.core.config.LogonType;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;

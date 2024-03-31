@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.core.remote.fieldsgetter;
 
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.AbstractQueryRController;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.AbstractQueryRController;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.domainobject.additionalfield.AdditionalFieldReadable;

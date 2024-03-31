@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.graphql.customfieldargument;
 
-import com.infomaximum.cluster.graphql.fieldargument.custom.CustomFieldArgument;
-import com.infomaximum.cluster.graphql.struct.ContextRequest;
-import com.infomaximum.cluster.struct.Component;
+import com.fuzzy.cluster.graphql.fieldargument.custom.CustomFieldArgument;
+import com.fuzzy.cluster.graphql.struct.ContextRequest;
+import com.fuzzy.cluster.struct.Component;
 import com.fuzzy.main.Subsystems;
 import com.fuzzy.subsystems.subsystem.Subsystem;
 

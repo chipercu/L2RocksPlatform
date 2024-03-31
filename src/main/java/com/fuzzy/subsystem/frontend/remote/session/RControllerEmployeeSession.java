@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.frontend.remote.session;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryRemoteController;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryRemoteController;
 
 import java.util.ArrayList;
 

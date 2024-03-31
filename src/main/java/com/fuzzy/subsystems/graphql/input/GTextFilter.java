@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.graphql.input;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLName;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeInput;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLName;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeInput;
 import org.apache.commons.lang3.StringUtils;
 import org.checkerframework.checker.nullness.qual.Nullable;
 

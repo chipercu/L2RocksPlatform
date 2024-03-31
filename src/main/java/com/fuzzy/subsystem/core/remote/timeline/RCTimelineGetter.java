@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.remote.timeline;
 
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryRemoteController;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryRemoteController;
 import com.fuzzy.subsystems.graphql.input.datetime.GDateInterval;
 import com.fuzzy.subsystems.graphql.input.datetime.GInputDate;
 

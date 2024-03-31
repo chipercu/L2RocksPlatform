@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.frontend.graphql.query;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLField;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
-import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLField;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.fuzzy.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 import com.fuzzy.subsystem.core.graphql.query.employee.GEmployee;
 import com.fuzzy.subsystem.core.remote.logon.AuthStatus;

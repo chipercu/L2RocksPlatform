@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.config;
 
-import com.infomaximum.database.schema.TypeConverter;
-import com.infomaximum.database.utils.BaseEnum;
-import com.infomaximum.database.utils.EnumConverter;
+import com.fuzzy.database.schema.TypeConverter;
+import com.fuzzy.database.utils.BaseEnum;
+import com.fuzzy.database.utils.EnumConverter;
 
 public class EnumConfig<T extends Enum<?> & BaseEnum> extends Config<T> {
 

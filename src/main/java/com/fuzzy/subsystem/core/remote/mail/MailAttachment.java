@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.mail;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 
 public abstract class MailAttachment implements RemoteObject {
 

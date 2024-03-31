@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.usedpassword;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public class UsedPasswordEditable extends UsedPasswordReadable implements DomainObjectEditable {
 

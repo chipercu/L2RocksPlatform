@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.graphql.query.employee.additionalfields;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLField;
-import com.infomaximum.platform.sdk.graphql.annotation.GraphQLAuthControl;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLField;
+import com.fuzzy.platform.sdk.graphql.annotation.GraphQLAuthControl;
 import com.fuzzy.subsystem.core.domainobject.additionalfield.AdditionalFieldReadable;
 import com.fuzzy.subsystem.core.graphql.query.field.GAdditionalField;
 import com.fuzzy.subsystem.frontend.authcontext.AuthorizedContext;

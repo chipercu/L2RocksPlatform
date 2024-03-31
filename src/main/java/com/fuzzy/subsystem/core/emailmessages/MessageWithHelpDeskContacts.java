@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.emailmessages;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.config.Language;
 import com.fuzzy.subsystem.core.graphql.query.config.HelpDeskConfig;
 import com.fuzzy.subsystem.core.remote.mail.FileMailAttachment;

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.tree;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 import com.fuzzy.subsystems.list.RemoteListItem;
 
 import java.util.ArrayList;

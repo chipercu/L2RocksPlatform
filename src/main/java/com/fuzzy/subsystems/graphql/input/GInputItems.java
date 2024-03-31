@@ -1,12 +1,12 @@
 package com.fuzzy.subsystems.graphql.input;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLName;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeInput;
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLName;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeInput;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
 import com.fuzzy.subsystems.utils.PrimaryKeyValidator;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;

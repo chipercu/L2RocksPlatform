@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.systemevent;
 
-import com.infomaximum.cluster.core.remote.AbstractRController;
+import com.fuzzy.cluster.core.remote.AbstractRController;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.service.systemevent.SystemEvent;
 import com.fuzzy.subsystem.core.service.systemevent.SystemEventService;

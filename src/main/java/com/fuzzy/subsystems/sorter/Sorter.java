@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.sorter;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;

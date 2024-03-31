@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.frontend.remote.info;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryRemoteController;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryRemoteController;
 
 /**
  * Created by kris on 02.11.16.

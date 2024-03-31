@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.core.config;
 
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.database.utils.TypeConvert;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.database.utils.TypeConvert;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.domainobject.authentication.AuthenticationReadable;
 import com.fuzzy.subsystem.core.domainobject.config.CoreConfigEditable;
 import com.fuzzy.subsystem.core.securitylog.CoreEvent;

@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.tree;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
 
 import java.util.ArrayList;
 import java.util.Collection;

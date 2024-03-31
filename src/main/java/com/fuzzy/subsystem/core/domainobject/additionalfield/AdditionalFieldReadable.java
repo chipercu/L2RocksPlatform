@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.domainobject.additionalfield;
 
-import com.infomaximum.database.anotation.Entity;
-import com.infomaximum.database.anotation.Field;
-import com.infomaximum.database.anotation.HashIndex;
+import com.fuzzy.database.anotation.Entity;
+import com.fuzzy.database.anotation.Field;
+import com.fuzzy.database.anotation.HashIndex;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.enums.FieldDataType;
 import com.fuzzy.subsystems.remote.RDomainObject;

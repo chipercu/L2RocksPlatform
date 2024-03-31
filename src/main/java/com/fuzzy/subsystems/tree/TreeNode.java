@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.tree;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.graphql.input.GInputNodesItems;
 import com.fuzzy.subsystems.remote.Identifiable;
 import com.fuzzy.subsystems.sorter.SorterComparator;

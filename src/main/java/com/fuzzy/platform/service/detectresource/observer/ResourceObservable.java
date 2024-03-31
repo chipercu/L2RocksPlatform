@@ -1,6 +1,6 @@
 package com.fuzzy.platform.service.detectresource.observer;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.ResourceMonitorStatus;
 
 import java.io.Serializable;

@@ -2,7 +2,7 @@ package com.fuzzy.platform.service.detectresource;
 
 import com.fuzzy.main.Subsystems;
 import com.fuzzy.main.SubsystemsConfig;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.platform.service.detectresource.observer.ResourceObservable;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.ResourceMonitor;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.ResourceMonitorBuilder;
@@ -13,7 +13,7 @@ import com.fuzzy.platform.service.detectresource.resourcemonitor.diskresourcesmo
 import com.fuzzy.platform.service.detectresource.resourcemonitor.diskresourcesmonitor.DiskJvmResourceMonitor;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.memoryresourcesmonitor.MemoryHostResourceMonitor;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.memoryresourcesmonitor.MemoryJvmResourceMonitor;
-import com.infomaximum.platform.utils.DefaultThreadFactory;
+import com.fuzzy.platform.utils.DefaultThreadFactory;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

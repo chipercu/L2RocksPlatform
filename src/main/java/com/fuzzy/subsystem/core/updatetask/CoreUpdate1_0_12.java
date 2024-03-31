@@ -1,13 +1,13 @@
 package com.fuzzy.subsystem.core.updatetask;
 
-import com.infomaximum.database.Record;
-import com.infomaximum.database.RecordIterator;
-import com.infomaximum.database.RecordSource;
-import com.infomaximum.database.domainobject.Transaction;
-import com.infomaximum.database.exception.DatabaseException;
-import com.infomaximum.database.schema.Schema;
-import com.infomaximum.platform.update.UpdateTask;
-import com.infomaximum.platform.update.annotation.Update;
+import com.fuzzy.database.Record;
+import com.fuzzy.database.RecordIterator;
+import com.fuzzy.database.RecordSource;
+import com.fuzzy.database.domainobject.Transaction;
+import com.fuzzy.database.exception.DatabaseException;
+import com.fuzzy.database.schema.Schema;
+import com.fuzzy.platform.update.UpdateTask;
+import com.fuzzy.platform.update.annotation.Update;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 

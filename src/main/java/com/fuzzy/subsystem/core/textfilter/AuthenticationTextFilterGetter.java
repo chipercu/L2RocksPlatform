@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.textfilter;
 
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.authentication.AuthenticationReadable;
 import com.fuzzy.subsystems.textfilter.DomainObjectTextFilterGetter;
 

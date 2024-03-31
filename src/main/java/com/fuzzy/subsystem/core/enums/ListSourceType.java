@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.enums;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
 import com.fuzzy.subsystem.core.domainobject.department.DepartmentReadable;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 

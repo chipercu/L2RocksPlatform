@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.accessrole;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public class AccessRoleEditable extends AccessRoleReadable implements DomainObjectEditable {
 

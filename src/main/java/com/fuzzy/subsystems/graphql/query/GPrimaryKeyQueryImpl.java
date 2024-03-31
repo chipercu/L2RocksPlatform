@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.graphql.query;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
 import com.fuzzy.subsystems.function.Function;
 import com.fuzzy.subsystems.graphql.GDomainObject;
 

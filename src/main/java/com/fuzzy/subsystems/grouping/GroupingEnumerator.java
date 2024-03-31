@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.grouping;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
 import com.fuzzy.subsystems.function.Function;
 
 public interface GroupingEnumerator {

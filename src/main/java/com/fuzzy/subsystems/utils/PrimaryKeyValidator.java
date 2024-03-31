@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.utils;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.graphql.input.*;
 

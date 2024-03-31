@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.access;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeOutObject;
-import com.infomaximum.database.utils.BaseEnum;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeOutObject;
+import com.fuzzy.database.utils.BaseEnum;
 
 @GraphQLTypeOutObject("access_operation")
 public enum AccessOperation implements BaseEnum {

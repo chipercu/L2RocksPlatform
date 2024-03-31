@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.remote.tag;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryRemoteController;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryRemoteController;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.domainobject.tag.TagReadable;
 
 import java.util.HashSet;

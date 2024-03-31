@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.textfilter;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.sdk.iterator.Iterator;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.sdk.iterator.Iterator;
 import com.fuzzy.subsystems.function.Consumer;
 
 public interface TextFilterGetter<T> extends TextFilterEnumerator<T> {

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.license.enums;
 
-import com.infomaximum.database.utils.BaseEnum;
+import com.fuzzy.database.utils.BaseEnum;
 
 import java.time.Period;
 

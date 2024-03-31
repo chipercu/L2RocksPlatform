@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.tag;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public class TagEditable extends TagReadable implements DomainObjectEditable {
 

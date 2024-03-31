@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.autocomplete;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.domainobject.department.DepartmentReadable;
 import com.fuzzy.subsystem.core.employeeaccess.ManagerEmployeeAccess;
 import com.fuzzy.subsystem.core.employeeaccess.ManagerEmployeeAccessGetter;

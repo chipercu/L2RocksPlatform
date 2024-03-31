@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.domainobject.config;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public interface ConfigEditable extends DomainObjectEditable {
 

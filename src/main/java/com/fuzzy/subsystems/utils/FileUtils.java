@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.utils;
 
-import com.infomaximum.cluster.struct.Component;
+import com.fuzzy.cluster.struct.Component;
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.struct.ClusterFile;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.struct.ClusterFile;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.checkerframework.checker.nullness.qual.NonNull;

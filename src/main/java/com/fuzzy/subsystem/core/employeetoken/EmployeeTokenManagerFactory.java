@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.employeetoken;
 
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.domainobject.employeeinvitationtoken.EmployeeInvitationTokenEditable;
 import com.fuzzy.subsystem.core.domainobject.employeetokenrestoreaccess.EmployeeTokenRestoreAccessEditable;

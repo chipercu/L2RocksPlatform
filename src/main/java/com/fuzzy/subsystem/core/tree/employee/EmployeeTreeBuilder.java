@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.core.tree.employee;
 
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
-import com.infomaximum.platform.sdk.function.Consumer;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.sdk.function.Consumer;
 import com.fuzzy.subsystem.core.config.CoreConfigDescription;
 import com.fuzzy.subsystem.core.config.CoreConfigGetter;
 import com.fuzzy.subsystem.core.config.DisplayNameFormat;
@@ -210,7 +210,7 @@ public class EmployeeTreeBuilder {
         ArrayList<EnableMonitoringType> monitoringTypes = param.monitoringTypes;
         if (monitoringTypes != null && !monitoringTypes.isEmpty()) {
             if (rControllerEmployeeMonitoringGetter == null) {
-                throw CoreExceptionBuilder.buildNotActivePlatformException("com.infomaximum.subsystem.monitoring");
+                throw CoreExceptionBuilder.buildNotActivePlatformException("com.fuzzy.subsystem.monitoring");
             }
             return rControllerEmployeeMonitoringGetter.getEmployeesWithEnabledMonitoring(monitoringTypes, employees, transaction);
         }

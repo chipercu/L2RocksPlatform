@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.sorter;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.function.Function;
 import com.fuzzy.subsystems.graphql.enums.SortingDirection;
 import com.fuzzy.subsystems.utils.ComparatorUtility;

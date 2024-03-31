@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.remote;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 
 import java.io.Serializable;
 import java.util.Objects;

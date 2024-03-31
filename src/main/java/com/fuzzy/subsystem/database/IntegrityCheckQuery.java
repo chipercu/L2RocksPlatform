@@ -1,15 +1,15 @@
 package com.fuzzy.subsystem.database;
 
-import com.infomaximum.database.exception.DatabaseException;
-import com.infomaximum.database.maintenance.ChangeMode;
+import com.fuzzy.database.exception.DatabaseException;
+import com.fuzzy.database.maintenance.ChangeMode;
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.Query;
-import com.infomaximum.platform.querypool.QueryPool;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.impl.ContextImpl;
-import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.Query;
+import com.fuzzy.platform.querypool.QueryPool;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.impl.ContextImpl;
+import com.fuzzy.platform.sdk.context.source.impl.SourceSystemImpl;
 import com.fuzzy.subsystem.core.securitylog.CoreEvent;
 import com.fuzzy.subsystem.core.securitylog.CoreParameter;
 import com.fuzzy.subsystem.core.securitylog.CoreTarget;

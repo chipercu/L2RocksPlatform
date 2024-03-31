@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.struct;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.autocomplete.LightAutocompleteElement;
 import com.fuzzy.subsystems.autocomplete.LightAutocompleteResult;
 import com.fuzzy.subsystems.function.Function;

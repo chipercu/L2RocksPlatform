@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.core.updatetask;
 
-import com.infomaximum.database.domainobject.Transaction;
-import com.infomaximum.database.exception.DatabaseException;
-import com.infomaximum.platform.update.UpdateTask;
-import com.infomaximum.platform.update.annotation.Update;
+import com.fuzzy.database.domainobject.Transaction;
+import com.fuzzy.database.exception.DatabaseException;
+import com.fuzzy.platform.update.UpdateTask;
+import com.fuzzy.platform.update.annotation.Update;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 

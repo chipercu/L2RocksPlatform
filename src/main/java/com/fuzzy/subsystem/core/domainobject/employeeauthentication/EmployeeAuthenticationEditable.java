@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.employeeauthentication;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public class EmployeeAuthenticationEditable extends EmployeeAuthenticationReadable implements DomainObjectEditable {
 

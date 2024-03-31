@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.config;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.config.CoreConfigReadable;
 import com.fuzzy.subsystems.config.ConfigGetter;
 

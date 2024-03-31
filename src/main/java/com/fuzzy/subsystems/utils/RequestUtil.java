@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.utils;
 
-import com.infomaximum.platform.component.frontend.request.GRequestHttp;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.struct.ClusterFile;
+import com.fuzzy.platform.component.frontend.request.GRequestHttp;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.struct.ClusterFile;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.subsystem.Subsystem;
 

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.frontend.struct.request;
 
-import com.infomaximum.platform.component.frontend.request.GRequestHttp;
+import com.fuzzy.platform.component.frontend.request.GRequestHttp;
 import jakarta.servlet.http.Cookie;
 
 import java.time.Instant;

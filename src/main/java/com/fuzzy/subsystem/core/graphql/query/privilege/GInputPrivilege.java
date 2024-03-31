@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.graphql.query.privilege;
 
-import com.infomaximum.cluster.graphql.anotation.GraphQLDescription;
-import com.infomaximum.cluster.graphql.anotation.GraphQLName;
-import com.infomaximum.cluster.graphql.anotation.GraphQLTypeInput;
+import com.fuzzy.cluster.graphql.anotation.GraphQLDescription;
+import com.fuzzy.cluster.graphql.anotation.GraphQLName;
+import com.fuzzy.cluster.graphql.anotation.GraphQLTypeInput;
 import com.fuzzy.subsystem.core.remote.accessroleprivileges.PrivilegeValue;
 import com.fuzzy.subsystems.access.AccessOperation;
 import com.fuzzy.subsystems.access.AccessOperationCollection;

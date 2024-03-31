@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.remote.fieldsgetter;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 import com.fuzzy.subsystem.core.enums.FieldDataType;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

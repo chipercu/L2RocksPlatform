@@ -1,32 +1,15 @@
 package com.fuzzy.main;
 
-import com.infomaximum.cluster.Cluster;
-import com.infomaximum.cluster.ComponentBuilder;
-import com.infomaximum.cluster.component.service.ServiceComponent;
-import com.infomaximum.cluster.core.service.componentuuid.ComponentUuidManager;
-import com.infomaximum.cluster.core.service.transport.network.grpc.GrpcNetworkTransit;
-import com.infomaximum.cluster.core.service.transport.network.grpc.GrpcRemoteNode;
-import com.infomaximum.cluster.exception.ClusterException;
-import com.infomaximum.database.maintenance.ChangeMode;
-import com.infomaximum.database.maintenance.SchemaService;
-import com.infomaximum.database.schema.Schema;
+import com.fuzzy.cluster.Cluster;
+import com.fuzzy.cluster.ComponentBuilder;
+import com.fuzzy.cluster.component.service.ServiceComponent;
+import com.fuzzy.cluster.core.service.componentuuid.ComponentUuidManager;
+import com.fuzzy.cluster.exception.ClusterException;
 import com.fuzzy.main.cluster.ClusterConfig;
 import com.fuzzy.main.cluster.ComponentsConfig;
 import com.fuzzy.main.cluster.NetworkConfig;
-import com.infomaximum.platform.Platform;
-import com.infomaximum.platform.component.database.DatabaseComponent;
-import com.infomaximum.platform.component.database.DatabaseConsts;
-import com.infomaximum.platform.component.database.configure.DatabaseConfigure;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryPool;
-import com.infomaximum.platform.sdk.component.Component;
-import com.infomaximum.platform.sdk.component.version.Version;
-import com.infomaximum.platform.sdk.context.impl.ContextImpl;
-import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
-import com.infomaximum.platform.sdk.remote.packer.RemotePackerContext;
-import com.infomaximum.platform.sdk.threadpool.ThreadPool;
-import com.infomaximum.platform.update.core.ModuleUpdateEntity;
-import com.infomaximum.platform.update.core.UpdateService;
+import com.fuzzy.cluster.core.service.transport.network.grpc.GrpcNetworkTransit;
+import com.fuzzy.cluster.core.service.transport.network.grpc.GrpcRemoteNode;
 import com.fuzzy.subsystem.core.securitylog.CoreEvent;
 import com.fuzzy.subsystem.core.securitylog.CoreTarget;
 import com.fuzzy.subsystem.database.DatabaseComponentExtensionImpl;
@@ -41,6 +24,23 @@ import com.fuzzy.subsystems.security.struct.data.event.SyslogStructDataEvent;
 import com.fuzzy.subsystems.security.struct.data.target.SyslogStructDataTarget;
 import com.fuzzy.subsystems.subsystem.Subsystem;
 import com.fuzzy.subsystems.utils.ManifestUtils;
+import com.fuzzy.database.maintenance.ChangeMode;
+import com.fuzzy.database.maintenance.SchemaService;
+import com.fuzzy.database.schema.Schema;
+import com.fuzzy.platform.Platform;
+import com.fuzzy.platform.component.database.DatabaseComponent;
+import com.fuzzy.platform.component.database.DatabaseConsts;
+import com.fuzzy.platform.component.database.configure.DatabaseConfigure;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryPool;
+import com.fuzzy.platform.sdk.component.Component;
+import com.fuzzy.platform.sdk.component.version.Version;
+import com.fuzzy.platform.sdk.context.impl.ContextImpl;
+import com.fuzzy.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.fuzzy.platform.sdk.remote.packer.RemotePackerContext;
+import com.fuzzy.platform.sdk.threadpool.ThreadPool;
+import com.fuzzy.platform.update.core.ModuleUpdateEntity;
+import com.fuzzy.platform.update.core.UpdateService;
 import net.minidev.json.parser.ParseException;
 import org.reflections.Reflections;
 import org.slf4j.Logger;
@@ -53,7 +53,7 @@ import java.util.stream.Collectors;
 
 public class Subsystems implements AutoCloseable {
 
-    public static final String UUID = "com.infomaximum.subsystems";
+    public static final String UUID = "com.fuzzy.subsystems";
     public static final Version VERSION = readVersion();
 
     private final static Logger log = LoggerFactory.getLogger(Subsystems.class);
@@ -364,7 +364,7 @@ public class Subsystems implements AutoCloseable {
         public Builder(SubsystemsConfig config, Thread.UncaughtExceptionHandler uncaughtExceptionHandler) {
             this.config = config;
             this.subsystemClasses = new HashSet<>();
-            withFindAndAddSubsystemClasses("com.infomaximum");
+            withFindAndAddSubsystemClasses("com.fuzzy");
             this.uncaughtExceptionHandler = uncaughtExceptionHandler;
         }
 

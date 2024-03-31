@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.employee;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 import com.fuzzy.subsystem.core.config.Language;
 import com.fuzzy.utils.Random;
 

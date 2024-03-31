@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.utils;
 
-import com.infomaximum.platform.sdk.component.version.Version;
+import com.fuzzy.platform.sdk.component.version.Version;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;

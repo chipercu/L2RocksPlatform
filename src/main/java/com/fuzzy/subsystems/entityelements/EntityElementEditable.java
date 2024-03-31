@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.entityelements;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 public interface EntityElementEditable<T> extends DomainObjectEditable {
 

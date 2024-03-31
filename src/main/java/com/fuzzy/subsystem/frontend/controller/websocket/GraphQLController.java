@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.frontend.controller.websocket;
 
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.network.mvc.ResponseEntity;
-import com.infomaximum.network.mvc.anotation.Controller;
-import com.infomaximum.network.mvc.anotation.ControllerAction;
-import com.infomaximum.network.protocol.standard.packet.TargetPacket;
-import com.infomaximum.network.protocol.standard.session.StandardTransportSession;
+import com.fuzzy.network.mvc.ResponseEntity;
+import com.fuzzy.network.mvc.anotation.Controller;
+import com.fuzzy.network.mvc.anotation.ControllerAction;
+import com.fuzzy.network.protocol.standard.packet.TargetPacket;
+import com.fuzzy.network.protocol.standard.session.StandardTransportSession;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 
 import java.util.concurrent.CompletableFuture;

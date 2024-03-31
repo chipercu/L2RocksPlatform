@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.subsystem;
 
-import com.infomaximum.cluster.struct.Component;
+import com.fuzzy.cluster.struct.Component;
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.sdk.component.version.CompatibleVersion;
+import com.fuzzy.platform.sdk.component.version.CompatibleVersion;
 
 public class SdkInfoBuilder {
 

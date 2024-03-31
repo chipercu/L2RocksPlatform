@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.accesscscheme;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.authcontext.employee.EmployeeAuthContext;
 import com.fuzzy.subsystem.core.authcontext.system.ApiKeyAuthContext;
 import com.fuzzy.subsystems.accesscscheme.domainobject.AccessSchemeItem;

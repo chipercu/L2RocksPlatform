@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.frontend.struct.config;
 
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.crypto.CryptoPassword;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;

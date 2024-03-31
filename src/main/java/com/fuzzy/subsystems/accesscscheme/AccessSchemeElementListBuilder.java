@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.accesscscheme;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.accesscscheme.domainobject.AccessSchemeItem;
 import com.fuzzy.subsystems.function.Consumer;
 import com.fuzzy.subsystems.remote.Identifiable;

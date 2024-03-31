@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.comparators;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.function.Function;
 import com.fuzzy.subsystems.sorter.SorterComparator;
 

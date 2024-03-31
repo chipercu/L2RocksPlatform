@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.frontend.remote.accessrole;
 
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.*;
-import com.infomaximum.platform.querypool.iterator.IteratorEntity;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.*;
+import com.fuzzy.platform.querypool.iterator.IteratorEntity;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.accessroleprivileges.EmployeePrivilegesGetter;
 import com.fuzzy.subsystem.core.domainobject.employeeaccessrole.EmployeeAccessRoleReadable;
 import com.fuzzy.subsystem.core.remote.accessrole.RControllerAccessRoleNotification;

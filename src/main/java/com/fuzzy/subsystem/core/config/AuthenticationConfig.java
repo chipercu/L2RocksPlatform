@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.config;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 
 import java.time.Duration;
 

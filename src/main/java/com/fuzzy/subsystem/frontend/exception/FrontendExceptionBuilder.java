@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.frontend.exception;
 
-import com.infomaximum.platform.exception.ExceptionFactory;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.exception.PlatformExceptionFactory;
+import com.fuzzy.platform.exception.ExceptionFactory;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformExceptionFactory;
 import com.fuzzy.subsystem.frontend.FrontendSubsystemConsts;
 
 import java.util.HashMap;

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.tree;
 
-import com.infomaximum.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.DomainObject;
 import com.fuzzy.subsystems.remote.Identifiable;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

@@ -1,10 +1,10 @@
 package com.fuzzy.subsystems.access;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystems.function.BiFunction;
 import com.fuzzy.subsystems.function.Function;
 import org.checkerframework.checker.nullness.qual.NonNull;

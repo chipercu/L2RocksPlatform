@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.core.domainobject.apikey;
 
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.exception.CoreExceptionBuilder;
 
 public class ApiKeyTypes {
 
-	public static final String AD_SUBSYSTEM_UUID_TEMP = "com.infomaximum.subsystem.activedirectory";
+	public static final String AD_SUBSYSTEM_UUID_TEMP = "com.fuzzy.subsystem.activedirectory";
 
 	public static final ApiKeyType NONE = new ApiKeyType("none", Subsystems.UUID);
 	public static final ApiKeyType CERTIFICATE = new ApiKeyType("certificate", Subsystems.UUID);

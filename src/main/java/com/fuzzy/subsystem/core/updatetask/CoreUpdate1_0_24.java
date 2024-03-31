@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.core.updatetask;
 
-import com.infomaximum.database.anotation.Entity;
-import com.infomaximum.database.domainobject.Transaction;
-import com.infomaximum.database.exception.DatabaseException;
-import com.infomaximum.database.schema.Schema;
-import com.infomaximum.database.schema.table.TField;
-import com.infomaximum.platform.update.UpdateTask;
-import com.infomaximum.platform.update.annotation.Update;
+import com.fuzzy.database.anotation.Entity;
+import com.fuzzy.database.domainobject.Transaction;
+import com.fuzzy.database.exception.DatabaseException;
+import com.fuzzy.database.schema.Schema;
+import com.fuzzy.database.schema.table.TField;
+import com.fuzzy.platform.update.UpdateTask;
+import com.fuzzy.platform.update.annotation.Update;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.CoreSubsystemConsts;
 import com.fuzzy.subsystem.core.domainobject.additionalfield.AdditionalFieldReadable;

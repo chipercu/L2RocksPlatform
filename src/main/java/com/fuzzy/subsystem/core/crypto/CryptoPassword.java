@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.crypto;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.utils.FileUtils;
 import com.fuzzy.utils.Random;

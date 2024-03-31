@@ -1,11 +1,11 @@
 package com.fuzzy.subsystems.utils;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.iterator.IteratorEntity;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.iterator.IteratorEntity;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.config;
 
-import com.infomaximum.database.schema.TypeConverter;
+import com.fuzzy.database.schema.TypeConverter;
 
 public abstract class Config<T> {
 

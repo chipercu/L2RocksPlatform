@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.list;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.function.Consumer;
 import com.fuzzy.subsystems.sorter.SorterComparator;

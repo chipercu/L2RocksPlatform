@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.accesscscheme.queries;
 
-import com.infomaximum.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.DomainObject;
 import com.fuzzy.subsystems.accesscscheme.domainobject.AccessSchemeItem;
 import org.checkerframework.checker.nullness.qual.NonNull;
 

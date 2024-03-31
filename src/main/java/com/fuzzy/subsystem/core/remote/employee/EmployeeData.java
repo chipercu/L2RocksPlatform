@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.remote.employee;
 
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
 
 public class EmployeeData implements RemoteObject {
 

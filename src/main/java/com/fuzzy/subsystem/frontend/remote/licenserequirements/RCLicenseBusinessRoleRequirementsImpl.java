@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.frontend.remote.licenserequirements;
 
-import com.infomaximum.platform.querypool.AbstractQueryRController;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.querypool.AbstractQueryRController;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.remote.licenserequirements.RCLicenseBusinessRoleRequirements;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 import com.fuzzy.subsystem.frontend.access.FrontendPrivilege;

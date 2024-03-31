@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.utils;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 
 import java.io.InputStream;

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.subsystem;
 
-import com.infomaximum.cluster.struct.Info;
+import com.fuzzy.cluster.struct.Info;
 import com.fuzzy.main.SubsystemsConfig;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;
 import com.fuzzy.subsystems.utils.TimeConsts;

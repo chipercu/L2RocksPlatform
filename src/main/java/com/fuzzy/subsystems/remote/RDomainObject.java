@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.remote;
 
-import com.infomaximum.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.DomainObject;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 import java.util.function.Function;

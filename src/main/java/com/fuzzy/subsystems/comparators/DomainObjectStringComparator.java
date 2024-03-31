@@ -1,6 +1,6 @@
 package com.fuzzy.subsystems.comparators;
 
-import com.infomaximum.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.DomainObject;
 import com.fuzzy.subsystems.function.Function;
 import com.fuzzy.subsystems.utils.ComparatorUtility;
 

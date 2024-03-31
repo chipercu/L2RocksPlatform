@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.grouping;
 
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.grouping.enumerator.DepartmentGroupingEnumerator;
 import com.fuzzy.subsystem.core.grouping.enumerator.EmployeeGroupingEnumerator;
 import com.fuzzy.subsystems.grouping.NodeItemGrouping;

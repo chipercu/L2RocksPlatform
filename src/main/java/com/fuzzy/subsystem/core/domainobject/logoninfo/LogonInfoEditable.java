@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.domainobject.logoninfo;
 
-import com.infomaximum.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
 
 import java.time.Instant;
 

@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.remote.mail;
 
-import com.infomaximum.cluster.core.remote.AbstractRController;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.cluster.core.remote.AbstractRController;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.graphql.query.config.HelpDeskConfig;
 import org.slf4j.Logger;

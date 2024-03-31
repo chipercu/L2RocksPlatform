@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.frontend.service.errorhandler;
 
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.component.frontend.engine.service.errorhandler.ActionErrorHandler;
-import com.infomaximum.platform.exception.GraphQLWrapperPlatformException;
+import com.fuzzy.platform.component.frontend.engine.service.errorhandler.ActionErrorHandler;
+import com.fuzzy.platform.exception.GraphQLWrapperPlatformException;
 import com.fuzzy.subsystem.frontend.FrontendSubsystem;
 import com.fuzzy.subsystem.frontend.controller.http.IndexController;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;

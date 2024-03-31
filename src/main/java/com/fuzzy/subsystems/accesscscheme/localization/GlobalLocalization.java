@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.accesscscheme.localization;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.component.Component;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.component.Component;
 import com.fuzzy.subsystem.core.config.Language;
 import com.fuzzy.subsystem.core.remote.localization.RCLocalization;
 import org.checkerframework.checker.nullness.qual.NonNull;

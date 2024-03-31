@@ -1,13 +1,13 @@
 package com.fuzzy.subsystems.entityelements;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.domainobject.DomainObjectEditable;
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.EditableResource;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.RemovableResource;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.DomainObjectEditable;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.EditableResource;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.RemovableResource;
 import com.fuzzy.subsystems.utils.PrimaryKeyValidator;
 
 import java.util.Collection;

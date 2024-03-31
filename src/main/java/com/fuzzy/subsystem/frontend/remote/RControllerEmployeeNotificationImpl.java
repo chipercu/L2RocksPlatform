@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.frontend.remote;
 
-import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.infomaximum.platform.component.frontend.context.source.SourceGRequest;
-import com.infomaximum.platform.component.frontend.context.source.SourceGRequestAuth;
-import com.infomaximum.platform.querypool.AbstractQueryRController;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.fuzzy.platform.component.frontend.context.source.SourceGRequest;
+import com.fuzzy.platform.component.frontend.context.source.SourceGRequestAuth;
+import com.fuzzy.platform.querypool.AbstractQueryRController;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.authcontext.employee.EmployeeSessionAuthContext;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 import com.fuzzy.subsystem.core.remote.employee.EmployeeBuilder;

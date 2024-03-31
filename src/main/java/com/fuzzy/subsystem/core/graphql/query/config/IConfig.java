@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.graphql.query.config;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 
 import java.io.Serializable;
 

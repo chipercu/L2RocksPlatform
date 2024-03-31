@@ -1,11 +1,11 @@
 package com.fuzzy.subsystems.utils;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.domainobject.filter.Filter;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.iterator.IteratorEntity;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.filter.Filter;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.iterator.IteratorEntity;
 import com.fuzzy.subsystems.comparators.IdentifiableComparator;
 import com.fuzzy.subsystems.sorter.Sorter;
 import com.fuzzy.subsystems.sorter.SorterComparator;

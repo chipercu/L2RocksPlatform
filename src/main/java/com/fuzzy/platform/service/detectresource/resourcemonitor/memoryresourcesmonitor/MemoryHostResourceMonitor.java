@@ -1,6 +1,6 @@
 package com.fuzzy.platform.service.detectresource.resourcemonitor.memoryresourcesmonitor;
 
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.platform.service.detectresource.PlatformEventType;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.ResourceMonitorBuilder;
 import com.fuzzy.platform.service.detectresource.resourcemonitor.ResourceMonitorContext;

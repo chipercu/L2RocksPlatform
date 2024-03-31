@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.remote;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.function.Consumer;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.function.Consumer;
 import com.fuzzy.subsystems.function.Function;
 import com.fuzzy.subsystems.function.Supplier;
 import org.checkerframework.checker.nullness.qual.NonNull;

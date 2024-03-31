@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.exception;
 
-import com.infomaximum.cluster.exception.ClusterException;
-import com.infomaximum.platform.sdk.component.version.Version;
+import com.fuzzy.cluster.exception.ClusterException;
+import com.fuzzy.platform.sdk.component.version.Version;
 import com.fuzzy.subsystems.subsystem.Subsystem;
 
 public class CompatibilityException extends ClusterException {

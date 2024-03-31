@@ -1,16 +1,16 @@
 package com.fuzzy.subsystem.core.remote.depersonalization;
 
-import com.infomaximum.database.domainobject.DomainObjectSource;
-import com.infomaximum.database.domainobject.Transaction;
-import com.infomaximum.database.domainobject.filter.HashFilter;
-import com.infomaximum.database.domainobject.iterator.IteratorEntity;
-import com.infomaximum.database.exception.DatabaseException;
-import com.infomaximum.database.utils.TypeConvert;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.AbstractQueryRController;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.rocksdb.RocksDBProvider;
-import com.infomaximum.rocksdb.RocksDataBaseBuilder;
+import com.fuzzy.database.domainobject.DomainObjectSource;
+import com.fuzzy.database.domainobject.Transaction;
+import com.fuzzy.database.domainobject.filter.HashFilter;
+import com.fuzzy.database.domainobject.iterator.IteratorEntity;
+import com.fuzzy.database.exception.DatabaseException;
+import com.fuzzy.database.utils.TypeConvert;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.AbstractQueryRController;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.rocksdb.RocksDBProvider;
+import com.fuzzy.rocksdb.RocksDataBaseBuilder;
 import com.fuzzy.subsystem.core.CoreSubsystem;
 import com.fuzzy.subsystem.core.config.CoreConfigDescription;
 import com.fuzzy.subsystem.core.domainobject.accessrole.AccessRoleEditable;

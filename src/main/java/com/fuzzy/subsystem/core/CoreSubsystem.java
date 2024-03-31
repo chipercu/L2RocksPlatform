@@ -1,15 +1,15 @@
 package com.fuzzy.subsystem.core;
 
-import com.infomaximum.database.domainobject.filter.HashFilter;
+import com.fuzzy.database.domainobject.filter.HashFilter;
 import com.fuzzy.main.Subsystems;
-import com.infomaximum.platform.component.database.DatabaseComponent;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
-import com.infomaximum.platform.sdk.context.impl.ContextImpl;
-import com.infomaximum.platform.sdk.context.source.impl.SourceSystemImpl;
-import com.infomaximum.platform.sdk.struct.querypool.QuerySystem;
+import com.fuzzy.platform.component.database.DatabaseComponent;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.sdk.context.impl.ContextImpl;
+import com.fuzzy.platform.sdk.context.source.impl.SourceSystemImpl;
+import com.fuzzy.platform.sdk.struct.querypool.QuerySystem;
 import com.fuzzy.platform.service.detectresource.DetectLowResourceService;
 import com.fuzzy.platform.service.detectresource.observer.ResourceObservable;
 import com.fuzzy.subsystem.core.access.CorePrivilege;
@@ -39,7 +39,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
 
-@com.infomaximum.cluster.anotation.Info(uuid = CoreSubsystemConsts.UUID)
+@com.fuzzy.cluster.anotation.Info(uuid = CoreSubsystemConsts.UUID)
 public class CoreSubsystem extends Subsystem {
 
     private final static Logger log = LoggerFactory.getLogger(CoreSubsystem.class);

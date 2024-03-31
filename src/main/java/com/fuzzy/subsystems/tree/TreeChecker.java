@@ -1,8 +1,8 @@
 package com.fuzzy.subsystems.tree;
 
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
 
 public interface TreeChecker<Node extends DomainObject, Item extends DomainObject> {
 

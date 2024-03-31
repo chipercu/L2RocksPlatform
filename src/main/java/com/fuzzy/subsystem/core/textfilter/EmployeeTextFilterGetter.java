@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.core.textfilter;
 
 import com.google.common.collect.ImmutableSet;
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.employee.EmployeeReadable;
 import com.fuzzy.subsystems.textfilter.DomainObjectTextFilterGetter;
 

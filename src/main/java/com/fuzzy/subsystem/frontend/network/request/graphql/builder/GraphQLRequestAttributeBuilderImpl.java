@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.frontend.network.request.graphql.builder;
 
-import com.infomaximum.platform.component.frontend.request.graphql.builder.impl.attribute.GraphQLRequestAttributeBuilder;
-import com.infomaximum.platform.exception.PlatformException;
+import com.fuzzy.platform.component.frontend.request.graphql.builder.impl.attribute.GraphQLRequestAttributeBuilder;
+import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.frontend.utils.HttpsRequestUtil;
 import com.fuzzy.subsystems.utils.CertificateUtil;
 import jakarta.servlet.http.HttpServletRequest;

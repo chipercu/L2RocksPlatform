@@ -1,9 +1,9 @@
 package com.fuzzy.subsystems.subsystem;
 
-import com.infomaximum.cluster.Cluster;
-import com.infomaximum.cluster.component.manager.ManagerComponent;
-import com.infomaximum.cluster.core.component.RuntimeComponentInfo;
-import com.infomaximum.cluster.struct.Component;
+import com.fuzzy.cluster.Cluster;
+import com.fuzzy.cluster.component.manager.ManagerComponent;
+import com.fuzzy.cluster.core.component.RuntimeComponentInfo;
+import com.fuzzy.cluster.struct.Component;
 import com.fuzzy.main.Subsystems;
 import com.fuzzy.subsystem.core.config.Language;
 

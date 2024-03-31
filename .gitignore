@@ -41,3 +41,5 @@ build/
 /data/databases/
 /log/
 /.idea/
+/app/
+/out/

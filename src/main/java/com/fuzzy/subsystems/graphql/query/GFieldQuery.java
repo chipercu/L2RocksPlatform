@@ -1,15 +1,15 @@
 package com.fuzzy.subsystems.graphql.query;
 
-import com.infomaximum.cluster.core.remote.struct.RemoteObject;
-import com.infomaximum.database.domainobject.DomainObject;
-import com.infomaximum.database.domainobject.filter.Filter;
-import com.infomaximum.platform.component.frontend.context.ContextTransactionRequest;
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ReadableResource;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.querypool.iterator.IteratorEntity;
-import com.infomaximum.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
+import com.fuzzy.cluster.core.remote.struct.RemoteObject;
+import com.fuzzy.database.domainobject.DomainObject;
+import com.fuzzy.database.domainobject.filter.Filter;
+import com.fuzzy.platform.component.frontend.context.ContextTransactionRequest;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ReadableResource;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.iterator.IteratorEntity;
+import com.fuzzy.platform.sdk.graphql.customfield.graphqlquery.GraphQLQuery;
 import com.fuzzy.subsystems.graphql.GDomainObject;
 
 import java.util.ArrayList;

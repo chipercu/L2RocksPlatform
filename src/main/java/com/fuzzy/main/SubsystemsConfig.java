@@ -1,7 +1,7 @@
 package com.fuzzy.main;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.utils.FileUtils;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.utils.FileUtils;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;
 import com.fuzzy.subsystems.logback.LogDirPropertyDefiner;
 import org.slf4j.Logger;

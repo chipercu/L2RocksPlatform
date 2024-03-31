@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.core.autocomplete;
 
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.domainobject.authentication.AuthenticationReadable;
 import com.fuzzy.subsystem.core.textfilter.AuthenticationTextFilterGetter;
 import com.fuzzy.subsystems.autocomplete.AtomicAutocompleteImpl;

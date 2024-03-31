@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.list;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.ResourceProvider;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystem.core.apikeyprivileges.ApiKeyPrivilegesGetter;
 import com.fuzzy.subsystem.core.domainobject.apikey.ApiKeyReadable;
 import com.fuzzy.subsystem.core.graphql.query.privilege.GInputPrivilege;

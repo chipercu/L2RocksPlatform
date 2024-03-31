@@ -1,11 +1,11 @@
 package com.fuzzy.subsystems.security.build;
 
-import com.infomaximum.cluster.graphql.struct.GRequest;
-import com.infomaximum.platform.component.frontend.authcontext.UnauthorizedContext;
-import com.infomaximum.platform.component.frontend.context.source.SourceGRequestAuth;
-import com.infomaximum.platform.sdk.context.Context;
-import com.infomaximum.platform.sdk.context.source.Source;
-import com.infomaximum.platform.sdk.context.source.SourceSystem;
+import com.fuzzy.cluster.graphql.struct.GRequest;
+import com.fuzzy.platform.component.frontend.authcontext.UnauthorizedContext;
+import com.fuzzy.platform.component.frontend.context.source.SourceGRequestAuth;
+import com.fuzzy.platform.sdk.context.Context;
+import com.fuzzy.platform.sdk.context.source.Source;
+import com.fuzzy.platform.sdk.context.source.SourceSystem;
 import com.fuzzy.subsystem.core.authcontext.employee.EmployeeSessionAuthContext;
 import com.fuzzy.subsystem.core.authcontext.system.ApiKeyAuthContext;
 import com.fuzzy.subsystems.security.struct.data.source.SyslogStructDataSource;

@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.core.emailmessages;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.querypool.QueryTransaction;
-import com.infomaximum.platform.querypool.ResourceProvider;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.querypool.QueryTransaction;
+import com.fuzzy.platform.querypool.ResourceProvider;
 import com.fuzzy.subsystem.core.config.CoreConfigDescription;
 import com.fuzzy.subsystem.core.config.CoreConfigGetter;
 import com.fuzzy.subsystem.core.config.DisplayNameFormat;

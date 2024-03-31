@@ -1,7 +1,7 @@
 package com.fuzzy.subsystems.list;
 
-import com.infomaximum.platform.exception.PlatformException;
-import com.infomaximum.platform.sdk.context.ContextTransaction;
+import com.fuzzy.platform.exception.PlatformException;
+import com.fuzzy.platform.sdk.context.ContextTransaction;
 import com.fuzzy.subsystems.comparators.IdentifiableComparator;
 import com.fuzzy.subsystems.function.Consumer;
 import com.fuzzy.subsystems.function.Function;
