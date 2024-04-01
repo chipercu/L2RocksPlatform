@@ -1,6 +1,5 @@
 package com.fuzzy.network;
 
-import com.fuzzy.network.Network;
 import com.fuzzy.network.event.NetworkListener;
 import com.fuzzy.network.protocol.Protocol;
 import com.fuzzy.network.protocol.ProtocolUtils;

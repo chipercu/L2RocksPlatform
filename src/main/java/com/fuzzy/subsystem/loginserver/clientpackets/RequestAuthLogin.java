@@ -1,9 +1,15 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
 
+import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
+import com.fuzzy.subsystem.loginserver.L2LoginClient.LoginClientState;
 import com.fuzzy.subsystem.loginserver.LoginController;
+import com.fuzzy.subsystem.loginserver.LoginController.State;
 import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail;
+import com.fuzzy.subsystem.loginserver.serverpackets.LoginOk;
+import com.fuzzy.subsystem.loginserver.serverpackets.ServerList;
+import com.fuzzy.subsystem.util.Log;
 
 import javax.crypto.Cipher;
 import java.net.InetAddress;
@@ -101,7 +107,7 @@ public class RequestAuthLogin extends L2LoginClientPacket {
         LoginController lc = LoginController.getInstance();
 
         LoginController.Status status = lc.tryAuthLogin(_user, _password, client);
-        if (status.state == LoginController.State.IN_USE) {
+        if (status.state == State.IN_USE) {
             L2LoginClient oldClient = lc.getAuthedClient(_user);
 
             // кикаем другого клиента, подключенного к логину
@@ -118,12 +124,12 @@ public class RequestAuthLogin extends L2LoginClientPacket {
             if (lc.isAccountInLoginServer(_user))
                 lc.removeAuthedLoginClient(_user).close(REASON_ACCOUNT_IN_USE);
 
-            status.state = LoginController.State.VALID;
+            status.state = State.VALID;
         }
-        if (status.state == LoginController.State.VALID) {
+        if (status.state == State.VALID) {
             client.setAccount(_user);
             lc.getCharactersOnAccount(_user);
-            client.setState(L2LoginClient.LoginClientState.AUTHED_LOGIN);
+            client.setState(LoginClientState.AUTHED_LOGIN);
             client.setSessionKey(lc.assignSessionKeyToClient());
             lc.addAuthedLoginClient(_user, client);
             client.setBonus(status.bonus, status.bonus_expire);

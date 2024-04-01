@@ -1,7 +1,8 @@
 package com.fuzzy.subsystem.extensions.network;
 
-import l2open.config.ConfigValue;
-import l2open.util.Log;
+import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.subsystem.gameserver.GameTimeController;
+import com.fuzzy.subsystem.util.Log;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -615,7 +616,7 @@ public class SelectorThread<T extends MMOClient> extends Thread {
 
     //----
     public static void getStartAntiFlood() {
-        l2open.gameserver.GameTimeController.getInstance();
+        GameTimeController.getInstance();
     }
 
     private static boolean enableAntiflood = false;

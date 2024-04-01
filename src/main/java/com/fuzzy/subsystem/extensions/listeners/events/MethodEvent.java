@@ -1,13 +1,10 @@
 package com.fuzzy.subsystem.extensions.listeners.events;
 
-/**
- * @author Death
- */
-public interface MethodEvent
-{
-	public Object getOwner();
+public interface MethodEvent {
 
-	public Object[] getArgs();
+    Object getOwner();
 
-	public String getMethodName();
+    Object[] getArgs();
+
+    String getMethodName();
 }

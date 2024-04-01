@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.loginserver.gameservercon;
 
 import javolution.util.FastList;
-import l2open.common.ThreadPoolManager;
-import l2open.config.ConfigValue;
+import com.fuzzy.subsystem.common.ThreadPoolManager;
+import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.GameServerTable;
 import com.fuzzy.subsystem.loginserver.LoginController;
 import com.fuzzy.subsystem.loginserver.crypt.ConnectionCrypt;

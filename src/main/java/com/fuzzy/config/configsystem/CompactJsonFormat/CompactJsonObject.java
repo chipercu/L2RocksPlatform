@@ -1,7 +1,6 @@
 package com.fuzzy.config.configsystem.CompactJsonFormat;
 
-
-import com.fuzzy.config.configsystem.exception.ConfigBuilderException;
+import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;
 
 import java.io.IOException;
 import java.io.OutputStream;

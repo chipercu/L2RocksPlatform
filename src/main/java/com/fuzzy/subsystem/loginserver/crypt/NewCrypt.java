@@ -98,6 +98,7 @@ public class NewCrypt implements ConnectionCrypt {
      * Packet is first XOR encoded with <code>key</code>
      * Then, the last 4 bytes are overwritten with the the XOR "key".
      * Thus this assume that there is enough room for the key to fit without overwriting data.
+     *
      * @param raw The raw bytes to be encrypted
      * @param key The 4 bytes (int) XOR key
      */
@@ -109,10 +110,11 @@ public class NewCrypt implements ConnectionCrypt {
      * Packet is first XOR encoded with <code>key</code>
      * Then, the last 4 bytes are overwritten with the the XOR "key".
      * Thus this assume that there is enough room for the key to fit without overwriting data.
-     * @param raw The raw bytes to be encrypted
+     *
+     * @param raw    The raw bytes to be encrypted
      * @param offset The begining of the data to be encrypted
-     * @param size Length of the data to be encrypted
-     * @param key The 4 bytes (int) XOR key
+     * @param size   Length of the data to be encrypted
+     * @param key    The 4 bytes (int) XOR key
      */
     public static void encXORPass(byte[] raw, final int offset, final int size, int key) {
         int stop = size - 8;

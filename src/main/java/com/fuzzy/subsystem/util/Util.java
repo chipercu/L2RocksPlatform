@@ -1,21 +1,22 @@
 package com.fuzzy.subsystem.util;
 
-import l2open.common.ThreadPoolManager;
-import l2open.config.ConfigSystem;
-import l2open.config.ConfigValue;
-import l2open.database.DatabaseUtils;
-import l2open.database.FiltredPreparedStatement;
-import l2open.database.L2DatabaseFactory;
-import l2open.database.ThreadConnection;
-import l2open.extensions.multilang.CustomMessage;
-import l2open.gameserver.common.DifferentMethods;
-import l2open.gameserver.instancemanager.ServerVariables;
-import l2open.gameserver.model.*;
-import l2open.gameserver.model.L2Zone.ZoneType;
-import l2open.gameserver.serverpackets.ExShowScreenMessage;
-import l2open.gameserver.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import l2open.gameserver.tables.SkillTable;
-import l2open.gameserver.taskmanager.MemoryWatchDog;
+import com.fuzzy.subsystem.common.ThreadPoolManager;
+import com.fuzzy.subsystem.config.ConfigSystem;
+import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.subsystem.database.DatabaseUtils;
+import com.fuzzy.subsystem.database.FiltredPreparedStatement;
+import com.fuzzy.subsystem.database.L2DatabaseFactory;
+import com.fuzzy.subsystem.database.ThreadConnection;
+import com.fuzzy.subsystem.extensions.multilang.CustomMessage;
+import com.fuzzy.subsystem.gameserver.common.DifferentMethods;
+import com.fuzzy.subsystem.gameserver.instancemanager.ServerVariables;
+import com.fuzzy.subsystem.gameserver.model.*;
+import com.fuzzy.subsystem.gameserver.model.L2Zone.ZoneType;
+import com.fuzzy.subsystem.gameserver.serverpackets.ExShowScreenMessage;
+import com.fuzzy.subsystem.gameserver.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
+import com.fuzzy.subsystem.gameserver.tables.SkillTable;
+import com.fuzzy.subsystem.gameserver.taskmanager.MemoryWatchDog;
+import com.google.common.reflect.Reflection;
 
 import java.io.File;
 import java.lang.reflect.Array;
@@ -1100,15 +1101,16 @@ public class Util {
     @SuppressWarnings("deprecation")
     // Запиздоливаем эту функцию в любой метод и мы увидем откуда тот метод вызвался...
     public static void test() {
-        Class self = sun.reflect.Reflection.getCallerClass(1);
-        Class caller = sun.reflect.Reflection.getCallerClass(3);
-        try {
-            if (self != caller)
-                throw new IllegalAccessError();
-        } catch (IllegalAccessError e) {
-            //e.printStackTrace();
-            _log.log(Level.WARNING, "Test:", e);
-        }
+//
+//        Class self = sun.reflect.Reflection.getCallerClass(1);
+//        Class caller = sun.reflect.Reflection.getCallerClass(3);
+//        try {
+//            if (self != caller)
+//                throw new IllegalAccessError();
+//        } catch (IllegalAccessError e) {
+//            //e.printStackTrace();
+//            _log.log(Level.WARNING, "Test:", e);
+//        }
     }
 
     public static String test_return(String text_add) {

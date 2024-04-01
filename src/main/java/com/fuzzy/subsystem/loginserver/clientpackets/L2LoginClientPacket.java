@@ -1,6 +1,8 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
 
+import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.subsystem.extensions.network.ReceivablePacket;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 
 import java.util.logging.Logger;

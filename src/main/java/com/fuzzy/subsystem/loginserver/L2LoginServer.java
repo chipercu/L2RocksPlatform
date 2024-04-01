@@ -1,18 +1,18 @@
 package com.fuzzy.subsystem.loginserver;
 
-import UI.logger.LoginServerLogViewer;
-import l2open.Server;
-import l2open.config.*;
-import l2open.database.L2DatabaseFactory;
-import l2open.extensions.network.SelectorStats;
-import l2open.extensions.network.SelectorThread;
-import l2open.gameserver.GameServer;
-import l2open.gameserver.taskmanager.MemoryWatchDog;
-import l2open.gameserver.xml.XmlUtils;
+import com.fuzzy.subsystem.ui_manager.logger.LoginServerLogViewer;
+import com.fuzzy.subsystem.Server;
+import com.fuzzy.subsystem.config.*;
+import com.fuzzy.subsystem.database.L2DatabaseFactory;
+import com.fuzzy.subsystem.extensions.network.SelectorStats;
+import com.fuzzy.subsystem.extensions.network.SelectorThread;
+import com.fuzzy.subsystem.gameserver.GameServer;
+import com.fuzzy.subsystem.gameserver.taskmanager.MemoryWatchDog;
+import com.fuzzy.subsystem.gameserver.xml.XmlUtils;
 import com.fuzzy.subsystem.loginserver.gameservercon.GSConnection;
-import l2open.status.Status;
-import l2open.util.Log;
-import l2open.util.Util;
+import com.fuzzy.subsystem.status.Status;
+import com.fuzzy.subsystem.util.Log;
+import com.fuzzy.subsystem.util.Util;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
@@ -28,7 +28,6 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class L2LoginServer {
-    public static boolean develop = Boolean.parseBoolean(System.getenv("DEVELOP"));
     protected static L2LoginServer _instance;
     private Logger _log = Logger.getLogger(L2LoginServer.class.getName());
     private GSConnection _gameServerListener;
@@ -44,23 +43,20 @@ public class L2LoginServer {
 
     public L2LoginServer() {
 
-
-        develop = true;
-
         Server.SERVER_MODE = Server.MODE_LOGINSERVER;
         //      Local Constants
         final String LOG_FOLDER = "log"; // Name of folder for log file
-        final String LOG_NAME = develop ? "java/config/log.properties" : "./config/log.properties"; // Name of log file
+        final String LOG_NAME = "./data/config/log.properties"; // Name of log file
 
         /*** Main ***/
         // Create log folder
-        File logFolder = new File(develop ? "" : "./", LOG_FOLDER);
+        File logFolder = new File("./", LOG_FOLDER);
         logFolder.mkdir();
 
         // Create input stream for log file -- or store file data into memory
         InputStream is = null;
         try {
-            is = new FileInputStream(new File(LOG_NAME));
+            is = new FileInputStream(LOG_NAME);
             LogManager.getLogManager().readConfiguration(is);
             is.close();
         } catch (IOException e) {
@@ -190,7 +186,7 @@ public class L2LoginServer {
             }
 
         if (!ConfigValue.develop) {
-            java.lang.Shutdown.getInstance().startShutdownH(ConfigValue.AutoRestart, true);
+            Shutdown.getInstance().startShutdownH(ConfigValue.AutoRestart, true);
         }
 
 

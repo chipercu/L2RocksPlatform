@@ -13,6 +13,7 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
 
+import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 import com.fuzzy.subsystem.loginserver.serverpackets.GGAuth;
 import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail;
@@ -20,7 +21,6 @@ import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail;
 /**
  * @author -Wooden-
  * Format: ddddd
- *
  */
 public class AuthGameGuard extends L2LoginClientPacket {
     private int _sessionId;

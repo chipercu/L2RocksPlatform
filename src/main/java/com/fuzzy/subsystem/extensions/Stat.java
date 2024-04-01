@@ -1,10 +1,10 @@
 package com.fuzzy.subsystem.extensions;
 
-import l2open.database.DatabaseUtils;
-import l2open.database.FiltredPreparedStatement;
-import l2open.database.L2DatabaseFactory;
-import l2open.database.ThreadConnection;
-import l2open.gameserver.instancemanager.ServerVariables;
+import com.fuzzy.subsystem.database.DatabaseUtils;
+import com.fuzzy.subsystem.database.FiltredPreparedStatement;
+import com.fuzzy.subsystem.database.L2DatabaseFactory;
+import com.fuzzy.subsystem.database.ThreadConnection;
+import com.fuzzy.subsystem.gameserver.instancemanager.ServerVariables;
 
 import java.sql.ResultSet;
 

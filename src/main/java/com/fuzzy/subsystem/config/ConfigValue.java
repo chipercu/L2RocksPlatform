@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.config;
 
-import l2open.gameserver.model.L2Zone.ZoneType;
+import com.fuzzy.subsystem.gameserver.model.L2Zone.ZoneType;
 
 import java.nio.ByteOrder;
 import java.util.ArrayList;

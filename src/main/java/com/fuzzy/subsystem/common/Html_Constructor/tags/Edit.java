@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.common.Html_Constructor.tags;
 
-import com.fuzzy.subsystem.common.Html_Constructor.tags.parameters.EditType;
+import com.fuzzy.subsystem.common.Html_Constructor.parameters.EditType;
 
 /**
  * Created by a.kiperku

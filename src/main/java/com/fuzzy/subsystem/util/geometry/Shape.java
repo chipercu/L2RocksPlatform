@@ -1,20 +1,19 @@
 package com.fuzzy.subsystem.util.geometry;
 
-public abstract interface Shape
-{
-	public abstract boolean isInside(int paramInt1, int paramInt2);
+public abstract interface Shape {
+    boolean isInside(int paramInt1, int paramInt2);
 
-	public abstract boolean isInside(int paramInt1, int paramInt2, int paramInt3);
+    boolean isInside(int paramInt1, int paramInt2, int paramInt3);
 
-	public abstract int getXmax();
+    int getXmax();
 
-	public abstract int getXmin();
+    int getXmin();
 
-	public abstract int getYmax();
+    int getYmax();
 
-	public abstract int getYmin();
+    int getYmin();
 
-	public abstract int getZmax();
+    int getZmax();
 
-	public abstract int getZmin();
+    int getZmin();
 }

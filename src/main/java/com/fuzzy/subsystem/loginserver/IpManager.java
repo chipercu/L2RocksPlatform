@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.loginserver;
 
 import javolution.util.FastList;
-import l2open.database.DatabaseUtils;
-import l2open.database.FiltredPreparedStatement;
-import l2open.database.L2DatabaseFactory;
-import l2open.database.ThreadConnection;
-import l2open.util.BannedIp;
-import l2open.util.Log;
+import com.fuzzy.subsystem.database.DatabaseUtils;
+import com.fuzzy.subsystem.database.FiltredPreparedStatement;
+import com.fuzzy.subsystem.database.L2DatabaseFactory;
+import com.fuzzy.subsystem.database.ThreadConnection;
+import com.fuzzy.subsystem.util.BannedIp;
+import com.fuzzy.subsystem.util.Log;
 
 import java.sql.ResultSet;
 import java.util.logging.Logger;

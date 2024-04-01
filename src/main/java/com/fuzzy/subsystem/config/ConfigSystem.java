@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.config;
 
 import gnu.trove.TIntIntHashMap;
-import l2open.Server;
-import l2open.gameserver.loginservercon.AdvIP;
-import l2open.gameserver.model.*;
-import l2open.gameserver.model.base.PlayerAccess;
-import l2open.gameserver.model.quest.Quest;
+import com.fuzzy.subsystem.Server;
+import com.fuzzy.subsystem.common.loginservercon.AdvIP;
+import com.fuzzy.subsystem.gameserver.model.*;
+import com.fuzzy.subsystem.gameserver.model.base.PlayerAccess;
+import com.fuzzy.subsystem.gameserver.model.quest.Quest;
 import com.fuzzy.subsystem.util.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 public class ConfigSystem {
     private static final boolean develop = Boolean.parseBoolean(System.getenv("DEVELOP"));
     private static final Logger _log = Logger.getLogger(ConfigSystem.class.getName());
-    private static final String dir = develop ? "java/config" : "./config";
+    private static final String dir = "./data/config";
     private static Map<Integer, Float> questRewardRates = new HashMap<Integer, Float>();
     private static Map<Integer, Float> questDropRates = new HashMap<Integer, Float>();
     private static ConcurrentHashMap<String, String> properties = new ConcurrentHashMap<String, String>();
@@ -38,9 +38,13 @@ public class ConfigSystem {
 
     private static Class _configValue = ConfigValue.class;
 
-    /** Some more LS Settings */
+    /**
+     * Some more LS Settings
+     */
     public static GArray<String> INTERNAL_IP = null;
-    /** Продвинутый список локальных сетей / ip-адресов */
+    /**
+     * Продвинутый список локальных сетей / ip-адресов
+     */
     public static NetList INTERNAL_NETLIST = null;
 
     public static NetList PACKETLOGGER_IPS = null;
@@ -358,9 +362,9 @@ public class ConfigSystem {
                 f.set(f, Util.parseCommaSeparatedFloatArrays(value.replace(" ", "")));
             else if (f.getType().getName().startsWith("[Ljava.lang.String"))
                 f.set(f, Util.parseCommaSeparatedStringArray(value));
-            else if (f.getType().getName().startsWith("[[Ll2open.gameserver.model.L2Skill"))
+            else if (f.getType().getName().startsWith("[[Lcom.fuzzy.subsystem.gameserver.model.L2Skill"))
                 f.set(f, Util.parseCommaSeparatedL2SkillArrays(value));
-            else if (f.getType().getName().startsWith("[Ll2open.gameserver.model.L2Zone$ZoneType"))
+            else if (f.getType().getName().startsWith("[Lcom.fuzzy.subsystem.gameserver.model.L2Zone$ZoneType"))
                 f.set(f, Util.parseCommaSeparatedZoneTypeArray(value));
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
@@ -539,10 +543,10 @@ public class ConfigSystem {
 
 
             if (ConfigValue.develop) {
-                lnr = new LineNumberReader(new InputStreamReader(new FileInputStream("java/config/mats.cfg"), "UTF-8"));
+                lnr = new LineNumberReader(new InputStreamReader(new FileInputStream("./data/config/mats.cfg"), "UTF-8"));
 
             } else {
-                lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(l2open.Server.PhoenixHomeDir + "./config/mats.cfg"), "UTF-8"));
+                lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(com.fuzzy.subsystem.Server.PhoenixHomeDir + "./data/config/mats.cfg"), "UTF-8"));
 
             }
 

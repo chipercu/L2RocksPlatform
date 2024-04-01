@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.common.Html_Constructor.tags;
 
-import com.fuzzy.subsystem.common.Html_Constructor.tags.parameters.Color;
+import com.fuzzy.subsystem.common.Html_Constructor.parameters.Color;
 
 public class Font implements Build{
 

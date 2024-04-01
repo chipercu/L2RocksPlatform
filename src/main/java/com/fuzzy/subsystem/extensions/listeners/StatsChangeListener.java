@@ -1,26 +1,24 @@
 package com.fuzzy.subsystem.extensions.listeners;
 
-import l2open.gameserver.skills.Calculator;
-import l2open.gameserver.skills.Env;
-import l2open.gameserver.skills.Stats;
+import com.fuzzy.subsystem.gameserver.skills.Calculator;
+import com.fuzzy.subsystem.gameserver.skills.Env;
+import com.fuzzy.subsystem.gameserver.skills.Stats;
 
- /**
+/**
  * НЕ ИСПОЛЬЗУЕТСЯ!
  **/
-public abstract class StatsChangeListener
-{
-	public final Stats _stat;
-	protected Calculator _calculator;
+public abstract class StatsChangeListener {
 
-	public StatsChangeListener(Stats stat)
-	{
-		_stat = stat;
-	}
+    public final Stats _stat;
+    protected Calculator _calculator;
 
-	public void setCalculator(Calculator calculator)
-	{
-		_calculator = calculator;
-	}
+    public StatsChangeListener(Stats stat) {
+        _stat = stat;
+    }
 
-	public abstract void statChanged(Double oldValue, double newValue, double baseValue, Env env);
+    public void setCalculator(Calculator calculator) {
+        _calculator = calculator;
+    }
+
+    public abstract void statChanged(Double oldValue, double newValue, double baseValue, Env env);
 }

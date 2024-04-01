@@ -1,6 +1,10 @@
 package com.fuzzy.subsystem.ui_manager.controllers;
 
 
+import com.fuzzy.subsystem.gameserver.GameStart;
+import com.fuzzy.subsystem.loginserver.L2LoginServer;
+import com.fuzzy.subsystem.loginserver.L2LoginStart;
+import com.fuzzy.subsystem.loginserver.gameservercon.GSConnection;
 import com.fuzzy.subsystem.ui_manager.UI_Manager;
 import com.fuzzy.subsystem.ui_manager.ui_models.LogViewer;
 import javafx.fxml.FXML;
@@ -19,10 +23,21 @@ public class MainController {
 
     private double xOffset, yOffset;
     private static final Map<LOG_VIEW_TYPE, LogViewer> logViewerMap = new HashMap<>();
+    private boolean loginStarted = false;
+    private boolean gameStarted = false;
+
+    private Thread loginServerThread;
+
 
     public enum LOG_VIEW_TYPE{
         LOGIN, GAME
     }
+
+    @FXML
+    private Button gameStartButton;
+
+    @FXML
+    private Button loginStartButton;
 
     @FXML
     private AnchorPane MainPane;
@@ -99,13 +114,19 @@ public class MainController {
 
     @FXML
     protected void startApp1(){
-
-//        L2LoginStart.main(new String[]{});
-//        new TestApp1(logViewerMap.get(LOG_VIEW_TYPE.LOGIN)).start();
+        final Thread thread = new Thread(() -> L2LoginStart.main(new String[]{}));
+        thread.start();
+        thread.interrupt();
     }
     @FXML
-    protected void startApp2(){
-//        new TestApp1(logViewerMap.get(LOG_VIEW_TYPE.GAME)).start();
+    protected void startApp2() {
+        new Thread(() -> {
+            try {
+                GameStart.main(new String[]{});
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }).start();
     }
 
     @FXML
@@ -113,6 +134,20 @@ public class MainController {
         logViewerMap.put(LOG_VIEW_TYPE.LOGIN, new LogViewer(MainPane, "Login logs"));
         logViewerMap.put(LOG_VIEW_TYPE.GAME, new LogViewer(MainPane, "Game logs"));
         setDragged(TOP_BAR);
+
+        loginStartButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+            if (L2LoginServer.getInstance() == null){
+                loginServerThread = new Thread(() -> L2LoginStart.main(new String[]{}));
+                loginServerThread.start();
+                loginStartButton.setText("Остановить Login Server");
+            }else if (L2LoginServer.getInstance().getGameServerListener().isShutdown()){
+                L2LoginServer.getInstance().getGameServerListener().setShutdown(false);
+                loginStartButton.setText("Остановить Login Server");
+            } else {
+                L2LoginServer.getInstance().getGameServerListener().setShutdown(true);
+                loginStartButton.setText("Запуск Login Server");
+            }
+        });
 
         CLOSE_BUTTON.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             final Stage stage = (Stage) CLOSE_BUTTON.getScene().getWindow();

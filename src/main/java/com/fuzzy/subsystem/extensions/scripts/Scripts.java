@@ -1,14 +1,14 @@
 package com.fuzzy.subsystem.extensions.scripts;
 
-import l2open.Server;
-import l2open.config.ConfigValue;
-import l2open.extensions.scripts.Compiler.MemoryClassLoader;
-import l2open.extensions.scripts.jarloader.JarClassLoader;
-import l2open.gameserver.GameServer;
-import l2open.gameserver.handler.AdminCommandHandler;
-import l2open.gameserver.instancemanager.QuestManager;
-import l2open.gameserver.model.quest.Quest;
-import l2open.util.GArray;
+import com.fuzzy.subsystem.Server;
+import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.subsystem.extensions.scripts.Compiler.MemoryClassLoader;
+import com.fuzzy.subsystem.extensions.scripts.jarloader.JarClassLoader;
+import com.fuzzy.subsystem.gameserver.GameServer;
+import com.fuzzy.subsystem.gameserver.handler.AdminCommandHandler;
+import com.fuzzy.subsystem.gameserver.instancemanager.QuestManager;
+import com.fuzzy.subsystem.gameserver.model.quest.Quest;
+import com.fuzzy.subsystem.util.GArray;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -105,10 +105,10 @@ public class Scripts {
 
             _log.info("Scripts end parse class...");
 
-            if (java.lang.Compiler.getInstance().compile(scriptFiles, System.out)) {
+            if (Compiler.getInstance().compile(scriptFiles, System.out)) {
                 _log.info("Scripts end compile class...");
-                MemoryClassLoader classLoader = java.lang.Compiler.getInstance().classLoader; //TODO
-                for (String name : java.lang.Compiler.getInstance().classLoader.byteCodes.keySet()) {
+                MemoryClassLoader classLoader = Compiler.getInstance().classLoader; //TODO
+                for (String name : Compiler.getInstance().classLoader.byteCodes.keySet()) {
                     if (name.contains("$"))
                         continue; // пропускаем вложенные классы
                     try {
@@ -121,7 +121,7 @@ public class Scripts {
                         error = true;
                     }
                 }
-                java.lang.Compiler.getInstance().classLoader = null;
+                Compiler.getInstance().classLoader = null;
             } else {
                 _log.warning("Can't compile scripts!");
                 error = true;
@@ -397,11 +397,11 @@ public class Scripts {
     private boolean reloadClassByPath(File f) {
         GArray<File> scriptFiles = new GArray<File>();
         parseClasses(f, scriptFiles);
-        if (java.lang.Compiler.getInstance().compile(scriptFiles, System.out)) {
+        if (Compiler.getInstance().compile(scriptFiles, System.out)) {
 //			ClassLoader classLoader = Compiler.class.getClassLoader(); // Compiler.getInstance().classLoader;
-            MemoryClassLoader classLoader = java.lang.Compiler.getInstance().classLoader; //TODO
+            MemoryClassLoader classLoader = Compiler.getInstance().classLoader; //TODO
             Class<?> c;
-            for (String name : java.lang.Compiler.getInstance().classLoader.byteCodes.keySet()) {
+            for (String name : Compiler.getInstance().classLoader.byteCodes.keySet()) {
                 if (name.contains("$"))
                     continue; // пропускаем вложенные классы
                 try {
@@ -420,7 +420,7 @@ public class Scripts {
                     return true;
                 }
             }
-            java.lang.Compiler.getInstance().classLoader = null;
+            Compiler.getInstance().classLoader = null;
         } else {
             _log.warning("Can't recompile scripts: " + f.getPath());
             return true;
@@ -430,12 +430,12 @@ public class Scripts {
 
     private boolean reloadClassByName(String name) {
         String path = "./data/scripts/";
-        if (ConfigValue.develop){
+        if (ConfigValue.develop) {
             path = "data/scripts/";
         }
 
-        if (java.lang.Compiler.getInstance().compile(new File(path + name.replace(".", "/") + ".java"), System.out)) {
-            MemoryClassLoader classLoader = java.lang.Compiler.getInstance().classLoader;
+        if (Compiler.getInstance().compile(new File(path + name.replace(".", "/") + ".java"), System.out)) {
+            MemoryClassLoader classLoader = Compiler.getInstance().classLoader;
             try {
                 Class<?> c = classLoader.loadClass(name);
                 Script s = new Script(c);
@@ -451,7 +451,7 @@ public class Scripts {
             } catch (ClassNotFoundException e) {
                 _log.warning("Can't load script class:" + e.getMessage());
             }
-            java.lang.Compiler.getInstance().classLoader = null;
+            Compiler.getInstance().classLoader = null;
         } else
             _log.warning("Can't recompile script: " + name);
         return true;
@@ -459,7 +459,7 @@ public class Scripts {
 
     public boolean reloadQuest(String name) {
         String s_path = "./data/scripts/";
-        if (ConfigValue.develop){
+        if (ConfigValue.develop) {
             s_path = "data/scripts/";
         }
 
@@ -480,7 +480,7 @@ public class Scripts {
             if (f.isDirectory())
                 return reloadClassByPath(f);
         }
-        return reloadClassByPath(new File( s_path + "quests/" + name + "/"));
+        return reloadClassByPath(new File(s_path + "quests/" + name + "/"));
     }
 
     private void parseClasses(File f, GArray<File> list) {

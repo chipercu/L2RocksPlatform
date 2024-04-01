@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
-import l2open.database.DatabaseUtils;
-import l2open.database.FiltredPreparedStatement;
-import l2open.database.L2DatabaseFactory;
-import l2open.database.ThreadConnection;
+import com.fuzzy.subsystem.database.DatabaseUtils;
+import com.fuzzy.subsystem.database.FiltredPreparedStatement;
+import com.fuzzy.subsystem.database.L2DatabaseFactory;
+import com.fuzzy.subsystem.database.ThreadConnection;
 import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
 
 import java.util.logging.Logger;

@@ -2,15 +2,14 @@ package com.fuzzy.subsystem.extensions.network;
 
 import java.nio.ByteBuffer;
 
-public abstract class AbstractPacket<T>
-{
-	protected abstract ByteBuffer getByteBuffer();
+public abstract class AbstractPacket<T> {
 
-	public abstract T getClient();
+    protected abstract ByteBuffer getByteBuffer();
 
-	protected SelectorThread getCurrentSelectorThread()
-	{
-		Thread result = Thread.currentThread();
-		return result instanceof SelectorThread ? (SelectorThread) result : null;
-	}
+    public abstract T getClient();
+
+    protected SelectorThread getCurrentSelectorThread() {
+        Thread result = Thread.currentThread();
+        return result instanceof SelectorThread ? (SelectorThread) result : null;
+    }
 }

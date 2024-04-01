@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.extensions.listeners.engine;
 
-import l2open.extensions.listeners.MethodInvokeListener;
-import l2open.extensions.listeners.PropertyChangeListener;
-import l2open.extensions.listeners.events.DefaultMethodInvokeEvent;
-import l2open.extensions.listeners.events.DefaultPropertyChangeEvent;
-import l2open.extensions.listeners.events.MethodEvent;
-import l2open.extensions.listeners.events.PropertyEvent;
+import com.fuzzy.subsystem.extensions.listeners.MethodInvokeListener;
+import com.fuzzy.subsystem.extensions.listeners.PropertyChangeListener;
+import com.fuzzy.subsystem.extensions.listeners.events.DefaultMethodInvokeEvent;
+import com.fuzzy.subsystem.extensions.listeners.events.DefaultPropertyChangeEvent;
+import com.fuzzy.subsystem.extensions.listeners.events.MethodEvent;
+import com.fuzzy.subsystem.extensions.listeners.events.PropertyEvent;
 
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
@@ -14,197 +14,178 @@ import java.util.concurrent.LinkedBlockingQueue;
 /**
  * @author Death
  */
-public class DefaultListenerEngine<T> implements ListenerEngine<T>
-{
-	protected LinkedBlockingQueue<PropertyChangeListener> propertyChangeListeners;
-	protected ConcurrentHashMap<String, LinkedBlockingQueue<PropertyChangeListener>> mappedPropertyChangeListeners;
-	protected HashMap<String, Object> properties;
+public class DefaultListenerEngine<T> implements ListenerEngine<T> {
+    protected LinkedBlockingQueue<PropertyChangeListener> propertyChangeListeners;
+    protected ConcurrentHashMap<String, LinkedBlockingQueue<PropertyChangeListener>> mappedPropertyChangeListeners;
+    protected HashMap<String, Object> properties;
 
-	protected LinkedBlockingQueue<MethodInvokeListener> methodInvokedListeners;
-	protected ConcurrentHashMap<String, LinkedBlockingQueue<MethodInvokeListener>> mappedMethodInvokedListeners;
+    protected LinkedBlockingQueue<MethodInvokeListener> methodInvokedListeners;
+    protected ConcurrentHashMap<String, LinkedBlockingQueue<MethodInvokeListener>> mappedMethodInvokedListeners;
 
-	public DefaultListenerEngine(T owner)
-	{
-		this.owner = owner;
-	}
+    public DefaultListenerEngine(T owner) {
+        this.owner = owner;
+    }
 
-	private final T owner;
+    private final T owner;
 
-	@Override
-	public void addPropertyChangeListener(PropertyChangeListener listener)
-	{
-		if(propertyChangeListeners == null)
-			propertyChangeListeners = new LinkedBlockingQueue<PropertyChangeListener>();
+    @Override
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        if (propertyChangeListeners == null)
+            propertyChangeListeners = new LinkedBlockingQueue<PropertyChangeListener>();
 
-		propertyChangeListeners.add(listener);
-	}
+        propertyChangeListeners.add(listener);
+    }
 
-	@Override
-	public void removePropertyChangeListener(PropertyChangeListener listener)
-	{
-		if(propertyChangeListeners == null)
-			return;
+    @Override
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        if (propertyChangeListeners == null)
+            return;
 
-		propertyChangeListeners.remove(listener);
-	}
+        propertyChangeListeners.remove(listener);
+    }
 
-	@Override
-	public void addPropertyChangeListener(String value, PropertyChangeListener listener)
-	{
-		if(mappedPropertyChangeListeners == null)
-			mappedPropertyChangeListeners = new ConcurrentHashMap<String, LinkedBlockingQueue<PropertyChangeListener>>();
+    @Override
+    public void addPropertyChangeListener(String value, PropertyChangeListener listener) {
+        if (mappedPropertyChangeListeners == null)
+            mappedPropertyChangeListeners = new ConcurrentHashMap<String, LinkedBlockingQueue<PropertyChangeListener>>();
 
-		LinkedBlockingQueue<PropertyChangeListener> listeners = mappedPropertyChangeListeners.get(value);
+        LinkedBlockingQueue<PropertyChangeListener> listeners = mappedPropertyChangeListeners.get(value);
 
-		if(listeners == null)
-		{
-			listeners = new LinkedBlockingQueue<PropertyChangeListener>();
-			mappedPropertyChangeListeners.put(value, listeners);
-		}
+        if (listeners == null) {
+            listeners = new LinkedBlockingQueue<PropertyChangeListener>();
+            mappedPropertyChangeListeners.put(value, listeners);
+        }
 
-		listeners.add(listener);
-	}
+        listeners.add(listener);
+    }
 
-	@Override
-	public void removePropertyChangeListener(String value, PropertyChangeListener listener)
-	{
-		if(mappedPropertyChangeListeners == null)
-			return;
+    @Override
+    public void removePropertyChangeListener(String value, PropertyChangeListener listener) {
+        if (mappedPropertyChangeListeners == null)
+            return;
 
-		LinkedBlockingQueue<PropertyChangeListener> listeners = mappedPropertyChangeListeners.get(value);
+        LinkedBlockingQueue<PropertyChangeListener> listeners = mappedPropertyChangeListeners.get(value);
 
-		if(listeners == null)
-			return;
+        if (listeners == null)
+            return;
 
-		listeners.remove(listener);
-	}
+        listeners.remove(listener);
+    }
 
-	@Override
-	public void firePropertyChanged(String value, T source, Object oldValue, Object newValue)
-	{
-		firePropertyChanged(new DefaultPropertyChangeEvent(value, source, oldValue, newValue));
-	}
+    @Override
+    public void firePropertyChanged(String value, T source, Object oldValue, Object newValue) {
+        firePropertyChanged(new DefaultPropertyChangeEvent(value, source, oldValue, newValue));
+    }
 
-	@Override
-	public void firePropertyChanged(PropertyEvent event)
-	{
-		if(propertyChangeListeners != null)
-			for(PropertyChangeListener l : propertyChangeListeners)
-				if(l.accept(event.getProperty()))
-					l.propertyChanged(event);
+    @Override
+    public void firePropertyChanged(PropertyEvent event) {
+        if (propertyChangeListeners != null)
+            for (PropertyChangeListener l : propertyChangeListeners)
+                if (l.accept(event.getProperty()))
+                    l.propertyChanged(event);
 
-		if(mappedPropertyChangeListeners == null)
-			return;
+        if (mappedPropertyChangeListeners == null)
+            return;
 
-		LinkedBlockingQueue<PropertyChangeListener> listeners = mappedPropertyChangeListeners.get(event.getProperty());
+        LinkedBlockingQueue<PropertyChangeListener> listeners = mappedPropertyChangeListeners.get(event.getProperty());
 
-		if(listeners == null)
-			return;
+        if (listeners == null)
+            return;
 
-		for(PropertyChangeListener l : listeners)
-			l.propertyChanged(event);
-	}
+        for (PropertyChangeListener l : listeners)
+            l.propertyChanged(event);
+    }
 
-	@Override
-	public void addProperty(String property, Object value)
-	{
-		if(properties == null)
-			properties = new HashMap<String, Object>();
+    @Override
+    public void addProperty(String property, Object value) {
+        if (properties == null)
+            properties = new HashMap<String, Object>();
 
-		Object old = properties.get(property);
-		properties.put(property, value);
+        Object old = properties.get(property);
+        properties.put(property, value);
 
-		firePropertyChanged(property, getOwner(), old, value);
-	}
+        firePropertyChanged(property, getOwner(), old, value);
+    }
 
-	@Override
-	public Object getProperty(String property)
-	{
-		if(properties == null)
-			return null;
+    @Override
+    public Object getProperty(String property) {
+        if (properties == null)
+            return null;
 
-		return properties.get(property);
-	}
+        return properties.get(property);
+    }
 
-	@Override
-	public T getOwner()
-	{
-		return owner;
-	}
+    @Override
+    public T getOwner() {
+        return owner;
+    }
 
-	@Override
-	public void addMethodInvokedListener(MethodInvokeListener listener)
-	{
-		if(methodInvokedListeners == null)
-			methodInvokedListeners = new LinkedBlockingQueue<MethodInvokeListener>();
+    @Override
+    public void addMethodInvokedListener(MethodInvokeListener listener) {
+        if (methodInvokedListeners == null)
+            methodInvokedListeners = new LinkedBlockingQueue<MethodInvokeListener>();
 
-		methodInvokedListeners.add(listener);
-	}
+        methodInvokedListeners.add(listener);
+    }
 
-	@Override
-	public void removeMethodInvokedListener(MethodInvokeListener listener)
-	{
-		if(methodInvokedListeners == null)
-			return;
+    @Override
+    public void removeMethodInvokedListener(MethodInvokeListener listener) {
+        if (methodInvokedListeners == null)
+            return;
 
-		methodInvokedListeners.remove(listener);
-	}
+        methodInvokedListeners.remove(listener);
+    }
 
-	@Override
-	public void addMethodInvokedListener(String methodName, MethodInvokeListener listener)
-	{
-		if(mappedMethodInvokedListeners == null)
-			mappedMethodInvokedListeners = new ConcurrentHashMap<String, LinkedBlockingQueue<MethodInvokeListener>>();
+    @Override
+    public void addMethodInvokedListener(String methodName, MethodInvokeListener listener) {
+        if (mappedMethodInvokedListeners == null)
+            mappedMethodInvokedListeners = new ConcurrentHashMap<String, LinkedBlockingQueue<MethodInvokeListener>>();
 
-		LinkedBlockingQueue<MethodInvokeListener> listeners = mappedMethodInvokedListeners.get(methodName);
+        LinkedBlockingQueue<MethodInvokeListener> listeners = mappedMethodInvokedListeners.get(methodName);
 
-		if(listeners == null)
-		{
-			listeners = new LinkedBlockingQueue<MethodInvokeListener>();
-			mappedMethodInvokedListeners.put(methodName, listeners);
-		}
+        if (listeners == null) {
+            listeners = new LinkedBlockingQueue<MethodInvokeListener>();
+            mappedMethodInvokedListeners.put(methodName, listeners);
+        }
 
-		listeners.add(listener);
-	}
+        listeners.add(listener);
+    }
 
-	@Override
-	public void removeMethodInvokedListener(String methodName, MethodInvokeListener listener)
-	{
-		if(mappedMethodInvokedListeners == null)
-			return;
+    @Override
+    public void removeMethodInvokedListener(String methodName, MethodInvokeListener listener) {
+        if (mappedMethodInvokedListeners == null)
+            return;
 
-		LinkedBlockingQueue<MethodInvokeListener> a = mappedMethodInvokedListeners.get(methodName);
+        LinkedBlockingQueue<MethodInvokeListener> a = mappedMethodInvokedListeners.get(methodName);
 
-		if(a == null)
-			return;
+        if (a == null)
+            return;
 
-		a.remove(listener);
-	}
+        a.remove(listener);
+    }
 
-	@Override
-	public void fireMethodInvoked(MethodEvent event)
-	{
-		if(methodInvokedListeners != null)
-			for(MethodInvokeListener listener : methodInvokedListeners)
-				if(listener.accept(event))
-					listener.methodInvoked(event);
+    @Override
+    public void fireMethodInvoked(MethodEvent event) {
+        if (methodInvokedListeners != null)
+            for (MethodInvokeListener listener : methodInvokedListeners)
+                if (listener.accept(event))
+                    listener.methodInvoked(event);
 
-		if(mappedMethodInvokedListeners == null)
-			return;
+        if (mappedMethodInvokedListeners == null)
+            return;
 
-		LinkedBlockingQueue<MethodInvokeListener> list = mappedMethodInvokedListeners.get(event.getMethodName());
+        LinkedBlockingQueue<MethodInvokeListener> list = mappedMethodInvokedListeners.get(event.getMethodName());
 
-		if(list == null)
-			return;
+        if (list == null)
+            return;
 
-		for(MethodInvokeListener lsr : list)
-			if(lsr.accept(event))
-				lsr.methodInvoked(event);
-	}
+        for (MethodInvokeListener lsr : list)
+            if (lsr.accept(event))
+                lsr.methodInvoked(event);
+    }
 
-	@Override
-	public void fireMethodInvoked(String methodName, T source, Object[] args)
-	{
-		fireMethodInvoked(new DefaultMethodInvokeEvent(methodName, source, args));
-	}
+    @Override
+    public void fireMethodInvoked(String methodName, T source, Object[] args) {
+        fireMethodInvoked(new DefaultMethodInvokeEvent(methodName, source, args));
+    }
 }

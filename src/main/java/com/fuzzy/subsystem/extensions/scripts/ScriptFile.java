@@ -3,28 +3,25 @@ package com.fuzzy.subsystem.extensions.scripts;
 import java.util.logging.Logger;
 
 /**
- * @Author: Death
- * @Date: 23/6/2007
- * @Time: 9:22:07
- *
+ * <p>
  * Просто интерфейс с методами которые обязательно должны использоваться в скриптах.
  */
-public interface ScriptFile
-{
-	public static final Logger _log = Logger.getLogger(ScriptFile.class.getName());
-	/**
-	 * Вызывается при загрузке классов скриптов
-	 */
-	public void onLoad();
+public interface ScriptFile {
+    Logger _log = Logger.getLogger(ScriptFile.class.getName());
 
-	/**
-	 * Вызывается при перезагрузке
-	 * После перезагрузки onLoad() вызывается автоматически
-	 */
-	public void onReload();
+    /**
+     * Вызывается при загрузке классов скриптов
+     */
+    void onLoad();
 
-	/**
-	 * Вызывается при выключении сервера
-	 */
-	public void onShutdown();
+    /**
+     * Вызывается при перезагрузке
+     * После перезагрузки onLoad() вызывается автоматически
+     */
+    void onReload();
+
+    /**
+     * Вызывается при выключении сервера
+     */
+    void onShutdown();
 }

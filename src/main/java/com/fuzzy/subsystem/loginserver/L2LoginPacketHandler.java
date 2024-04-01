@@ -1,12 +1,12 @@
 package com.fuzzy.subsystem.loginserver;
 
-import l2open.common.ThreadPoolManager;
-import l2open.extensions.network.*;
+import com.fuzzy.subsystem.common.ThreadPoolManager;
+import com.fuzzy.subsystem.extensions.network.*;
 import com.fuzzy.subsystem.loginserver.L2LoginClient.LoginClientState;
 import com.fuzzy.subsystem.loginserver.clientpackets.*;
 import com.fuzzy.subsystem.loginserver.serverpackets.Init;
 import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail.LoginFailReason;
-import l2open.util.Util;
+import com.fuzzy.subsystem.util.Util;
 
 import java.nio.ByteBuffer;
 import java.util.logging.Logger;

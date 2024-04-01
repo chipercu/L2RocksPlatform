@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.loginserver.gameservercon;
 
 import javolution.util.FastList;
-import l2open.gameserver.loginservercon.AdvIP;
+import com.fuzzy.subsystem.common.loginservercon.AdvIP;
 import com.fuzzy.subsystem.loginserver.GameInfo;
 import com.fuzzy.subsystem.loginserver.GameServerTable;
 

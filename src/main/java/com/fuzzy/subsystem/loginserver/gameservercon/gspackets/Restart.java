@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
-import l2open.Server;
+import com.fuzzy.subsystem.Server;
 import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
 
 public class Restart extends ClientBasePacket {

@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
-import l2open.config.ConfigValue;
+import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 import com.fuzzy.subsystem.loginserver.L2LoginClient.LoginClientState;
 import com.fuzzy.subsystem.loginserver.LoginController;

@@ -22,7 +22,6 @@ public abstract class RunnableImpl implements Runnable {
             e.printStackTrace();
             if (ConfigValue.RunnableLog)
                 Log.logTrace2(e, "Exception: RunnableImpl.run", "RunnableImpl", "RunnableImpl");
-            //_log.log(Level.WARNING, "Exception: RunnableImpl.run("+_log.getLevel()+"): ", e);
         }
     }
 }

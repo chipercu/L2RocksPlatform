@@ -36,9 +36,6 @@ public class RequestServerList extends L2LoginClientPacket {
         return false;
     }
 
-    /**
-     * @see l2open.extensions.network.ReceivablePacket#run()
-     */
     @Override
     public void runImpl() {
         if (getClient().getSessionKey().checkLoginPair(_skey1, _skey2))

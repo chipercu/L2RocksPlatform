@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.extensions;
 
-import l2open.config.ConfigValue;
-import l2open.database.*;
-import l2open.gameserver.model.L2Player;
-import l2open.gameserver.serverpackets.ExBrPremiumState;
+import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.subsystem.database.*;
+import com.fuzzy.subsystem.gameserver.model.L2Player;
+import com.fuzzy.subsystem.gameserver.serverpackets.ExBrPremiumState;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
@@ -15,34 +15,34 @@ public class Bonus {
 
     // bypass -h _bbsscripts;82;services.Bonus.bonus:buy 13 1 0
     /**
-     BONUS_ENABLED = true
-     # Итем за который продаем ПА.
-     # если для всех вариантов ПА итем один, можно прописать BONUS_PRICE_ID = 4037
-     BONUS_PRICE_ID = 4037;4037;4037
-
-     BONUS_PRICE_INDEX=10;100;1000
-
-     BONUS_DAY = 1;7;30
-
-     BONUS_RATE_XP = 1;1;1
-     BONUS_RATE_SP = 1;1;1
-     BONUS_RATE_QUESTS_REWARD = 1;1;1
-     BONUS_RATE_QUESTS_DROP = 1;1;1
-     BONUS_RATE_DROP_ADENA = 1;1;1
-     BONUS_RATE_DROP_ITEMS = 1;1;1
-     BONUS_RATE_DROP_SPOIL = 1;1;1
-     # MOD
-     BONUS_RATE_TOKEN = 1;1;1
-     BONUS_RATE_FAME = 1;1;1
-     BONUS_RATE_MAX_LOAD = 1;1;1
-     BONUS_RATE_EPAULETTE = 1;1;1
-     BONUS_RATE_CRAFT = 1;1;1
-     BONUS_RATE_CRAFT_MASTER_WORK = 1;1;1
-     BONUS_RATE_ENCHANT = 0;0;0
-     BONUS_RATE_ENCHANT_BLESSED = 0;0;0
-
-     BONUS_RATE_ENCHANT_MUL = 2;2;2
-     BONUS_RATE_ENCHANT_BLESSED_MUL = 2;2;2
+     * BONUS_ENABLED = true
+     * # Итем за который продаем ПА.
+     * # если для всех вариантов ПА итем один, можно прописать BONUS_PRICE_ID = 4037
+     * BONUS_PRICE_ID = 4037;4037;4037
+     * <p>
+     * BONUS_PRICE_INDEX=10;100;1000
+     * <p>
+     * BONUS_DAY = 1;7;30
+     * <p>
+     * BONUS_RATE_XP = 1;1;1
+     * BONUS_RATE_SP = 1;1;1
+     * BONUS_RATE_QUESTS_REWARD = 1;1;1
+     * BONUS_RATE_QUESTS_DROP = 1;1;1
+     * BONUS_RATE_DROP_ADENA = 1;1;1
+     * BONUS_RATE_DROP_ITEMS = 1;1;1
+     * BONUS_RATE_DROP_SPOIL = 1;1;1
+     * # MOD
+     * BONUS_RATE_TOKEN = 1;1;1
+     * BONUS_RATE_FAME = 1;1;1
+     * BONUS_RATE_MAX_LOAD = 1;1;1
+     * BONUS_RATE_EPAULETTE = 1;1;1
+     * BONUS_RATE_CRAFT = 1;1;1
+     * BONUS_RATE_CRAFT_MASTER_WORK = 1;1;1
+     * BONUS_RATE_ENCHANT = 0;0;0
+     * BONUS_RATE_ENCHANT_BLESSED = 0;0;0
+     * <p>
+     * BONUS_RATE_ENCHANT_MUL = 2;2;2
+     * BONUS_RATE_ENCHANT_BLESSED_MUL = 2;2;2
      **/
     public int INDEX = -1;
 

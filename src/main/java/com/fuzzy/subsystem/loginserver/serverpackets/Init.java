@@ -12,7 +12,7 @@
  */
 package com.fuzzy.subsystem.loginserver.serverpackets;
 
-import l2open.config.ConfigValue;
+import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 //import ccpGuard.login.Antibrute;
 

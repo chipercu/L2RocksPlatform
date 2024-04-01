@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.loginserver.gameservercon;
 
 import javolution.util.FastList;
-import l2open.Server;
+import com.fuzzy.subsystem.Server;
 import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.gameservercon.lspackets.ServerBasePacket;
 import com.fuzzy.subsystem.util.Util;
@@ -28,13 +28,16 @@ public class GSConnection extends Thread {
     // Включение дебага: java -DenableDebugLsGs
     private static final Logger log = Logger.getLogger(GSConnection.class.getName());
 
-    private static final GSConnection instance = new GSConnection();
+    private static GSConnection instance = new GSConnection();
     private static final FastList<AttGS> gameservers = FastList.newInstance();
 
     private Selector selector;
     private boolean shutdown;
 
     public static GSConnection getInstance() {
+        if (instance == null){
+            instance = new GSConnection();
+        }
         return instance;
     }
 
@@ -67,7 +70,7 @@ public class GSConnection extends Thread {
         SelectionKey key;
         int keyNum, opts;
 
-        while (!isShutdown())
+        while (!isShutdown()) {
             try {
                 keyNum = selector.selectNow();
 
@@ -120,6 +123,7 @@ public class GSConnection extends Thread {
                 System.out.println("LoginServer: GameServer Listener - NIO Down... Restarting...");
                 Server.exit(2, "LoginServer: GameServer Listener - NIO Down... Restarting...");
             }
+        }
     }
 
     public void accept(SelectionKey key) {

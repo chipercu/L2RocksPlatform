@@ -15,8 +15,8 @@ public class EmailAddress {
      * Constructs a new EmailAddress with the
      * specified user I.D. and domain address.
      *
-     * @param userID        user I.D. portion of the email address.
-     * @param domainAddress domain address portion of the email address.
+     * @param userID  user I.D. portion of the email address.
+     * @param address domain address portion of the email address.
      * @throws NullPointerException if the user I.D. or
      *                              domain name are null.
      */
@@ -67,17 +67,19 @@ public class EmailAddress {
      *
      * @param obj the object we are testing for equality with this object.
      * @return true if obj is an instance of
-     *         EmailAddress and has the same user I.D. and domain
-     *         address as this EmailAddress.
+     * EmailAddress and has the same user I.D. and domain
+     * address as this EmailAddress.
      */
     @Override
     public boolean equals(Object obj) {
-        if (obj != null)
+        if (obj != null) {
             if (obj instanceof EmailAddress) {
                 EmailAddress address = (EmailAddress) obj;
-                if (address.userID.equalsIgnoreCase(userID) && address.domainAddress.equals(domainAddress))
+                if (address.userID.equalsIgnoreCase(userID) && address.domainAddress.equals(domainAddress)) {
                     return true;
+                }
             }
+        }
         return false;
     }
 

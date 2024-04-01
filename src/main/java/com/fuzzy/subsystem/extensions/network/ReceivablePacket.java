@@ -3,92 +3,77 @@ package com.fuzzy.subsystem.extensions.network;
 import java.nio.ByteBuffer;
 
 @SuppressWarnings("unchecked")
-public abstract class ReceivablePacket<T extends MMOClient> extends AbstractPacket<T> implements Runnable
-{
-	protected T _client;
-	protected ByteBuffer _buf;
+public abstract class ReceivablePacket<T extends MMOClient> extends AbstractPacket<T> implements Runnable {
+    protected T _client;
+    protected ByteBuffer _buf;
 
-	protected void setByteBuffer(ByteBuffer buf)
-	{
-		_buf = buf;
-	}
+    protected void setByteBuffer(ByteBuffer buf) {
+        _buf = buf;
+    }
 
-	@Override
-	protected ByteBuffer getByteBuffer()
-	{
-		return _buf;
-	}
+    @Override
+    protected ByteBuffer getByteBuffer() {
+        return _buf;
+    }
 
-	protected void setClient(T client)
-	{
-		_client = client;
-	}
+    protected void setClient(T client) {
+        _client = client;
+    }
 
-	@Override
-	public T getClient()
-	{
-		return _client;
-	}
-	//-----------
-	protected int getAvaliableBytes()
-	{
-		return getByteBuffer().remaining();
-	}
+    @Override
+    public T getClient() {
+        return _client;
+    }
 
-	protected void readB(byte[] dst)
-	{
-		getByteBuffer().get(dst);
-	}
+    //-----------
+    protected int getAvaliableBytes() {
+        return getByteBuffer().remaining();
+    }
 
-	protected void readB(byte[] dst, int offset, int len)
-	{
-		getByteBuffer().get(dst, offset, len);
-	}
+    protected void readB(byte[] dst) {
+        getByteBuffer().get(dst);
+    }
 
-	protected int readC()
-	{
-		return getByteBuffer().get() & 0xFF;
-	}
+    protected void readB(byte[] dst, int offset, int len) {
+        getByteBuffer().get(dst, offset, len);
+    }
 
-	protected int readH()
-	{
-		return getByteBuffer().getShort() & 0xFFFF;
-	}
+    protected int readC() {
+        return getByteBuffer().get() & 0xFF;
+    }
 
-	protected int readD()
-	{
-		return getByteBuffer().getInt();
-	}
+    protected int readH() {
+        return getByteBuffer().getShort() & 0xFFFF;
+    }
 
-	protected long readQ()
-	{
-		return getByteBuffer().getLong();
-	}
+    protected int readD() {
+        return getByteBuffer().getInt();
+    }
 
-	protected double readF()
-	{
-		return getByteBuffer().getDouble();
-	}
+    protected long readQ() {
+        return getByteBuffer().getLong();
+    }
 
-	protected String readS()
-	{
-		StringBuilder sb = new StringBuilder();
-		char ch;
-		while((ch = getByteBuffer().getChar()) != 0)
-			sb.append(ch);
-		return sb.toString();
-	}
+    protected double readF() {
+        return getByteBuffer().getDouble();
+    }
 
-	protected String readS(int Maxlen)
-	{
-		String ret = readS();
-		return ret.length() > Maxlen ? ret.substring(0, Maxlen) : ret;
-	}
+    protected String readS() {
+        StringBuilder sb = new StringBuilder();
+        char ch;
+        while ((ch = getByteBuffer().getChar()) != 0)
+            sb.append(ch);
+        return sb.toString();
+    }
 
-	protected abstract boolean read();
+    protected String readS(int Maxlen) {
+        String ret = readS();
+        return ret.length() > Maxlen ? ret.substring(0, Maxlen) : ret;
+    }
 
-	public boolean isFilter()
-	{
-		return true;
-	}
+    protected abstract boolean read();
+
+    public boolean isFilter() {
+        return true;
+    }
 }

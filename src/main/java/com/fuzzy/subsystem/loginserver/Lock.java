@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver;
 
-import l2open.util.NetList;
+import com.fuzzy.subsystem.util.NetList;
 
 public class Lock
 {

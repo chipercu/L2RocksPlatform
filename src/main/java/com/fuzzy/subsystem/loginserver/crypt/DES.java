@@ -23,6 +23,7 @@ public class DES implements Crypt {
 
     /**
      * Шифрует пароль алгоритмом DES. Используется для импорта с офф сервера.
+     *
      * @param password
      * @return hash
      * @throws ArrayIndexOutOfBoundsException если произошла ошибка

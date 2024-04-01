@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.fuzzy.subsystem.common.Html_Constructor.tags.parameters.Parameters.*;
-import static com.fuzzy.subsystem.common.Html_Constructor.tags.parameters.Position.*;
+import static com.fuzzy.subsystem.common.Html_Constructor.parameters.Parameters.*;
+import static com.fuzzy.subsystem.common.Html_Constructor.parameters.Position.*;
 
 public class Col implements Build {
     private static final String START_COL = "       <td";

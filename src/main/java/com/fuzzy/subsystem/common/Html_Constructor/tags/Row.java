@@ -3,7 +3,7 @@ package com.fuzzy.subsystem.common.Html_Constructor.tags;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.fuzzy.subsystem.common.Html_Constructor.tags.parameters.Parameters.*;
+import static com.fuzzy.subsystem.common.Html_Constructor.parameters.Parameters.*;
 
 public class Row implements Build {
     public static final String START_ROW = "    <tr>\n";

@@ -49,7 +49,7 @@ public class MailMessage {
      * Returns an array of recipients.
      *
      * @return an array of EmailAddresses of the recipients of
-     *         this message.
+     * this message.
      */
     public EmailAddress[] getRecipients() {
         EmailAddress[] emailAddresses = new EmailAddress[recipients.size()];

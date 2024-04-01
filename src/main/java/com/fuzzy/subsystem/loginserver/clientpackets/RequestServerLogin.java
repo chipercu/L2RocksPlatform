@@ -28,9 +28,6 @@ public class RequestServerLogin extends L2LoginClientPacket {
         return false;
     }
 
-    /**
-     * @see l2open.extensions.network.ReceivablePacket#run()
-     */
     @Override
     public void runImpl() {
         SessionKey sk = getClient().getSessionKey();

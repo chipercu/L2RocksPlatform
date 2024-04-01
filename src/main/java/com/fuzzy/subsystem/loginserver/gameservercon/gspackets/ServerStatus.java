@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
-import l2open.gameserver.loginservercon.Attribute;
+import com.fuzzy.subsystem.common.loginservercon.Attribute;
 import com.fuzzy.subsystem.loginserver.GameServerTable;
 import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
 import com.fuzzy.subsystem.loginserver.gameservercon.GameServerInfo;
