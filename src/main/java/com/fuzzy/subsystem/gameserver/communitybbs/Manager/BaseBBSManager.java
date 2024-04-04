@@ -23,8 +23,6 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 
-import static com.fuzzy.subsystem.gameserver.model.base.Race.*;
-
 public abstract class BaseBBSManager {
     static final Logger _log = Logger.getLogger(BaseBBSManager.class.getName());
 

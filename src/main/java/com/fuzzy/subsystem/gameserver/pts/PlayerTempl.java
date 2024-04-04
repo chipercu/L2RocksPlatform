@@ -1,4 +1,4 @@
-package com.fuzzy.subsystem.pts;
+package com.fuzzy.subsystem.gameserver.pts;
 
 /**
  * Запиздовал Diagod...

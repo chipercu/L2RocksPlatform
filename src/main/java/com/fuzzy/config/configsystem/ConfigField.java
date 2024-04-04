@@ -1,10 +1,13 @@
 package com.fuzzy.config.configsystem;
 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Config {
+@Target(ElementType.FIELD)
+public @interface ConfigField {
 
     String desc();
 //    Class<?> type();

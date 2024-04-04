@@ -1,4 +1,4 @@
-package com.fuzzy.subsystem.pts.loader;
+package com.fuzzy.subsystem.gameserver.pts.loader;
 
 import java.util.HashMap;
 import java.util.List;

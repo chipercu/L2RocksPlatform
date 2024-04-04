@@ -3,7 +3,6 @@ package com.fuzzy.subsystem.gameserver.model.instances;
 import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.gameserver.model.*;
 import com.fuzzy.subsystem.gameserver.model.barahlo.Drop;
-import com.fuzzy.subsystem.gameserver.model.instances.*;
 import com.fuzzy.subsystem.gameserver.serverpackets.*;
 import com.fuzzy.subsystem.gameserver.templates.L2NpcTemplate;
 import com.fuzzy.subsystem.util.Rnd;

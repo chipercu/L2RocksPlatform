@@ -13,9 +13,6 @@ import com.fuzzy.subsystem.util.Log;
 import java.sql.ResultSet;
 import java.util.logging.Logger;
 
-/**
- * @Author: Abaddon
- */
 public class MoveCharToAcc extends ClientBasePacket {
     private static final Logger log = Logger.getLogger(MoveCharToAcc.class.getName());
 

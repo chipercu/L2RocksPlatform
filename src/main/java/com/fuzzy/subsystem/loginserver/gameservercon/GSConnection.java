@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.loginserver.gameservercon;
 
+import com.fuzzy.config.LoginConfig;
 import javolution.util.FastList;
 import com.fuzzy.subsystem.Server;
-import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.gameservercon.lspackets.ServerBasePacket;
 import com.fuzzy.subsystem.util.Util;
 
@@ -19,11 +19,6 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.logging.Logger;
 
-/**
- * @Author: Death
- * @Date: 12/11/2007
- * @Time: 17:08:29
- */
 public class GSConnection extends Thread {
     // Включение дебага: java -DenableDebugLsGs
     private static final Logger log = Logger.getLogger(GSConnection.class.getName());
@@ -35,7 +30,7 @@ public class GSConnection extends Thread {
     private boolean shutdown;
 
     public static GSConnection getInstance() {
-        if (instance == null){
+        if (instance == null) {
             instance = new GSConnection();
         }
         return instance;
@@ -47,8 +42,8 @@ public class GSConnection extends Thread {
             ServerSocketChannel server = ServerSocketChannel.open();
             server.configureBlocking(false);
 
-            int port = ConfigValue.LoginPort;
-            String host = ConfigValue.LoginHost;
+            int port = LoginConfig.LoginPort;
+            String host = LoginConfig.LoginHost;
 
             server.socket().bind(host.equals("*") ? new InetSocketAddress(port) : new InetSocketAddress(InetAddress.getByName(host), port));
             server.register(selector, SelectionKey.OP_ACCEPT);
@@ -117,7 +112,7 @@ public class GSConnection extends Thread {
                     }
                     keys.clear();
                 }
-                Thread.sleep(ConfigValue.GSLSConnectionSleep);
+                Thread.sleep(LoginConfig.GSLSConnectionSleep);
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("LoginServer: GameServer Listener - NIO Down... Restarting...");
@@ -189,7 +184,7 @@ public class GSConnection extends Thread {
                     data = Util.writeLenght(data);
                     channel.write(ByteBuffer.wrap(data));
 
-                    if (ConfigValue.DEBUG_LS_GS)
+                    if (LoginConfig.DEBUG_LS_GS)
                         log.info("LoginServer -> GameServer [" + att.getServerId() + "]: " + packet.getClass().getSimpleName());
                 } catch (IOException e) {
                     e.printStackTrace();

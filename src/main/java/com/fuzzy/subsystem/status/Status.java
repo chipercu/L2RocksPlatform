@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.status;
 
+import com.fuzzy.config.TelnetConfig;
 import com.fuzzy.subsystem.Server;
-import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.util.GArray;
 import com.fuzzy.subsystem.util.Rnd;
 
@@ -12,12 +12,12 @@ import java.util.logging.Logger;
 
 public class Status extends Thread {
     protected static Logger _log = Logger.getLogger(Status.class.getName());
-    private ServerSocket statusServerSocket;
+    private final ServerSocket statusServerSocket;
 
-    private int _mode;
-    private String _StatusPW;
+    private final int _mode;
+    private final String _StatusPW;
     public static GameStatusThread telnetlist;
-    private GArray<LoginStatusThread> _loginStatus = new GArray<LoginStatusThread>();
+    private final GArray<LoginStatusThread> _loginStatus = new GArray<>();
 
     @Override
     public void run() {
@@ -61,7 +61,7 @@ public class Status extends Thread {
     public Status(int mode) throws IOException {
         super("Status");
         _mode = mode;
-        _StatusPW = ConfigValue.StatusPW;
+        _StatusPW = TelnetConfig.StatusPW;
 
         if (_StatusPW == null)
             _log.warning("Warning: server's Telnet Function Has No Password Defined!");
@@ -70,31 +70,25 @@ public class Status extends Thread {
             //System.out.println("Password Has Been Set To: " + _StatusPW);
         else
             _log.fine("Password Has Been Set");
-        statusServerSocket = new ServerSocket(ConfigValue.StatusPort);
+        statusServerSocket = new ServerSocket(TelnetConfig.StatusPort);
         if (_mode == Server.MODE_LOGINSERVER)
-            _log.fine("StatusServer for LoginServer Started! - Listening on Port: " + ConfigValue.StatusPort);
+            _log.fine("StatusServer for LoginServer Started! - Listening on Port: " + TelnetConfig.StatusPort);
         else
-            _log.fine("StatusServer for GameServer Started! - Listening on Port: " + ConfigValue.StatusPort);
+            _log.fine("StatusServer for GameServer Started! - Listening on Port: " + TelnetConfig.StatusPort);
     }
 
     @SuppressWarnings("unused")
     private String RndPW(int length) {
-        StringBuffer password = new StringBuffer();
+        StringBuilder password = new StringBuilder();
         String lowerChar = "qwertyuiopasdfghjklzxcvbnm";
         String upperChar = "QWERTYUIOPASDFGHJKLZXCVBNM";
         String digits = "1234567890";
         for (int i = 0; i < length; i++) {
             int charSet = Rnd.get(3);
             switch (charSet) {
-                case 0:
-                    password.append(lowerChar.charAt(Rnd.get(lowerChar.length() - 1)));
-                    break;
-                case 1:
-                    password.append(upperChar.charAt(Rnd.get(upperChar.length() - 1)));
-                    break;
-                case 2:
-                    password.append(digits.charAt(Rnd.get(digits.length() - 1)));
-                    break;
+                case 0 -> password.append(lowerChar.charAt(Rnd.get(lowerChar.length() - 1)));
+                case 1 -> password.append(upperChar.charAt(Rnd.get(upperChar.length() - 1)));
+                case 2 -> password.append(digits.charAt(Rnd.get(digits.length() - 1)));
             }
         }
         return password.toString();

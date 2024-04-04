@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.loginserver.LoginController;
 import com.fuzzy.subsystem.loginserver.SessionKey;
 import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail.LoginFailReason;
@@ -33,7 +33,7 @@ public class RequestServerLogin extends L2LoginClientPacket {
         SessionKey sk = getClient().getSessionKey();
 
         // if we didnt showed the license we cant check these values
-        if (!ConfigValue.ShowLicence || sk.checkLoginPair(_skey1, _skey2)) {
+        if (!LoginConfig.ShowLicence || sk.checkLoginPair(_skey1, _skey2)) {
             if (LoginController.getInstance().isLoginPossible(getClient(), _serverId))
                 getClient().sendPacket(new PlayOk(sk));
             else

@@ -1,7 +1,7 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
+import com.fuzzy.config.LoginConfig;
 import javolution.util.FastList;
-import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.common.loginservercon.AdvIP;
 import com.fuzzy.subsystem.loginserver.GameServerTable;
 import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
@@ -122,7 +122,7 @@ public class AuthRequest extends ClientBasePacket {
         //	sendPacket(new LoginServerFail(LoginServerFail.REASON_WRONG_HEXID));
 
         if (gsi != null && gsi.isAuthed()) {
-            AuthResponse ar = new AuthResponse(gsi.getId(), ConfigValue.LoginServerProtocol);
+            AuthResponse ar = new AuthResponse(gsi.getId(), LoginConfig.LoginServerProtocol);
             getGameServer().setAuthed(true);
             getGameServer().setServerId(gsi.getId());
             sendPacket(ar);

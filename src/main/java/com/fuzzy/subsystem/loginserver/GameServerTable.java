@@ -1,11 +1,11 @@
 package com.fuzzy.subsystem.loginserver;
 
+import com.fuzzy.config.LoginConfig;
 import javolution.io.UTF8StreamReader;
 import javolution.util.FastMap;
 import javolution.xml.stream.XMLStreamConstants;
 import javolution.xml.stream.XMLStreamException;
 import javolution.xml.stream.XMLStreamReaderImpl;
-import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.database.DatabaseUtils;
 import com.fuzzy.subsystem.database.FiltredPreparedStatement;
 import com.fuzzy.subsystem.database.L2DatabaseFactory;
@@ -68,7 +68,7 @@ public class GameServerTable {
         RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(512, RSAKeyGenParameterSpec.F4);
         keyGen.initialize(spec);
 
-        _keyPairs = new KeyPair[ConfigValue.RSAKeyPairs];
+        _keyPairs = new KeyPair[LoginConfig.RSAKeyPairs];
         for (int i = 0; i < _keyPairs.length; i++)
             _keyPairs[i] = keyGen.genKeyPair();
     }
@@ -129,7 +129,7 @@ public class GameServerTable {
     }
 
     public GameServerInfo getRegisteredGameServerById(int id) {
-        if (ConfigValue.LoginProxyEnable)
+        if (LoginConfig.LoginProxyEnable)
             for (GameServerInfo gsi : _gameServerTable.values())
                 if (gsi.gi != null && gsi.gi._proxy.containsKey(id))
                     return gsi;

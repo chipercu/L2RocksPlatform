@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 import com.fuzzy.subsystem.loginserver.L2LoginClient.LoginClientState;
 import com.fuzzy.subsystem.loginserver.LoginController;
@@ -16,146 +16,125 @@ import com.fuzzy.subsystem.loginserver.serverpackets.ServerList;
 import javax.crypto.Cipher;
 import java.security.GeneralSecurityException;
 
-public class RequestCmdLogin extends L2LoginClientPacket
-{
-	private byte[] _raw = new byte[128];
+public class RequestCmdLogin extends L2LoginClientPacket {
 
-	private String _user;
-	private String _password;
-	@SuppressWarnings("unused")
-	private int _ncotp;
+    private final byte[] _raw = new byte[128];
 
-	public String getPassword()
-	{
-		return _password;
-	}
+    private String _user;
+    private String _password;
+    @SuppressWarnings("unused")
+    private int _ncotp;
 
-	public String getUser()
-	{
-		return _user;
-	}
+    public String getPassword() {
+        return _password;
+    }
 
-	public int getOneTimePassword()
-	{
-		return _ncotp;
-	}
+    public String getUser() {
+        return _user;
+    }
 
-	@Override
-	public boolean readImpl()
-	{
-		L2LoginClient client = getClient();
+    public int getOneTimePassword() {
+        return _ncotp;
+    }
 
-		if(getAvaliableBytes() >= 128)
-		{
-			try
-			{
-				readD();
-				readB(_raw);
-				readD();
-				readH();
-				readC();
-				return true;
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-		return false;
-	}
+    @Override
+    public boolean readImpl() {
+        L2LoginClient client = getClient();
 
-	@Override
-	public void runImpl()
-	{
-		L2LoginClient client = getClient();
+        if (getAvaliableBytes() >= 128) {
+            try {
+                readD();
+                readB(_raw);
+                readD();
+                readH();
+                readC();
+                return true;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
 
-		byte[] decrypted;
-		try
-		{
-			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
-			rsaCipher.init(Cipher.DECRYPT_MODE, client.getRSAPrivateKey());
-			decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
-		}
-		catch(GeneralSecurityException e)
-		{
-			_log.warning("RequestCmdLogin: "+_raw.length);
-			e.printStackTrace();
-			return;
-		}
+    @Override
+    public void runImpl() {
+        L2LoginClient client = getClient();
 
-		_user = new String(decrypted, 0x40, 14).trim();
-		_user = _user.toLowerCase();
-		_password = new String(decrypted, 0x60, 16).trim();
-		_ncotp = decrypted[0x7c];
-		_ncotp |= decrypted[0x7d] << 8;
-		_ncotp |= decrypted[0x7e] << 16;
-		_ncotp |= decrypted[0x7f] << 24;
+        byte[] decrypted;
+        try {
+            Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+            rsaCipher.init(Cipher.DECRYPT_MODE, client.getRSAPrivateKey());
+            decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
+        } catch (GeneralSecurityException e) {
+            _log.warning("RequestCmdLogin: " + _raw.length);
+            e.printStackTrace();
+            return;
+        }
 
-		LoginController lc = LoginController.getInstance();
+        _user = new String(decrypted, 0x40, 14).trim();
+        _user = _user.toLowerCase();
+        _password = new String(decrypted, 0x60, 16).trim();
+        _ncotp = decrypted[0x7c];
+        _ncotp |= decrypted[0x7d] << 8;
+        _ncotp |= decrypted[0x7e] << 16;
+        _ncotp |= decrypted[0x7f] << 24;
 
-		Status status = lc.tryAuthLogin(_user, _password, client);
-		if(status.state == State.IN_USE)
-		{
-			client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
+        LoginController lc = LoginController.getInstance();
 
-			L2LoginClient oldClient = lc.getAuthedClient(_user);
+        Status status = lc.tryAuthLogin(_user, _password, client);
+        if (status.state == State.IN_USE) {
+            client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
 
-			// кикаем другого клиента, подключенного к логину
-			if(oldClient == null)
-			{
-				GameServerInfo gsi = lc.getAccountOnGameServer(_user);
-				if(gsi != null && gsi.isAuthed())
-					//gsi.getGameServer().kickPlayer(_user);
-					gsi.getGameServer().sendPacket(new KickPlayer(_user));
-			}
-			//else
-				// запускаем таймер кика другого клиента, на 10 секунд...таймер скидывается, если выполнить какое-то действие.
-				
+            L2LoginClient oldClient = lc.getAuthedClient(_user);
 
-			// кикаем другого клиента из игры
+            // кикаем другого клиента, подключенного к логину
+            if (oldClient == null) {
+                GameServerInfo gsi = lc.getAccountOnGameServer(_user);
+                if (gsi != null && gsi.isAuthed())
+                    //gsi.getGameServer().kickPlayer(_user);
+                    gsi.getGameServer().sendPacket(new KickPlayer(_user));
+            }
+            //else
+            // запускаем таймер кика другого клиента, на 10 секунд...таймер скидывается, если выполнить какое-то действие.
+
+
+            // кикаем другого клиента из игры
 			/*
 			GameServerInfo gsi = lc.getAccountOnGameServer(_user);
 			if(gsi != null && gsi.isAuthed())
 				gsi.getGameServer().kickPlayer(_user);
 				*/
 
-			//if(lc.isAccountInLoginServer(_user))
-			//	lc.removeAuthedLoginClient(_user).close(LoginFailReason.REASON_ACCOUNT_IN_USE);
+            //if(lc.isAccountInLoginServer(_user))
+            //	lc.removeAuthedLoginClient(_user).close(LoginFailReason.REASON_ACCOUNT_IN_USE);
 
-			//status.state = State.VALID;
-		}
-		else if(status.state == State.VALID)
-		{
-			client.setAccount(_user);
-			lc.getCharactersOnAccount(_user);
-			client.setState(LoginClientState.AUTHED_LOGIN);
-			client.setSessionKey(lc.assignSessionKeyToClient());
-			lc.addAuthedLoginClient(_user, client);
-			client.setBonus(status.bonus, status.bonus_expire);
-			if(ConfigValue.ShowLicence)
-				client.sendPacket(new LoginOk(client.getSessionKey()));
-			else
-				client.sendPacket(new ServerList(client));
-		}
-		else if(status.state == State.WRONG)
-		{
-			if(ConfigValue.FakeLogin)  
-			{ 
-				client.setState(LoginClientState.FAKE_LOGIN);  
-				client.setSessionKey(lc.assignSessionKeyToClient());  
-				if (ConfigValue.ShowLicence)  
-					client.sendPacket(new LoginOk(getClient().getSessionKey()));  
-				else  
-					getClient().sendPacket(new ServerList(getClient()));  
-			}  
-			else  
-				client.close(LoginFailReason.REASON_USER_OR_PASS_WRONG); 
-		}
-		else if(status.state == State.BANNED)
-			client.close(new LoginFail(LoginFailReason.REASON_ACCESS_FAILED));
-		else if(status.state == State.IP_ACCESS_DENIED)
-			client.close(LoginFailReason.REASON_ATTEMPTED_RESTRICTED_IP);
-		else if(status.state == State.REASON_PERMANENTLY_BANNED)
-			client.close(new LoginFail(LoginFailReason.REASON_ACCESS_FAILED));
-	}
+            //status.state = State.VALID;
+        } else if (status.state == State.VALID) {
+            client.setAccount(_user);
+            lc.getCharactersOnAccount(_user);
+            client.setState(LoginClientState.AUTHED_LOGIN);
+            client.setSessionKey(lc.assignSessionKeyToClient());
+            lc.addAuthedLoginClient(_user, client);
+            client.setBonus(status.bonus, status.bonus_expire);
+            if (LoginConfig.ShowLicence)
+                client.sendPacket(new LoginOk(client.getSessionKey()));
+            else
+                client.sendPacket(new ServerList(client));
+        } else if (status.state == State.WRONG) {
+            if (LoginConfig.FakeLogin) {
+                client.setState(LoginClientState.FAKE_LOGIN);
+                client.setSessionKey(lc.assignSessionKeyToClient());
+                if (LoginConfig.ShowLicence)
+                    client.sendPacket(new LoginOk(getClient().getSessionKey()));
+                else
+                    getClient().sendPacket(new ServerList(getClient()));
+            } else
+                client.close(LoginFailReason.REASON_USER_OR_PASS_WRONG);
+        } else if (status.state == State.BANNED)
+            client.close(new LoginFail(LoginFailReason.REASON_ACCESS_FAILED));
+        else if (status.state == State.IP_ACCESS_DENIED)
+            client.close(LoginFailReason.REASON_ATTEMPTED_RESTRICTED_IP);
+        else if (status.state == State.REASON_PERMANENTLY_BANNED)
+            client.close(new LoginFail(LoginFailReason.REASON_ACCESS_FAILED));
+    }
 }

@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 public class DES implements Crypt {
     protected static Logger _log = Logger.getLogger(DES.class.getName());
 
-    private static DES _instance = new DES();
+    private static final DES _instance = new DES();
 
     public static DES getInstance() {
         return _instance;

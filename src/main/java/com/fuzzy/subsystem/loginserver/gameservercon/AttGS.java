@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.loginserver.gameservercon;
 
+import com.fuzzy.config.LoginConfig;
 import javolution.util.FastList;
 import com.fuzzy.subsystem.common.ThreadPoolManager;
-import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.loginserver.GameServerTable;
 import com.fuzzy.subsystem.loginserver.LoginController;
 import com.fuzzy.subsystem.loginserver.crypt.ConnectionCrypt;
@@ -41,9 +41,6 @@ public class AttGS {
     public AttGS(SelectionKey sc) {
         key = sc;
         new KeyTask(this);
-
-        //if(ConfigValue.DEBUG_LS_GS)
-        //	log.info("LS Debug: RSAKey task started");
     }
 
     private void requestPing() {
@@ -64,7 +61,7 @@ public class AttGS {
             return false;
         }
 
-        return now - pingRequested > ConfigValue.LoginWatchdogTimeout;
+        return now - pingRequested > LoginConfig.LoginWatchdogTimeout;
     }
 
     public void sendPacket(ServerBasePacket packet) {
@@ -168,7 +165,7 @@ public class AttGS {
 
             ClientBasePacket runnable = PacketHandler.handlePacket(packet, this);
             if (runnable != null) {
-                if (ConfigValue.DEBUG_LS_GS)
+                if (LoginConfig.DEBUG_LS_GS)
                     log.info("GameServer -> LoginServer [" + getServerId() + "]: " + runnable.getClass().getSimpleName());
                 ThreadPoolManager.getInstance().execute(runnable);
             }

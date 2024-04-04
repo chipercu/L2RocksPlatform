@@ -25,31 +25,26 @@ import com.fuzzy.subsystem.loginserver.SessionKey;
  * d: ?
  * b: 16 bytes - unknown
  */
-public final class LoginOk extends L2LoginServerPacket
-{
-	private int _loginOk1, _loginOk2;
+public final class LoginOk extends L2LoginServerPacket {
+    private final int _loginOk1;
+    private final int _loginOk2;
 
-	public LoginOk(SessionKey sessionKey)
-	{
-		_loginOk1 = sessionKey.loginOkID1;
-		_loginOk2 = sessionKey.loginOkID2;
-	}
+    public LoginOk(SessionKey sessionKey) {
+        _loginOk1 = sessionKey.loginOkID1;
+        _loginOk2 = sessionKey.loginOkID2;
+    }
 
-	/**
-	 * @see l2open.extensions.network.SendablePacket#write()
-	 */
-	@Override
-	protected void write_impl()
-	{
-		writeC(0x03);
-		writeD(_loginOk1);
-		writeD(_loginOk2);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x000003ea);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeB(new byte[16]);
-	}
+    @Override
+    protected void write_impl() {
+        writeC(0x03);
+        writeD(_loginOk1);
+        writeD(_loginOk2);
+        writeD(0x00);
+        writeD(0x00);
+        writeD(0x000003ea);
+        writeD(0x00);
+        writeD(0x00);
+        writeD(0x00);
+        writeB(new byte[16]);
+    }
 }

@@ -1,7 +1,6 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
-
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 import com.fuzzy.subsystem.loginserver.L2LoginClient.LoginClientState;
 import com.fuzzy.subsystem.loginserver.LoginController;
@@ -141,15 +140,15 @@ public class RequestAuthLogin extends L2LoginClientPacket {
 			{
 				e.printStackTrace();
 			}*/
-            if (ConfigValue.ShowLicence)
+            if (LoginConfig.ShowLicence)
                 client.sendPacket(new LoginOk(client.getSessionKey()));
             else
                 client.sendPacket(new ServerList(client));
         } else if (status.state == State.WRONG) {
-            if (ConfigValue.FakeLogin) {
+            if (LoginConfig.FakeLogin) {
                 client.setState(LoginClientState.FAKE_LOGIN);
                 client.setSessionKey(lc.assignSessionKeyToClient());
-                if (ConfigValue.ShowLicence)
+                if (LoginConfig.ShowLicence)
                     client.sendPacket(new LoginOk(getClient().getSessionKey()));
                 else
                     getClient().sendPacket(new ServerList(getClient()));

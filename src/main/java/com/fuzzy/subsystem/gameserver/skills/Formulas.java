@@ -21,7 +21,7 @@ import com.fuzzy.subsystem.gameserver.skills.funcs.Func;
 import com.fuzzy.subsystem.gameserver.templates.L2PlayerTemplate;
 import com.fuzzy.subsystem.gameserver.templates.L2Weapon;
 import com.fuzzy.subsystem.gameserver.templates.L2Weapon.WeaponType;
-import com.fuzzy.subsystem.pts.PtsFormulas;
+import com.fuzzy.subsystem.gameserver.pts.PtsFormulas;
 import com.fuzzy.subsystem.util.Log;
 import com.fuzzy.subsystem.util.Rnd;
 import com.fuzzy.subsystem.util.Util;

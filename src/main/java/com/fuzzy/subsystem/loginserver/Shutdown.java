@@ -19,7 +19,7 @@ public class Shutdown extends Thread {
     public static final int GM_SHUTDOWN = 1;
     public static final int GM_RESTART = 2;
     public static final int ABORT = 3;
-    private static String[] _modeText = {"brought down", "brought down", "restarting", "aborting"};
+    private static final String[] _modeText = {"brought down", "brought down", "restarting", "aborting"};
 
     public int get_seconds() {
         if (_counterInstance != null)

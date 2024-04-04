@@ -1,8 +1,8 @@
 package com.fuzzy.subsystem.loginserver;
 
+import com.fuzzy.config.LoginConfig;
 import javolution.util.FastMap;
 import com.fuzzy.subsystem.Base64;
-import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.database.*;
 import com.fuzzy.subsystem.loginserver.crypt.Crypt;
 import com.fuzzy.subsystem.loginserver.crypt.ScrambledKeyPair;
@@ -95,10 +95,10 @@ public class LoginController {
         _log.info("Loading LoginController...");
 
         try {
-            DEFAULT_CRYPT = (Crypt) Class.forName("com.fuzzy.subsystem.loginserver.crypt." + ConfigValue.DefaultPasswordEncoding).getMethod("getInstance", new Class[0]).invoke(null, new Object[0]);
+            DEFAULT_CRYPT = (Crypt) Class.forName("com.fuzzy.subsystem.loginserver.crypt." + LoginConfig.DefaultPasswordEncoding).getMethod("getInstance", new Class[0]).invoke(null, new Object[0]);
             GArray<Crypt> legacy = new GArray<Crypt>();
-            for (String method : ConfigValue.LegacyPasswordEncoding.split(";"))
-                if (!method.equalsIgnoreCase(ConfigValue.DefaultPasswordEncoding))
+            for (String method : LoginConfig.LegacyPasswordEncoding.split(";"))
+                if (!method.equalsIgnoreCase(LoginConfig.DefaultPasswordEncoding))
                     legacy.add((Crypt) Class.forName("com.fuzzy.subsystem.loginserver.crypt." + method).getMethod("getInstance", new Class[0]).invoke(null, new Object[0]));
             LEGACY_CRYPT = legacy.toArray(new Crypt[legacy.size()]);
         } catch (ClassNotFoundException e) {
@@ -113,7 +113,7 @@ public class LoginController {
 
         _hackProtection = new FastMap<InetAddress, FailedLoginAttempt>().setShared(true);
 
-        _keyPairs = new ScrambledKeyPair[ConfigValue.RSAKeyPairs];
+        _keyPairs = new ScrambledKeyPair[LoginConfig.RSAKeyPairs];
 
         KeyPairGenerator keygen;
 
@@ -171,7 +171,7 @@ public class LoginController {
     }
 
     private void generateBlowFishKeys() {
-        _blowfishKeys = new byte[ConfigValue.BlowFishKeys][16];
+        _blowfishKeys = new byte[LoginConfig.BlowFishKeys][16];
 
         for (int i = 0; i < _blowfishKeys.length; i++)
             for (int j = 0; j < _blowfishKeys[i].length; j++)
@@ -233,9 +233,9 @@ public class LoginController {
                     failedCount = failedAttempt.getCount();
                 }
 
-                if (failedCount >= ConfigValue.LoginTryBeforeBan) {
+                if (failedCount >= LoginConfig.LoginTryBeforeBan) {
                     Log.add("Cheater IP: " + address.getHostAddress() + " Last account: " + account, "logins_ip_cheaters");
-                    addBanForAddress(address, ConfigValue.LoginTryBanDuration * 1000);
+                    addBanForAddress(address, LoginConfig.LoginTryBanDuration * 1000L);
                 }
             }
             return ret;
@@ -286,9 +286,9 @@ public class LoginController {
      */
     public void addBanForAddress(InetAddress address, long duration) {
         _bannedIps.put(address, new BanInfo(address, System.currentTimeMillis() + duration));
-        if (ConfigValue.BanAtFlood)
+        if (LoginConfig.BanAtFlood)
             IpManager.getInstance().BanIp(address.getHostAddress(), "AutoBan: Brut", (int) (duration / 1000), "");
-        if (ConfigValue.ChangePasswordAtFlood)
+        if (LoginConfig.ChangePasswordAtFlood)
             changePassword(address);
     }
 
@@ -398,7 +398,7 @@ public class LoginController {
         GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 
         String ip = null;
-        if (ConfigValue.LoginProxyEnable && gsi.gi != null && gsi.gi._proxy.containsKey(serverId))
+        if (LoginConfig.LoginProxyEnable && gsi.gi != null && gsi.gi._proxy.containsKey(serverId))
             ip = gsi.gi._proxy.get(serverId).ip_in;
 
         int access = client.getAccessLevel();
@@ -597,12 +597,12 @@ public class LoginController {
                     else
                         banned = true;
                 lastServer = Math.max(rset.getInt("lastServer"), 1);
-                if (ConfigValue.Debug)
+                if (LoginConfig.Debug)
                     _log.fine("account exists");
             }
             DatabaseUtils.closeDatabaseSR(statement, rset);
             if (phash.equals("")) {
-                if (ConfigValue.AutoCreateAccounts && Util.isMatchingRegexp(user, ConfigValue.AnameTemplate)/* && Util.isMatchingRegexp(password, ConfigValue.ApasswdTemplate)*/) {
+                if (LoginConfig.AutoCreateAccounts && Util.isMatchingRegexp(user, LoginConfig.AnameTemplate)/* && Util.isMatchingRegexp(password, ConfigValue.ApasswdTemplate)*/) {
                     if (user != null && user.length() >= 2 && user.length() <= 14) {
                         statement = con.prepareStatement("INSERT INTO accounts (login,password,lastactive,access_level,lastIP,comments) values(?,?,?,?,?,?)");
                         statement.setString(1, user);
@@ -613,16 +613,16 @@ public class LoginController {
                         statement.setString(6, "");
                         statement.execute();
                         DatabaseUtils.closeStatement(statement);
-                        if (ConfigValue.Debug)
+                        if (LoginConfig.Debug)
                             _log.fine("created new account for " + user);
                         return new Status().setState(State.VALID);
 
                     }
-                    if (ConfigValue.Debug)
+                    if (LoginConfig.Debug)
                         _log.fine("Invalid username creation/use attempt: " + user);
                     return new Status().setState(State.WRONG);
                 }
-                if (ConfigValue.Debug)
+                if (LoginConfig.Debug)
                     _log.fine("account missing for user " + user);
                 return new Status().setState(State.WRONG);
             }
@@ -651,7 +651,7 @@ public class LoginController {
                 return new Status().setState(State.NOT_PAID);
             if (banned)
                 return new Status().setState(State.BANNED);
-            if (ConfigValue.SkipBannedIp && !SkipBannedIp && IpManager.getInstance().CheckIp(client.getIpAddress()))
+            if (LoginConfig.SkipBannedIp && !SkipBannedIp && IpManager.getInstance().CheckIp(client.getIpAddress()))
                 return new Status().setState(State.REASON_PERMANENTLY_BANNED);
             if (ok.state == State.VALID) {
                 statement = con.prepareStatement("UPDATE accounts SET lastactive=?, lastIP=? WHERE login=?");
@@ -733,7 +733,7 @@ public class LoginController {
         public void increaseCounter(String password) {
             if (!_lastPassword.equals(password)) {
                 // check if theres a long time since last wrong try
-                if (System.currentTimeMillis() - _lastAttempTime < ConfigValue.LoginTryCheckDuration * 1000)
+                if (System.currentTimeMillis() - _lastAttempTime < LoginConfig.LoginTryCheckDuration * 1000L)
                     _count++;
                 else
                     // restart the status
@@ -801,7 +801,7 @@ public class LoginController {
         if (_hackProtection.containsKey(ia))
             tries = _hackProtection.get(ia).getCount();
 
-        if (tries > ConfigValue.LoginTryBeforeBan) {
+        if (tries > LoginConfig.LoginTryBeforeBan) {
             _hackProtection.remove(ia);
             _bannedIps.remove(ia);
             _log.warning("Removed host from hacklist! IP number: " + ipAddress);

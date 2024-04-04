@@ -1,7 +1,6 @@
 package com.fuzzy.subsystem.gameserver.communitybbs.Manager;
 
 import com.fuzzy.subsystem.config.*;
-import com.fuzzy.subsystem.database.*;
 import com.fuzzy.subsystem.gameserver.model.L2Player;
 import com.fuzzy.subsystem.gameserver.model.barahlo.CBBuffSch;
 

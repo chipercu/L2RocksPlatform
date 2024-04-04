@@ -6,7 +6,7 @@ import java.security.interfaces.RSAPublicKey;
 import java.util.logging.Logger;
 
 public class ScrambledKeyPair {
-    private static Logger _log = Logger.getLogger(ScrambledKeyPair.class.getName());
+    private static final Logger _log = Logger.getLogger(ScrambledKeyPair.class.getName());
     public KeyPair _pair;
     public byte[] _scrambledModulus;
 

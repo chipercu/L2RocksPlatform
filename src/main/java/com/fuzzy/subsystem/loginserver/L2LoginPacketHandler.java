@@ -34,7 +34,6 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
     public ReceivablePacket<L2LoginClient> handlePacket(ByteBuffer buf, L2LoginClient client) {
 
 
-
         int opcode = buf.get() & 0xFF;
 
         ReceivablePacket<L2LoginClient> packet = null;

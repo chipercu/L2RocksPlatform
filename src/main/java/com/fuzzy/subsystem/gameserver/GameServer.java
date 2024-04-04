@@ -1,5 +1,7 @@
 package com.fuzzy.subsystem.gameserver;
 
+import com.fuzzy.subsystem.gameserver.pts.loader.ArmorEnchantBonusData;
+import com.fuzzy.subsystem.gameserver.pts.loader.NpcData;
 import emudev.KeyChecker;
 import javolution.util.FastMap;
 import com.fuzzy.subsystem.Server;
@@ -159,12 +161,12 @@ public class GameServer {
 
         SkillTreeTable.getInstance();
         SkillSpellbookTable.getInstance();
-        new com.fuzzy.subsystem.pts.loader.ArmorEnchantBonusData();
+        new ArmorEnchantBonusData();
         CharTemplateTable.getInstance();
         //XmlPcParameterLoader.getInstance();
 
         NpcTable.getInstance();
-        com.fuzzy.subsystem.pts.loader.NpcData.loadNpcPch();
+        NpcData.loadNpcPch();
 
         if (!NpcTable.isInitialized()) {
             _log.severe("Could not find the extraced files. Please Check Your Data.");

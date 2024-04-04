@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.loginserver.GameServerTable;
 import com.fuzzy.subsystem.loginserver.LoginController;
 import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
@@ -21,7 +21,8 @@ public class PlayerLogout extends ClientBasePacket {
         getGameServer().removeAccountFromGameServer(account);
         LoginController.getInstance().removeAuthedLoginClient(account);
 
-        if (ConfigValue.Debug)
+        if (LoginConfig.Debug) {
             log.info("Player " + account + " logged out from gameserver [" + getGameServer().getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getGameServer().getServerId()));
+        }
     }
 }

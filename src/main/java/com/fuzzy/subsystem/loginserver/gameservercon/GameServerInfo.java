@@ -11,12 +11,12 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 public class GameServerInfo {
-    private static Logger log = Logger.getLogger(GameServerInfo.class.getName());
+    private static final Logger log = Logger.getLogger(GameServerInfo.class.getName());
     public ConcurrentHashMap<String, Integer> _online_ip = new ConcurrentHashMap<String, Integer>();
 
     // auth
     private int _id;
-    private byte[] _hexId;
+    private final byte[] _hexId;
     private boolean _isAuthed;
 
     // status

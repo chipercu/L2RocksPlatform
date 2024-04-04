@@ -23,11 +23,6 @@ public class MainController {
 
     private double xOffset, yOffset;
     private static final Map<LOG_VIEW_TYPE, LogViewer> logViewerMap = new HashMap<>();
-    private boolean loginStarted = false;
-    private boolean gameStarted = false;
-
-    private Thread loginServerThread;
-
 
     public enum LOG_VIEW_TYPE{
         LOGIN, GAME
@@ -137,26 +132,19 @@ public class MainController {
 
         loginStartButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             if (L2LoginServer.getInstance() == null){
-                loginServerThread = new Thread(() -> L2LoginStart.main(new String[]{}));
-                loginServerThread.start();
+                new Thread(() -> L2LoginStart.main(new String[]{})).start();
                 loginStartButton.setText("Остановить Login Server");
             }else if (L2LoginServer.getInstance().getGameServerListener().isShutdown()){
-                L2LoginServer.getInstance().getGameServerListener().setShutdown(false);
                 loginStartButton.setText("Остановить Login Server");
             } else {
-                L2LoginServer.getInstance().getGameServerListener().setShutdown(true);
                 loginStartButton.setText("Запуск Login Server");
             }
         });
 
         CLOSE_BUTTON.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             final Stage stage = (Stage) CLOSE_BUTTON.getScene().getWindow();
-            logViewerMap.forEach((logViewType, viewer) -> {
-                viewer.close();
-            });
-//            Runtime.getRuntime().halt(0);
+            logViewerMap.forEach((logViewType, viewer) -> viewer.close());
             System.exit(0);
-
             stage.close();
         });
 

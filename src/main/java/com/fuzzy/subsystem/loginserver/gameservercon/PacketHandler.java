@@ -5,13 +5,9 @@ import com.fuzzy.subsystem.loginserver.gameservercon.gspackets.*;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-/**
- * @Author: Death
- * @Date: 12/11/2007
- * @Time: 19:05:16
- */
 public class PacketHandler {
-    private static Logger log = Logger.getLogger(PacketHandler.class.getName());
+
+    private static final Logger log = Logger.getLogger(PacketHandler.class.getName());
 
     public static ClientBasePacket handlePacket(byte[] data, AttGS gameserver) {
         ClientBasePacket packet = null;

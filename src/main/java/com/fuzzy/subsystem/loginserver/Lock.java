@@ -2,24 +2,21 @@ package com.fuzzy.subsystem.loginserver;
 
 import com.fuzzy.subsystem.util.NetList;
 
-public class Lock
-{
-	private NetList ips;
+public class Lock {
+    private NetList ips;
 
-	public Lock()
-	{}
+    public Lock() {
+    }
 
-	public void addIP(String ip)
-	{
-		if(ips == null)
-			ips = new NetList();
-		ips.AddNet(ip);
-	}
+    public void addIP(String ip) {
+        if (ips == null)
+            ips = new NetList();
+        ips.AddNet(ip);
+    }
 
-	public boolean checkIP(String ip)
-	{
-		if(ips == null)
-			return false;
-		return ips.isIpInNets(ip);
-	}
+    public boolean checkIP(String ip) {
+        if (ips == null)
+            return false;
+        return ips.isIpInNets(ip);
+    }
 }

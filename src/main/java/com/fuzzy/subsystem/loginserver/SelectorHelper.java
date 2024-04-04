@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.database.DatabaseUtils;
 import com.fuzzy.subsystem.database.FiltredPreparedStatement;
 import com.fuzzy.subsystem.database.L2DatabaseFactory;
@@ -42,7 +42,7 @@ public class SelectorHelper implements IAcceptFilter<L2LoginClient> {
             connect_count = c_info.getCount();
         }
 
-        if (connect_count >= ConfigValue.LoginServerConnectCount) {
+        if (connect_count >= LoginConfig.LoginServerConnectCount) {
             Log.add("DDOS IP: " + address.getHostAddress(), "logins_ip_ddos");
             BanIp(address, -1, "DDOS ATTACK: pps=" + connect_count);
             return false;
@@ -63,8 +63,8 @@ public class SelectorHelper implements IAcceptFilter<L2LoginClient> {
     }
 
     // ----------------------------------------------------------
-    class ConnectInfo {
-        private InetAddress _ipAddress;
+    static class ConnectInfo {
+        private final InetAddress _ipAddress;
         private long _count;
         private long _lastAttempTime;
 
@@ -75,7 +75,7 @@ public class SelectorHelper implements IAcceptFilter<L2LoginClient> {
         }
 
         public void increaseCounter() {
-            if (System.currentTimeMillis() - _lastAttempTime < ConfigValue.LoginServerTryCheckDuration)
+            if (System.currentTimeMillis() - _lastAttempTime < LoginConfig.LoginServerTryCheckDuration)
                 _count++;
             else
                 _count = 1;
@@ -90,7 +90,7 @@ public class SelectorHelper implements IAcceptFilter<L2LoginClient> {
     // ----------------------------------------------------------
     @Override
     public void BanIp(InetAddress address, int time, String comments) {
-        LoginController.getInstance().addBanForAddress(address, ConfigValue.LoginServerConnectBanTime * 1000);
+        LoginController.getInstance().addBanForAddress(address, LoginConfig.LoginServerConnectBanTime * 1000L);
         ThreadConnection con = null;
         FiltredPreparedStatement statement = null;
         try {
@@ -121,7 +121,7 @@ public class SelectorHelper implements IAcceptFilter<L2LoginClient> {
             statement = con.prepareStatement("SELECT ip,admin FROM ddos_ips");
             rset = statement.executeQuery();
             while (rset.next())
-                LoginController.getInstance().addBanForAddress(rset.getString("ip"), System.currentTimeMillis() + ConfigValue.LoginServerConnectBanTime * 1000);
+                LoginController.getInstance().addBanForAddress(rset.getString("ip"), System.currentTimeMillis() + LoginConfig.LoginServerConnectBanTime * 1000L);
         } catch (Exception e) {
             _log.info("error5 while reading ddos_ips");
         } finally {

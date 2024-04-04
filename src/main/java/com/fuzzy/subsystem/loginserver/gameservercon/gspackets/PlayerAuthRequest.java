@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.gspackets;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 import com.fuzzy.subsystem.loginserver.LoginController;
 import com.fuzzy.subsystem.loginserver.SessionKey;
@@ -40,10 +40,11 @@ public class PlayerAuthRequest extends ClientBasePacket {
         int lLoginOk2 = key.loginOkID2;
 
         boolean isAuthedOnLs;
-        if (ConfigValue.ShowLicence)
+        if (LoginConfig.ShowLicence) {
             isAuthedOnLs = playOkId1 == lPlayOk1 && playOkId2 == lPlayOk2 && loginOkId1 == lLoginOk1 && loginOkId2 == lLoginOk2;
-        else
+        } else {
             isAuthedOnLs = playOkId1 == lPlayOk1 && playOkId2 == lPlayOk2;
+        }
 
         sendPacket(new PlayerAuthResponse(client, isAuthedOnLs));
         getGameServer().removeAccountFromGameServer(account);

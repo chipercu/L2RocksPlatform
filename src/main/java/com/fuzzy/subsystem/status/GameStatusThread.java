@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.status;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.TelnetConfig;
 import com.fuzzy.subsystem.status.gshandlers.*;
 
 import java.io.*;
@@ -44,7 +44,7 @@ public class GameStatusThread extends Thread {
         try {
             // compare
             String ipToCompare;
-            for (String ip : ConfigValue.ListOfHosts.split(","))
+            for (String ip : TelnetConfig.ListOfHosts.split(","))
                 if (!result) {
                     ipToCompare = InetAddress.getByName(ip).getHostAddress();
                     if (clientStringIP.equals(ipToCompare))

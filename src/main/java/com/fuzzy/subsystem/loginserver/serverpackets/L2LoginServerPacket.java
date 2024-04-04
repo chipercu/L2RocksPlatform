@@ -12,52 +12,40 @@
  */
 package com.fuzzy.subsystem.loginserver.serverpackets;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.extensions.network.SendablePacket;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 
 import java.util.logging.Logger;
 
-/**
- *
- * @author KenM
- */
-public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient>
-{
-	public static Logger _log = Logger.getLogger(L2LoginServerPacket.class.getName());
+public abstract class L2LoginServerPacket extends SendablePacket<L2LoginClient> {
+    public static Logger _log = Logger.getLogger(L2LoginServerPacket.class.getName());
 
-	@Override
-	protected int getHeaderSize()
-	{
-		return 2;
-	}
+    @Override
+    protected int getHeaderSize() {
+        return 2;
+    }
 
-	protected abstract void write_impl();
+    protected abstract void write_impl();
 
-	@Override
-	protected void write()
-	{
-		try
-		{
-			
-			if(ConfigValue.DebugServerPackets)
-				_log.info("LoginServer send to Client("+getClient().toString()+") packets: " + getType());
-			write_impl();
-		}
-		catch(Throwable t)
-		{
-			t.printStackTrace();
-		}
-	}
+    @Override
+    protected void write() {
+        try {
 
-	@Override
-	protected void writeHeader(int dataSize)
-	{
-		writeH(dataSize + getHeaderSize());
-	}
+            if (LoginConfig.DebugServerPackets)
+                _log.info("LoginServer send to Client(" + getClient().toString() + ") packets: " + getType());
+            write_impl();
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
+    }
 
-	public String getType()
-	{
-		return "[S] " + getClass().getSimpleName();
-	}
+    @Override
+    protected void writeHeader(int dataSize) {
+        writeH(dataSize + getHeaderSize());
+    }
+
+    public String getType() {
+        return "[S] " + getClass().getSimpleName();
+    }
 }

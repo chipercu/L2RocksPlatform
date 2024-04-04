@@ -1,4 +1,4 @@
-package com.fuzzy.subsystem.pts.loader;
+package com.fuzzy.subsystem.gameserver.pts.loader;
 
 import java.io.*;
 import java.util.ArrayList;

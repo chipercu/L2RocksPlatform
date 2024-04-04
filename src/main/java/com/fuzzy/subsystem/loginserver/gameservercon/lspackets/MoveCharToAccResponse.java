@@ -1,8 +1,5 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.lspackets;
 
-/**
- * @Author: Abaddon
- */
 public class MoveCharToAccResponse extends ServerBasePacket {
     public MoveCharToAccResponse(String player, int response) {
         writeC(0x08);

@@ -1,8 +1,10 @@
 package com.fuzzy.subsystem.loginserver;
 
+import com.fuzzy.config.LoginConfig;
+import com.fuzzy.config.TelnetConfig;
+import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.ui_manager.logger.LoginServerLogViewer;
 import com.fuzzy.subsystem.Server;
-import com.fuzzy.subsystem.config.*;
 import com.fuzzy.subsystem.database.L2DatabaseFactory;
 import com.fuzzy.subsystem.extensions.network.SelectorStats;
 import com.fuzzy.subsystem.extensions.network.SelectorThread;
@@ -29,8 +31,8 @@ import java.util.logging.Logger;
 
 public class L2LoginServer {
     protected static L2LoginServer _instance;
-    private Logger _log = Logger.getLogger(L2LoginServer.class.getName());
-    private GSConnection _gameServerListener;
+    private final Logger _log = Logger.getLogger(L2LoginServer.class.getName());
+    private final GSConnection _gameServerListener;
     private SelectorThread<L2LoginClient> _selectorThread;
     public static Status statusServer;
     public LoginController loginController;
@@ -70,17 +72,9 @@ public class L2LoginServer {
             }
         }
 
-        // Load Config
-        ConfigSystem.load();
-
-        ConfigValue.develop = true;
-        ConfigValue.Accounts_Password = "68464846l2";
-        ConfigValue.Password = "68464846l2";
-        ConfigValue.Accounts_URL = "jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8";
-        ConfigValue.URL = "jdbc:mysql://localhost/l2tehno?useUnicode=true&characterEncoding=UTF-8";
         _log.addHandler(new LoginServerLogViewer());
 
-        if (ConfigValue.ComboMode) {
+        if (LoginConfig.ComboMode) {
             Server.SERVER_MODE = Server.MODE_COMBOSERVER;
             Log.InitGSLoggers();
         }
@@ -90,7 +84,7 @@ public class L2LoginServer {
             L2DatabaseFactory.getInstance();
         } catch (SQLException e) {
             _log.severe("FATAL: Failed initializing database. Reason: " + e.getMessage());
-            if (ConfigValue.Debug)
+            if (LoginConfig.Debug)
                 e.printStackTrace();
             Server.exit(1, "FATAL: Failed initializing database. Reason: " + e.getMessage());
         }
@@ -99,7 +93,7 @@ public class L2LoginServer {
             LoginController.load();
         } catch (GeneralSecurityException e) {
             _log.severe("FATAL: Failed initializing LoginController. Reason: " + e.getMessage());
-            if (ConfigValue.Debug)
+            if (LoginConfig.Debug)
                 e.printStackTrace();
             Server.exit(1, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage());
         }
@@ -108,74 +102,74 @@ public class L2LoginServer {
             GameServerTable.load();
         } catch (GeneralSecurityException e) {
             _log.severe("FATAL: Failed to load GameServerTable. Reason: " + e.getMessage());
-            if (ConfigValue.Debug)
+            if (LoginConfig.Debug)
                 e.printStackTrace();
             Server.exit(1, "FATAL: Failed to load GameServerTable. Reason: " + e.getMessage());
         } catch (SQLException e) {
             _log.severe("FATAL: Failed to load GameServerTable. Reason: " + e.getMessage());
-            if (ConfigValue.Debug)
+            if (LoginConfig.Debug)
                 e.printStackTrace();
             Server.exit(1, "FATAL: Failed to load GameServerTable. Reason: " + e.getMessage());
         }
 
-        if (ConfigValue.LoginProxyEnable)
+        if (LoginConfig.LoginProxyEnable)
             loadProxy();
 
         //this.loadBanFile();
 
         /* Accepting connections from players */
-        Util.waitForFreePorts(ConfigValue.LoginserverHostname, ConfigValue.LoginserverPort);
+        Util.waitForFreePorts(LoginConfig.LoginserverHostname, LoginConfig.LoginserverPort);
         InetAddress ad = null;
         try {
-            ad = InetAddress.getByName(ConfigValue.LoginserverHostname);
-        } catch (Exception e) {
+            ad = InetAddress.getByName(LoginConfig.LoginserverHostname);
+        } catch (Exception ignored) {
         }
 
         L2LoginPacketHandler loginPacketHandler = new L2LoginPacketHandler();
         try {
-            _selectorThread = new SelectorThread<L2LoginClient>(new SelectorStats(), loginPacketHandler, loginPacketHandler, loginPacketHandler, ConfigValue.LoginServerProtectEnable ? new SelectorHelper() : null);
+            _selectorThread = new SelectorThread<>(new SelectorStats(), loginPacketHandler, loginPacketHandler, loginPacketHandler, LoginConfig.LoginServerProtectEnable ? new SelectorHelper() : null);
         } catch (IOException e) {
             _log.severe("FATAL: Failed to open Selector. Reason: " + e.getMessage());
-            if (ConfigValue.Debug)
+            if (LoginConfig.Debug)
                 e.printStackTrace();
             Server.exit(1, "FATAL: Failed to open Selector. Reason: " + e.getMessage());
         }
 
         _gameServerListener = GSConnection.getInstance();
         _gameServerListener.start();
-        _log.info("Listening for GameServers on " + ConfigValue.LoginHost + ":" + ConfigValue.LoginPort);
+        _log.info("Listening for GameServers on " + LoginConfig.LoginHost + ":" + LoginConfig.LoginPort);
 
-        if (ConfigValue.EnableTelnet)
+        if (TelnetConfig.EnableTelnet)
             try {
                 statusServer = new Status(Server.MODE_LOGINSERVER);
                 statusServer.start();
             } catch (IOException e) {
                 _log.severe("Failed to start the Telnet Server. Reason: " + e.getMessage());
-                if (ConfigValue.Debug)
+                if (LoginConfig.Debug)
                     e.printStackTrace();
             }
         else
             _log.info("LoginServer Telnet server is currently disabled.");
 
         try {
-            SelectorThread.setAntiFlood(ConfigValue.AntiFloodEnable);
-            SelectorThread.setAntiFloodSocketsConf(ConfigValue.MaxUnhandledSocketsPerIP, ConfigValue.UnhandledSocketsMinTTL);
-            _selectorThread.openServerSocket(ad, ConfigValue.LoginserverPort);
+            SelectorThread.setAntiFlood(LoginConfig.AntiFloodEnable);
+            SelectorThread.setAntiFloodSocketsConf(LoginConfig.MaxUnhandledSocketsPerIP, LoginConfig.UnhandledSocketsMinTTL);
+            _selectorThread.openServerSocket(ad, LoginConfig.LoginserverPort);
         } catch (IOException e) {
-            _log.severe("FATAL: Failed to open server socket on " + ad + ":" + ConfigValue.LoginserverPort + ". Reason: " + e.getMessage());
-            if (ConfigValue.Debug)
+            _log.severe("FATAL: Failed to open server socket on " + ad + ":" + LoginConfig.LoginserverPort + ". Reason: " + e.getMessage());
+            if (LoginConfig.Debug)
                 e.printStackTrace();
-            Server.exit(1, "FATAL: Failed to open server socket on " + ad + ":" + ConfigValue.LoginserverPort + ". Reason: " + e.getMessage());
+            Server.exit(1, "FATAL: Failed to open server socket on " + ad + ":" + LoginConfig.LoginserverPort + ". Reason: " + e.getMessage());
         }
         _selectorThread.start();
-        _log.info("Login Server ready on port " + ConfigValue.LoginserverPort);
+        _log.info("Login Server ready on port " + LoginConfig.LoginserverPort);
         _log.info(IpManager.getInstance().getBannedCount() + " banned IPs defined");
 
-        if (ConfigValue.ComboMode)
+        if (LoginConfig.ComboMode)
             try {
                 Util.waitForFreePorts(ConfigValue.GameserverHostname, ConfigValue.GameserverPort);
 
-                if (ConfigValue.EnableTelnet) {
+                if (TelnetConfig.EnableTelnet) {
                     Status _statusServer = new Status(Server.MODE_GAMESERVER);
                     _statusServer.start();
                 } else
@@ -185,9 +179,9 @@ public class L2LoginServer {
                 e.printStackTrace();
             }
 
-        if (!ConfigValue.develop) {
-            Shutdown.getInstance().startShutdownH(ConfigValue.AutoRestart, true);
-        }
+
+            Shutdown.getInstance().startShutdownH(LoginConfig.AutoRestart, true);
+
 
 
         Util.gc(3, 333);
@@ -196,14 +190,7 @@ public class L2LoginServer {
 
     private void loadProxy() {
         try {
-            File file;
-
-            if (ConfigValue.develop) {
-                file = new File("java/gameservers.xml");
-            } else {
-                file = new File(ConfigValue.DatapackRoot + "/gameservers.xml");
-            }
-
+            File file = new File(LoginConfig.DatapackRoot + "/gameservers.xml");
             Document document = XmlUtils.readFile(file);
 
             Element root = document.getRootElement();

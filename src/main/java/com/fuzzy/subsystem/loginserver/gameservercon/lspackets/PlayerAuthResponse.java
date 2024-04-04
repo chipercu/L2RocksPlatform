@@ -1,6 +1,6 @@
 package com.fuzzy.subsystem.loginserver.gameservercon.lspackets;
 
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 
 public class PlayerAuthResponse extends ServerBasePacket {
@@ -16,7 +16,7 @@ public class PlayerAuthResponse extends ServerBasePacket {
         writeS("");
         writeS("");
         writeD(client.getBonusExpire());
-        writeD(ConfigValue.LoginserverId);
+        writeD(LoginConfig.LoginserverId);
     }
 
     /**
@@ -35,6 +35,6 @@ public class PlayerAuthResponse extends ServerBasePacket {
         writeS(""); //TODO переработать на использование account_fields
         writeS("");
         writeD(0);
-        writeD(ConfigValue.LoginserverId);
+        writeD(LoginConfig.LoginserverId);
     }
 }

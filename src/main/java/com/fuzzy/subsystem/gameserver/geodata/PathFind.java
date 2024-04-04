@@ -1,7 +1,6 @@
 package com.fuzzy.subsystem.gameserver.geodata;
 
 import com.fuzzy.subsystem.config.ConfigValue;
-import com.fuzzy.subsystem.gameserver.geodata.*;
 import com.fuzzy.subsystem.gameserver.geodata.PathFindBuffers.GeoNode;
 import com.fuzzy.subsystem.gameserver.geodata.PathFindBuffers.PathFindBuffer;
 import com.fuzzy.subsystem.gameserver.model.*;

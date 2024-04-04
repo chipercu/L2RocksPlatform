@@ -1,16 +1,17 @@
 package com.fuzzy.subsystem.loginserver.crypt;
 
+import com.fuzzy.config.LoginConfig;
 import jonelo.jacksum.JacksumAPI;
 import jonelo.jacksum.algorithm.AbstractChecksum;
-import com.fuzzy.subsystem.config.ConfigValue;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Logger;
 
 public class DoubleWhirlpoolWithSalt implements Crypt {
     protected static Logger _log = Logger.getLogger(DoubleWhirlpoolWithSalt.class.getName());
-    private static DoubleWhirlpoolWithSalt _instance = new DoubleWhirlpoolWithSalt();
+    private static final DoubleWhirlpoolWithSalt _instance = new DoubleWhirlpoolWithSalt();
 
     public static DoubleWhirlpoolWithSalt getInstance() {
         return _instance;
@@ -32,19 +33,19 @@ public class DoubleWhirlpoolWithSalt implements Crypt {
     @Override
     public String encrypt(String password) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         AbstractChecksum whirlpool2 = JacksumAPI.getChecksumInstance("whirlpool2");
-        whirlpool2.update(password.getBytes("UTF-8"));
+        whirlpool2.update(password.getBytes(StandardCharsets.UTF_8));
         byte[] stdHash = whirlpool2.getByteArray();
 
         whirlpool2 = JacksumAPI.getChecksumInstance("whirlpool2");
         whirlpool2.setEncoding("BASE64");
-        whirlpool2.update(ConfigValue.DoubleWhirlpoolSalt.getBytes("UTF-8"));
+        whirlpool2.update(LoginConfig.DoubleWhirlpoolSalt.getBytes(StandardCharsets.UTF_8));
         whirlpool2.update(stdHash);
         String pt1 = whirlpool2.format("#CHECKSUM");
 
         whirlpool2 = JacksumAPI.getChecksumInstance("whirlpool2");
         whirlpool2.setEncoding("BASE64");
         whirlpool2.update(stdHash);
-        whirlpool2.update((ConfigValue.DoubleWhirlpoolSalt + pt1).getBytes("UTF-8"));
+        whirlpool2.update((LoginConfig.DoubleWhirlpoolSalt + pt1).getBytes(StandardCharsets.UTF_8));
         String pt2 = whirlpool2.format("#CHECKSUM");
 
         return pt1 + '|' + pt2;

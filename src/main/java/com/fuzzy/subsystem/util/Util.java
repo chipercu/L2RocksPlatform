@@ -16,7 +16,6 @@ import com.fuzzy.subsystem.gameserver.serverpackets.ExShowScreenMessage;
 import com.fuzzy.subsystem.gameserver.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import com.fuzzy.subsystem.gameserver.tables.SkillTable;
 import com.fuzzy.subsystem.gameserver.taskmanager.MemoryWatchDog;
-import com.google.common.reflect.Reflection;
 
 import java.io.File;
 import java.lang.reflect.Array;
@@ -31,7 +30,6 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

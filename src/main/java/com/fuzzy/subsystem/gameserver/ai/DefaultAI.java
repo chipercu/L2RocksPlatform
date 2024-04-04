@@ -15,8 +15,6 @@ import com.fuzzy.subsystem.gameserver.model.instances.L2NpcInstance.AggroInfo;
 import com.fuzzy.subsystem.gameserver.model.quest.QuestEventType;
 import com.fuzzy.subsystem.gameserver.model.quest.QuestState;
 import com.fuzzy.subsystem.gameserver.serverpackets.*;
-import com.fuzzy.subsystem.gameserver.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import com.fuzzy.subsystem.gameserver.skills.*;
 import com.fuzzy.subsystem.gameserver.tables.NpcTable;
 import com.fuzzy.subsystem.gameserver.tables.SkillTable;
 import com.fuzzy.subsystem.gameserver.tables.TerritoryTable;

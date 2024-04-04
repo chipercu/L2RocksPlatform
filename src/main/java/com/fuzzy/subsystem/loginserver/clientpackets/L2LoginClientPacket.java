@@ -1,7 +1,6 @@
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
-
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.extensions.network.ReceivablePacket;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 
@@ -18,7 +17,7 @@ public abstract class L2LoginClientPacket extends ReceivablePacket<L2LoginClient
     @Override
     protected final boolean read() {
         try {
-            if (ConfigValue.DebugClientPackets)
+            if (LoginConfig.DebugClientPackets)
                 _log.info("Client send to LoginServer(" + getClient().toString() + ") packets: " + getType());
 
             return readImpl();

@@ -1,6 +1,5 @@
 package com.fuzzy.config.configsystem;
 
-import com.fuzzy.config.AppConfig;
 import com.fuzzy.config.configsystem.CompactJsonFormat.CompactJsonObject;
 import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystem.core.crypto.Crypto;
@@ -10,13 +9,11 @@ import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
 
-import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,12 +24,13 @@ import java.util.Map;
  * Date: 05.02.2024
  */
 
-public class ConfigBuilder<T extends ISubsystemConfig> {
+public class ConfigBuilder<T> {
 
     private final Map<String, Object> configObjectMap = new HashMap<>();
     private final boolean encrypt;
+    public static String CONFIG_DIRECTORY = "data/config/";
 
-    public static void load(Class<? extends ISubsystemConfig> configClass, boolean encrypt) {
+    public static void load(Class<?> configClass, boolean encrypt) {
         try {
             new ConfigBuilder<>(configClass, encrypt);
         } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException |
@@ -45,12 +43,13 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
     private ConfigBuilder(Class<T> configClass, boolean encrypt) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, PlatformException {
         this.encrypt = encrypt;
         final T instance = configClass.getDeclaredConstructor().newInstance();
-        JSONObject json = readJSON(instance.getConfigPathName());
+        final String config_name = instance.getClass().getAnnotation(ConfigClass.class).name();
+        JSONObject json = readJSON(config_name);
         if (json.isEmpty()) {
             initDefault(configClass);
-            save(instance.getConfigPathName(), configClass);
+            save(config_name, configClass);
         } else {
-            loadFrom(json, instance.getConfigPathName(), configClass);
+            loadFrom(json, config_name, configClass);
         }
         initConfigFields(instance, configClass);
     }
@@ -59,14 +58,14 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
         final Field[] declaredFields = configClass.getDeclaredFields();
         final ArrayList<Field> fields = new ArrayList<>();
         for (Field field : declaredFields) {
-            if (field.isAnnotationPresent(Config.class)) {
+            if (field.isAnnotationPresent(ConfigField.class)) {
                 fields.add(field);
             }
         }
         return fields;
     }
 
-    private void withAnnotation(Field field, Config annotation) {
+    private void withAnnotation(Field field, ConfigField annotation) {
         if (field.getType() == String.class) {
             configObjectMap.put(field.getName(), annotation.strValue());
         } else if (field.getType() == String[].class) {
@@ -93,7 +92,7 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
     private void initDefault(Class<T> configClass) {
         final List<Field> annotatedFields = getAnnotatedFields(configClass);
         for (Field field : annotatedFields) {
-            Config annotation = field.getAnnotation(Config.class);
+            ConfigField annotation = field.getAnnotation(ConfigField.class);
             withAnnotation(field, annotation);
         }
     }
@@ -102,7 +101,7 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
         boolean need_save = false;
         final List<Field> annotatedFields = getAnnotatedFields(configClass);
         for (Field field : annotatedFields) {
-            Config annotation = field.getAnnotation(Config.class);
+            ConfigField annotation = field.getAnnotation(ConfigField.class);
             if (json.containsKey(field.getName())) {
                 final JSONObject jsonObject = (JSONObject) json.get(field.getName());
                 if (field.getType() == String.class) {
@@ -151,6 +150,12 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
                     }
                     configObjectMap.put(field.getName(), array);
                 }
+
+                if (!jsonObject.get("description").equals(field.getAnnotation(ConfigField.class).desc())){
+                    need_save = true;
+                }
+
+
             } else {
                 withAnnotation(field, annotation);
                 need_save = true;
@@ -161,7 +166,7 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
         }
     }
 
-    public void initConfigFields(ISubsystemConfig config, Class<T> configClass) {
+    public void initConfigFields(T config, Class<T> configClass) {
         final List<Field> annotatedFields = getAnnotatedFields(configClass);
         for (Field field : annotatedFields) {
             try {
@@ -174,7 +179,6 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
                 throw new RuntimeException(e);
             }
         }
-        config.init();
     }
 
     public void save(String configPathName, Class<T> configClass) throws PlatformException {
@@ -182,7 +186,7 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
         final List<Field> annotatedFields = getAnnotatedFields(configClass);
         for (Field field : annotatedFields) {
             final CompactJsonObject compactJsonObject = new CompactJsonObject(field.getName());
-            Config annotation = field.getAnnotation(Config.class);
+            ConfigField annotation = field.getAnnotation(ConfigField.class);
             Object value = configObjectMap.get(field.getName());
             compactJsonObject.putField("description", annotation.desc(), true);
             if (value instanceof String val) {
@@ -209,14 +213,14 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
             mainCompactObject.putField(compactJsonObject);
         }
 
-        final Path path = Path.of(AppConfig.CONFIG_DIRECTORY + configPathName + ".json");
+        final Path path = Path.of(CONFIG_DIRECTORY + configPathName + ".json");
         saveToFile(path, mainCompactObject.build());
     }
 
     private void saveToFile(Path path, String json) throws PlatformException {
         if (encrypt){
             try {
-                Crypto crypto = new Crypto(Path.of(AppConfig.CONFIG_DIRECTORY + "secret_key"));
+                Crypto crypto = new Crypto(Path.of(CONFIG_DIRECTORY + "secret_key"));
                 FileUtils.saveToFile(crypto.encrypt(json), path);
             } catch (PlatformException e) {
                 throw new RuntimeException(e);
@@ -230,13 +234,13 @@ public class ConfigBuilder<T extends ISubsystemConfig> {
 
     private JSONObject readJSON(String configPathName) throws PlatformException {
         JSONObject configJson;
-        final Path path = Path.of(AppConfig.CONFIG_DIRECTORY + configPathName + ".json");
+        final Path path = Path.of(CONFIG_DIRECTORY + configPathName + ".json");
         if (Files.exists(path)) {
 
             byte[] bytes = FileUtils.readBytesFromFile(path);
             if (encrypt){
                 try {
-                    Crypto crypto = new Crypto(Path.of(AppConfig.CONFIG_DIRECTORY + "secret_key"));
+                    Crypto crypto = new Crypto(Path.of(CONFIG_DIRECTORY + "secret_key"));
                     configJson = (JSONObject) new JSONParser(JSONParser.DEFAULT_PERMISSIVE_MODE).parse(crypto.decrypt(bytes));
                 } catch (ParseException e) {
                     throw new RuntimeException(e);

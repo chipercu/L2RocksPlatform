@@ -11,11 +11,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 
-/**
- * @Author: Death
- * @Date: 12/11/2007
- * @Time: 19:45:57
- */
 public class RSACrypt {
     private final Cipher RSAEncrypt;
     private final Cipher RSADecrypt;

@@ -2,7 +2,6 @@ package com.fuzzy.subsystem.gameserver.model.barahlo.attainment;
 
 import com.fuzzy.subsystem.config.ConfigValue;
 import com.fuzzy.subsystem.gameserver.model.*;
-import com.fuzzy.subsystem.gameserver.serverpackets.*;
 import com.fuzzy.subsystem.util.Rnd;
 
 /**

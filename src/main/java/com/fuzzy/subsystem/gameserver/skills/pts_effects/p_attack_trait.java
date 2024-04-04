@@ -5,7 +5,6 @@ import com.fuzzy.subsystem.gameserver.model.*;
 import com.fuzzy.subsystem.gameserver.skills.Env;
 import com.fuzzy.subsystem.gameserver.skills.SkillTrait;
 import com.fuzzy.subsystem.gameserver.skills.effects.EffectTemplate;
-import com.fuzzy.subsystem.gameserver.skills.funcs.*;
 
 /**
  * {p_attack_trait;trait_valakas;20}

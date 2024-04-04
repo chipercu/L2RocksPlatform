@@ -3,7 +3,6 @@ package com.fuzzy.subsystem.gameserver.xml.loader;
 import com.fuzzy.subsystem.config.*;
 import com.fuzzy.subsystem.gameserver.model.L2Skill;
 import com.fuzzy.subsystem.gameserver.skills.*;
-import com.fuzzy.subsystem.gameserver.skills.conditions.*;
 import com.fuzzy.subsystem.gameserver.skills.funcs.FuncTemplate;
 import com.fuzzy.subsystem.gameserver.skills.triggers.*;
 import com.fuzzy.subsystem.gameserver.tables.SkillTable;

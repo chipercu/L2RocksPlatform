@@ -8,10 +8,6 @@ import com.fuzzy.subsystem.loginserver.gameservercon.AttGS;
 
 import java.util.logging.Logger;
 
-/**
- * @Author: SYS
- * @Date: 10/4/2007
- */
 public class LockAccountIP extends ClientBasePacket {
     private static final Logger _log = Logger.getLogger(LockAccountIP.class.getName());
 

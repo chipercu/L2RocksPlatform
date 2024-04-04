@@ -1,9 +1,9 @@
 package com.fuzzy.subsystem.gameserver.model.instances;
 
+import com.fuzzy.subsystem.gameserver.pts.loader.NpcData;
 import javolution.util.FastMap;
 import com.fuzzy.subsystem.common.ThreadPoolManager;
 import com.fuzzy.subsystem.config.ConfigValue;
-import com.fuzzy.subsystem.database.*;
 import com.fuzzy.subsystem.extensions.multilang.CustomMessage;
 import com.fuzzy.subsystem.extensions.scripts.Events;
 import com.fuzzy.subsystem.extensions.scripts.Functions;
@@ -48,7 +48,6 @@ import com.fuzzy.subsystem.gameserver.templates.L2NpcTemplate;
 import com.fuzzy.subsystem.gameserver.templates.L2Weapon;
 import com.fuzzy.subsystem.gameserver.templates.L2Weapon.WeaponType;
 import com.fuzzy.subsystem.gameserver.xml.ItemTemplates;
-import com.fuzzy.subsystem.pts.loader.*;
 import com.fuzzy.subsystem.util.*;
 import com.fuzzy.subsystem.util.reference.HardReference;
 

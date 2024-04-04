@@ -12,8 +12,7 @@
  */
 package com.fuzzy.subsystem.loginserver.clientpackets;
 
-
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.loginserver.L2LoginClient;
 import com.fuzzy.subsystem.loginserver.serverpackets.GGAuth;
 import com.fuzzy.subsystem.loginserver.serverpackets.LoginFail;
@@ -64,7 +63,7 @@ public class AuthGameGuard extends L2LoginClientPacket {
 
     @Override
     public void runImpl() {
-        if (!ConfigValue.GGCheck || _sessionId == getClient().getSessionId()) {
+        if (!LoginConfig.GGCheck || _sessionId == getClient().getSessionId()) {
             getClient().setState(L2LoginClient.LoginClientState.AUTHED_GG);
             getClient().sendPacket(new GGAuth(getClient().getSessionId()));
         } else

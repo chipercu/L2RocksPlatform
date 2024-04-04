@@ -1,7 +1,6 @@
 package com.fuzzy.subsystem.loginserver;
 
-
-import com.fuzzy.subsystem.config.ConfigValue;
+import com.fuzzy.config.LoginConfig;
 import com.fuzzy.subsystem.extensions.network.MMOConnection;
 import com.fuzzy.subsystem.extensions.network.MMOClient;
 import com.fuzzy.subsystem.loginserver.crypt.LoginCrypt;
@@ -69,7 +68,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
         _sessionId = con.hashCode();
         _ipAddr = getConnection().getSocket().getInetAddress().getHostAddress();
         String ip = getIpAddress();
-        if (!ConfigValue.SkipBannedIp && IpManager.getInstance().CheckIp(ip)) {
+        if (!LoginConfig.SkipBannedIp && IpManager.getInstance().CheckIp(ip)) {
             close(new AccountKicked(AccountKickedReason.REASON_PERMANENTLY_BANNED));
             _log.warning("Drop connection from banned IP: " + ip);
         }
@@ -189,7 +188,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 
     @Override
     public void onDisconnection() {
-        if (ConfigValue.Debug) {
+        if (LoginConfig.Debug) {
             _log.info("DISCONNECTED: " + toString());
             Util.test();
         }

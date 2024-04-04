@@ -1,7 +1,8 @@
 package com.fuzzy.subsystem.loginserver.serverpackets;
 
 public final class AccountKicked extends L2LoginServerPacket {
-    public static enum AccountKickedReason {
+
+    public enum AccountKickedReason {
         REASON_FALSE_DATA_STEALER_REPORT(0x00),
         REASON_DATA_STEALER(0x01),
         REASON_SOUSPICION_DATA_STEALER(0x03),
@@ -22,7 +23,7 @@ public final class AccountKicked extends L2LoginServerPacket {
         }
     }
 
-    private int reason_code;
+    private final int reason_code;
 
     public AccountKicked(AccountKickedReason reason) {
         reason_code = reason.getCode();

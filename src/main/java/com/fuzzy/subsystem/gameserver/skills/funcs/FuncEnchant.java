@@ -6,7 +6,7 @@ import com.fuzzy.subsystem.gameserver.skills.Stats;
 import com.fuzzy.subsystem.gameserver.templates.*;
 import com.fuzzy.subsystem.gameserver.templates.L2Item.Grade;
 import com.fuzzy.subsystem.gameserver.templates.L2Weapon.WeaponType;
-import com.fuzzy.subsystem.pts.loader.ArmorEnchantBonusData;
+import com.fuzzy.subsystem.gameserver.pts.loader.ArmorEnchantBonusData;
 
 import java.util.logging.Logger;
 
