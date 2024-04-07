@@ -1,5 +1,6 @@
 package com.fuzzy.test_code;
 
+import com.fuzzy.subsystem.config.ConfigSystem;
 import com.fuzzy.subsystem.config.ConfigValue;
 import com.google.common.io.Files;
 import net.lingala.zip4j.exception.ZipException;
@@ -53,41 +54,27 @@ public class ConfigConverter {
     }
 
     @Test
-    public void convert2(){
-
+    public void convert2() throws NoSuchFieldException {
+        ConfigSystem.load();
         List<Config> configs = new ArrayList<>();
-        Config currentConfig = null;
+        Config currentConfig;
         StringBuilder descriptionBuilder = new StringBuilder();
         try (BufferedReader br = new BufferedReader(new FileReader("data/config/items.properties"))) {
             String line;
             while ((line = br.readLine()) != null) {
-                if (line.startsWith("# ")) {
-                    if (currentConfig != null) {
-                        currentConfig.setDescription(descriptionBuilder.toString().trim());
-                        descriptionBuilder.setLength(0); // Очищаем StringBuilder
-                    }
+                if (line.startsWith("#")) {
+                    descriptionBuilder.append(line.replace("#", ""));
                     // Создаем новый Config объект для комментария
+                } else if (line.contains("=")) {
                     currentConfig = new Config();
-                } else if (line.contains("=") && currentConfig != null) {
                     // Найдено ключ-значение
                     String[] parts = line.split("=");
                     currentConfig.setKey(parts[0].trim());
                     currentConfig.setValue(parts[1].trim());
-
+                    currentConfig.setDescription(descriptionBuilder.toString());
                     configs.add(currentConfig);
-                    currentConfig = null; // Сбрасываем текущий объект Config
-                } else {
-                    if (currentConfig != null) {
-                        // Пополняем описание для текущего Config объекта
-                        descriptionBuilder.append(line.trim()).append(" ");
-                    }
+                    descriptionBuilder.setLength(0);
                 }
-            }
-
-            // Обработка последнего описания после последнего Config
-            if (currentConfig != null) {
-                currentConfig.setDescription(descriptionBuilder.toString().trim());
-                configs.add(currentConfig);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -96,8 +83,45 @@ public class ConfigConverter {
 
         // Выводим полученные объекты Config
         for (Config config : configs) {
+            Field field = ConfigValue.class.getField(config.key);
+
+            String configName = "items_config";
+
+            Class<?> type = field.getType();
+            String typeSimpleName = type.getSimpleName();
+            String replace = typeSimpleName.replace("float", "double")
+                    .replace("byte", "int");
+
+            StringBuilder configBuilder = new StringBuilder();
+
+
+            configBuilder.append("package com.fuzzy.config;\n");
+            configBuilder.append("""
+                                    import com.fuzzy.config.configsystem.ConfigClass;
+                                    import com.fuzzy.config.configsystem.ConfigField;
+                                    \n
+                                    """);
+
+            configBuilder.append("@ConfigClass(name = \"").append(configName).append("\")\n");
+            configBuilder.append("public class LoginConfig {\n");
+            configBuilder.append("");
+
+
+
+
+            File file = new File(configName);
+
+
+
             System.out.println("@ConfigField(desc=\"" + config.getDescription() + "\"" + ",\n " +
-                    "intValue = " + config.getValue() + ") public static int " + config.getKey() + ";\n");
+                    "intValue = " + config.getValue() + ") public static " + replace + " " + config.getKey() + ";\n");
+
+
+            try (FileWriter writer = new FileWriter(file)) {
+                writer.write(generatedObject.getStringClass());
+            } catch (IOException e) {
+                System.out.println("Ошибка при записи в файл: " + e.getMessage());
+            }
 
         }
     }
@@ -130,8 +154,6 @@ public class ConfigConverter {
         public void setDescription(String description) {
             this.description = description;
         }
-
-        // Геттеры и сеттеры
     }
 
 

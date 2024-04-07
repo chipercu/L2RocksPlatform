@@ -28,18 +28,18 @@ public class Scripts {
 
     public static boolean loading;
 
-    private final HashMap<String, Script> _classes = new HashMap<String, Script>();
-    public static final HashMap<Integer, GArray<ScriptClassAndMethod>> itemHandlers = new HashMap<Integer, GArray<ScriptClassAndMethod>>();
-    public static final HashMap<Integer, GArray<ScriptClassAndMethod>> dialogAppends = new HashMap<Integer, GArray<ScriptClassAndMethod>>();
-    public static final HashMap<String, ScriptClassAndMethod> onAction = new HashMap<String, ScriptClassAndMethod>();
-    public static final HashMap<String, ScriptClassAndMethod> onActionShift = new HashMap<String, ScriptClassAndMethod>();
-    public static final GArray<ScriptClassAndMethod> onPlayerExit = new GArray<ScriptClassAndMethod>();
-    public static final GArray<ScriptClassAndMethod> onPlayerEnter = new GArray<ScriptClassAndMethod>();
-    public static final GArray<ScriptClassAndMethod> onReloadMultiSell = new GArray<ScriptClassAndMethod>();
-    public static final GArray<ScriptClassAndMethod> onDie = new GArray<ScriptClassAndMethod>();
-    public static final GArray<ScriptClassAndMethod> onEscape = new GArray<ScriptClassAndMethod>();
+    private final HashMap<String, Script> _classes = new HashMap<>();
+    public static final HashMap<Integer, GArray<ScriptClassAndMethod>> itemHandlers = new HashMap<>();
+    public static final HashMap<Integer, GArray<ScriptClassAndMethod>> dialogAppends = new HashMap<>();
+    public static final HashMap<String, ScriptClassAndMethod> onAction = new HashMap<>();
+    public static final HashMap<String, ScriptClassAndMethod> onActionShift = new HashMap<>();
+    public static final GArray<ScriptClassAndMethod> onPlayerExit = new GArray<>();
+    public static final GArray<ScriptClassAndMethod> onPlayerEnter = new GArray<>();
+    public static final GArray<ScriptClassAndMethod> onReloadMultiSell = new GArray<>();
+    public static final GArray<ScriptClassAndMethod> onDie = new GArray<>();
+    public static final GArray<ScriptClassAndMethod> onEscape = new GArray<>();
 
-    public static final GArray<ScriptClassAndMethod> onPlayerTeleport = new GArray<ScriptClassAndMethod>();
+    public static final GArray<ScriptClassAndMethod> onPlayerTeleport = new GArray<>();
 
     public static Scripts getInstance() {
         if (_instance == null)

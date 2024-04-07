@@ -10,96 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72048911-3a79-46b0-af6a-d3187a1387ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/GameServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/TelnetConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/ConfigClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/ui_manager/ui_models/LogLabelTooltip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fuzzy/main/config/ConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fuzzy/test_code/ConfigConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/LoginConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/ServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/ConfigField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/ConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/ConfigBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/ISubsystemConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/GameServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/GameStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/GameStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/ai/DefaultAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/ai/DefaultAI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/communitybbs/Manager/BaseBBSManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/communitybbs/Manager/BaseBBSManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/communitybbs/Manager/TopBBSManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/communitybbs/Manager/TopBBSManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/geodata/PathFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/geodata/PathFind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/barahlo/attainment/AttainmentHunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/barahlo/attainment/AttainmentHunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/barahlo/attainment/AttainmentNoname.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/barahlo/attainment/AttainmentNoname.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/entity/olympiad/OlympiadStat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/entity/olympiad/OlympiadStat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/entity/siege/territory/TerritorySiegeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/entity/siege/territory/TerritorySiegeDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/instances/L2NpcInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/instances/L2NpcInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/instances/L2PetInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/instances/L2PetInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/instances/PokemonGoNpcInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/model/instances/PokemonGoNpcInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/Formulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/Formulas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/funcs/FuncEnchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/funcs/FuncEnchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/pts_effects/p_attack_trait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/pts_effects/p_attack_trait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/pts_effects/p_defence_trait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/skills/pts_effects/p_defence_trait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/xml/loader/XmlOptionDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/xml/loader/XmlOptionDataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/GameInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/GameInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/GameServerTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/GameServerTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/HackingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/HackingException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/IpManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/IpManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/L2LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/L2LoginClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/L2LoginPacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/L2LoginPacketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/L2LoginServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/L2LoginServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/Lock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/Lock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/Proxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/Proxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/SelectorHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/SelectorHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/SessionKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/SessionKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/Shutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/Shutdown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/AuthGameGuard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/AuthGameGuard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/L2LoginClientPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/L2LoginClientPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/RequestAuthLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/RequestAuthLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/RequestCmdLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/RequestCmdLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/RequestServerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/clientpackets/RequestServerLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/config/LoginConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/BlowfishEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/BlowfishEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/DES.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/DES.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/DoubleWhirlpoolWithSalt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/DoubleWhirlpoolWithSalt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/ScrambledKeyPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/crypt/ScrambledKeyPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/AttGS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/AttGS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/GSConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/GSConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/GameServerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/GameServerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/KeyTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/KeyTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/PacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/PacketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/RSACrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/RSACrypt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/AuthRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/LockAccountIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/LockAccountIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/MoveCharToAcc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/MoveCharToAcc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/PlayerAuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/PlayerAuthRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/PlayerLogout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/gspackets/PlayerLogout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/lspackets/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/lspackets/AuthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/lspackets/MoveCharToAccResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/lspackets/MoveCharToAccResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/lspackets/PlayerAuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/gameservercon/lspackets/PlayerAuthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/AccountKicked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/AccountKicked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/GGAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/GGAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/Init.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/Init.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/L2LoginServerPacket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/L2LoginServerPacket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/LoginFail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/LoginFail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/LoginOk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/LoginOk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/PlayFail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/PlayFail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/PlayOk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/PlayOk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/ServerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/loginserver/serverpackets/ServerList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/pts/PlayerTempl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/pts/PlayerTempl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/pts/PtsFormulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/pts/PtsFormulas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/pts/loader/ArmorEnchantBonusData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/pts/loader/ArmorEnchantBonusData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/pts/loader/LoadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/pts/loader/LoadData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/pts/loader/NpcData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/gameserver/pts/loader/NpcData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/status/GameStatusThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/status/GameStatusThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/status/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/status/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/ui_manager/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/ui_manager/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/ui_manager/logger/LoginServerLogViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/ui_manager/logger/LoginServerLogViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/ui_manager/ui_models/LogViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/ui_manager/ui_models/LogViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fuzzy/utils/FileUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fuzzy/utils/FileUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/extensions/scripts/Scripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/extensions/scripts/Scripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fuzzy/test_code/ConfigConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fuzzy/test_code/ConfigConverter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,6 +206,7 @@
       <workItem from="1711875497856" duration="17506000" />
       <workItem from="1712054975739" duration="10090000" />
       <workItem from="1712222134319" duration="15753000" />
+      <workItem from="1712394965622" duration="6085000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1711636486018</created>
@@ -346,6 +260,17 @@
     <MESSAGE value="finish add platform" />
     <MESSAGE value="add gameserver and data" />
     <option name="LAST_COMMIT_MESSAGE" value="add gameserver and data" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fuzzy/test_code/ConfigConverter.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
