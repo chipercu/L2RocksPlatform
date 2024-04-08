@@ -1,5 +1,7 @@
-package com.fuzzy.config.configsystem;
+package com.fuzzy.config;
 
+import com.fuzzy.config.configsystem.ConfigBuilder;
+import com.fuzzy.config.configsystem.ConfigClass;
 import com.fuzzy.platform.exception.PlatformException;
 import com.fuzzy.subsystems.exception.GeneralExceptionBuilder;
 import com.fuzzy.subsystems.exception.runtime.ConfigBuilderException;

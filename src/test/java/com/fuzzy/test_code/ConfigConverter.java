@@ -1,5 +1,6 @@
 package com.fuzzy.test_code;
 
+import com.fuzzy.config.ConfigManager;
 import com.fuzzy.subsystem.config.ConfigSystem;
 import com.fuzzy.subsystem.config.ConfigValue;
 import com.google.common.io.Files;
@@ -14,8 +15,10 @@ import java.io.*;
 import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
+import java.util.stream.Collectors;
 
 /**
  * Created by a.kiperku
@@ -31,12 +34,12 @@ public class ConfigConverter {
 
         final List<File> filesInDirectoryRecursive = FileUtils.getFilesInDirectoryRecursive(new File("data/config"), zipParameters);
 
-        for (File file: filesInDirectoryRecursive){
-            if (!file.isDirectory() && file.getName().endsWith(".properties") && !file.getName().equals("log.properties")){
+        for (File file : filesInDirectoryRecursive) {
+            if (!file.isDirectory() && file.getName().endsWith(".properties") && !file.getName().equals("log.properties")) {
                 Properties properties = new Properties();
                 properties.load(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
 
-                for (Object key: properties.keySet()){
+                for (Object key : properties.keySet()) {
                     final Field declaredField = ConfigValue.class.getDeclaredField((String) key);
                     System.out.println(key + " = " + declaredField.get(null).toString());
                 }
@@ -54,12 +57,13 @@ public class ConfigConverter {
     }
 
     @Test
-    public void convert2() throws NoSuchFieldException {
+    public void convert2() throws NoSuchFieldException, IllegalAccessException {
         ConfigSystem.load();
         List<Config> configs = new ArrayList<>();
         Config currentConfig;
         StringBuilder descriptionBuilder = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader("data/config/items.properties"))) {
+        final File proprietesFile = new File("data/config/skills.properties");
+        try (BufferedReader br = new BufferedReader(new FileReader(proprietesFile))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (line.startsWith("#")) {
@@ -81,50 +85,88 @@ public class ConfigConverter {
         }
 
 
+        StringBuilder configBuilder = new StringBuilder();
+        String configName = proprietesFile.getName().replace(".properties", "") + "_config";
+        final String packageName = ConfigManager.class.getPackage().getName();
+        configBuilder.append("package ").append(packageName).append(";\n\n");
+        configBuilder.append("""
+                import com.fuzzy.config.configsystem.ConfigClass;
+                import com.fuzzy.config.configsystem.ConfigField;
+                                                    
+                """);
+
+        configBuilder.append("@ConfigClass(name = \"").append(configName).append("\")\n");
+        configBuilder.append("public class ").append(configName).append(" {\n\n");
+
+
         // Выводим полученные объекты Config
         for (Config config : configs) {
             Field field = ConfigValue.class.getField(config.key);
-
-            String configName = "items_config";
 
             Class<?> type = field.getType();
             String typeSimpleName = type.getSimpleName();
             String replace = typeSimpleName.replace("float", "double")
                     .replace("byte", "int");
 
-            StringBuilder configBuilder = new StringBuilder();
+            String annotationDataType = "strValue";
+//            String value = config.getValue();
+            Object fieldValue = field.get(null);
+            String value = "";
 
-
-            configBuilder.append("package com.fuzzy.config;\n");
-            configBuilder.append("""
-                                    import com.fuzzy.config.configsystem.ConfigClass;
-                                    import com.fuzzy.config.configsystem.ConfigField;
-                                    \n
-                                    """);
-
-            configBuilder.append("@ConfigClass(name = \"").append(configName).append("\")\n");
-            configBuilder.append("public class LoginConfig {\n");
-            configBuilder.append("");
-
-
-
-
-            File file = new File(configName);
-
-
-
-            System.out.println("@ConfigField(desc=\"" + config.getDescription() + "\"" + ",\n " +
-                    "intValue = " + config.getValue() + ") public static " + replace + " " + config.getKey() + ";\n");
-
-
-            try (FileWriter writer = new FileWriter(file)) {
-                writer.write(generatedObject.getStringClass());
-            } catch (IOException e) {
-                System.out.println("Ошибка при записи в файл: " + e.getMessage());
+            if (type.equals(String.class)) {
+                annotationDataType = "strValue";
+                value = (String) fieldValue;
+            } else if (type.equals(Boolean.class) || type.equals(boolean.class)) {
+                annotationDataType = "boolValue";
+                value = String.valueOf(fieldValue);
+            } else if (type.equals(Integer.class) || type.equals(int.class)) {
+                annotationDataType = "intValue";
+                value = String.valueOf(fieldValue);
+            } else if (type.equals(Double.class) || type.equals(double.class) || type.equals(Float.class) || type.equals(float.class)) {
+                annotationDataType = "doubleValue";
+                value = String.valueOf(fieldValue);
+            } else if (type.equals(Long.class) || type.equals(long.class)) {
+                annotationDataType = "longValue";
+                value = String.valueOf(fieldValue);
+            } else if(type.equals(String[].class)) {
+                annotationDataType = "strArrValue";
+                value = "{" + fieldValue  + "}";
+            } else if (type.equals(Boolean[].class) || type.equals(boolean[].class)) {
+                annotationDataType = "boolArrValue";
+                value = "{" + fieldValue  + "}";
+            } else if (type.equals(Integer[].class) || type.equals(int[].class)) {
+                annotationDataType = "intArrValue";
+                value = arrToString(fieldValue);
+            } else if (type.equals(Double[].class) || type.equals(double[].class) || type.equals(Float[].class) || type.equals(float[].class)) {
+                annotationDataType = "doubleArrValue";
+                value = "{" + fieldValue  + "}";
+            } else if (type.equals(Long[].class) || type.equals(long[].class)) {
+                annotationDataType = "longArrValue";
+                value = "{" + fieldValue + "}";
             }
 
+
+            configBuilder.append("    @ConfigField(desc=\"").append(config.getDescription()).append("\"").append(",\n")
+                    .append("            ").append(annotationDataType).append(" = ").append(value).append(")\n    public static ").append(replace).append(" ").append(config.getKey()).append(";\n\n");
         }
+        configBuilder.append("}\n");
+        File file = new File("src/main/java/" + ConfigManager.class.getPackage().getName().replace(".", "/") + "/" + configName + ".java");
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(configBuilder.toString());
+        } catch (IOException e) {
+            System.out.println("Ошибка при записи в файл: " + e.getMessage());
+        }
+
     }
+
+    public String arrToString(Object val){
+        if (val instanceof int[] value){
+            final String collect = Arrays.stream(value).mapToObj(String::valueOf).collect(Collectors.joining(","));
+            return "{" + collect + "}";
+        }
+        return "{}";
+    }
+
 
     public class Config {
         private String key;

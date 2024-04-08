@@ -11,7 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="72048911-3a79-46b0-af6a-d3187a1387ff" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/extensions/scripts/Scripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/subsystem/extensions/scripts/Scripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/configsystem/ConfigManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fuzzy/config/ConfigManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fuzzy/main/config/ConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fuzzy/main/config/ConfigTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/fuzzy/test_code/ConfigConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fuzzy/test_code/ConfigConverter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,6 +208,7 @@
       <workItem from="1712054975739" duration="10090000" />
       <workItem from="1712222134319" duration="15753000" />
       <workItem from="1712394965622" duration="6085000" />
+      <workItem from="1712581221794" duration="3994000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1711636486018</created>
@@ -260,17 +262,6 @@
     <MESSAGE value="finish add platform" />
     <MESSAGE value="add gameserver and data" />
     <option name="LAST_COMMIT_MESSAGE" value="add gameserver and data" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/fuzzy/test_code/ConfigConverter.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

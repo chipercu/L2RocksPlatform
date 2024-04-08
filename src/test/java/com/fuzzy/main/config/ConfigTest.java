@@ -3,7 +3,7 @@ package com.fuzzy.main.config;
 import com.fuzzy.config.LoginConfig;
 import com.fuzzy.config.configsystem.ConfigBuilder;
 import com.fuzzy.config.configsystem.ConfigClass;
-import com.fuzzy.config.configsystem.ConfigManager;
+import com.fuzzy.config.ConfigManager;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
